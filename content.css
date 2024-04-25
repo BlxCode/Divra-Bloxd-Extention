@@ -1,0 +1,9 @@
+.BlueButton, .NewButton{
+    background-color:red;
+}
+.NewButton{
+    background-color:red;
+}
+.SettingsMenu{
+    z-index:2;
+}

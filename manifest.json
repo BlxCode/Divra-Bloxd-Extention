@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Divra Client",
+  "description": "A great extention that boosts preformance, GUI enhansments, tons of customization capibilities, etc for the online browser game 'Bloxd.io'!",
+  "version": "1.01",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "Images/hello_extensions.png"
+  },
+  "icons": {
+    "16": "Images/16.png",
+    "32": "Images/32.png",
+    "48": "Images/48.png",
+    "128": "Images/128.png",
+    "500": "Images/hello_extensions.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://bloxd.io/",
+        "https://www.bloxd.io/",
+        "https://apkpure.bloxd.io/",
+        "https://bloxd.io/index.html"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
