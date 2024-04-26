@@ -1,9 +1,14 @@
 var cssnew = document.createElement("style");
-cssnew.textContent=".NewButton{ background-color:red;}";
+cssnew.textContent = ".PartnersAndCreditsWrapper{z-index:10;}";
 
-
-var infirior = document.querySelector("#root");
-cssnew.insertAdjacentElement("beforebegin", infirior);
+document.getElementById("root").insertBefore(cssnew, document.getElementById("root").children[0]);
+document.querySelector("#root > div.WholeAppWrapper > div > div.HomeScreenBottomRight > div:nth-child(3)").addEventListener("click", () => {
+  if (document.getElementsByClassName(".PartnersAndCreditsWrapper")) {
+    document.getElementsByClassName(".PartnersAndCreditsWrapper").style.zIndex = "10";
+  }
+});
+//var infirior = document.querySelector("#root");
+//cssnew.insertAdjacentElement("beforebegin", infirior);
 function upper() {
   "use strict";
   var opening = document.createElement("div");
@@ -123,7 +128,7 @@ function body() {
 
   document.getElementsByClassName("Title")[0].innerHTML = "<img src='https://i.ibb.co/ctsSZmr/favicon.png' alt='bloxd.io logo' title='this is the official logo for bloxd btw' style='  image-rendering: pixelated; width:5%; height:5%;'>Divra for Bloxd";
   document.getElementsByClassName("Title")[0].title = "Divra btw the name was chosen because of randomosy and my knowlage of code.";
- // document.getElementsByClassName("Background")[0].src = "https://cdn.discordapp.com/attachments/1200293652258377759/1200293652719734784/20240126_094706_0000.png?ex=65c5a793&is=65b33293&hm=ba5bca862b9222a2651defc771449024d52fdf2a045b4bfb2f66b17390f5e432&";
+  // document.getElementsByClassName("Background")[0].src = "https://cdn.discordapp.com/attachments/1200293652258377759/1200293652719734784/20240126_094706_0000.png?ex=65c5a793&is=65b33293&hm=ba5bca862b9222a2651defc771449024d52fdf2a045b4bfb2f66b17390f5e432&";
 
 
   console.log("Loading Divra Client...");
@@ -610,12 +615,12 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
 
       if (document.getElementsByClassName("CrossHair")[0].innerHTML == "+") {
         document.body.removeEventListener("keyup", okeyup);
-        if(localStorage.getItem("PBOF")=="Y"){
-          
+        if (localStorage.getItem("PBOF") == "Y") {
+
           document.getElementById("noa-canvas").style.imageRendering = "pixelated";
 
         }
-        
+
         document.body.addEventListener("keyup", gamekeyup);
 
         clearInterval(mch);
@@ -1197,7 +1202,7 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
   var conyt = document.createElement("button");
   var subsHid = document.createElement("div");
 
-  subz.style.zIndex="-1";
+  subz.style.zIndex = "-1";
   subs.id = "subs1";
   var channelID = document.createElement("input");
   channelID.placeholder = "Youtube Channel Id";
@@ -1214,11 +1219,11 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
 
   function BloxdmasterSubs() {
     if (subs.style.zIndex == "-1") {
-      subs.style.zIndex="91";
-      subz.style.zIndex="-1";
+      subs.style.zIndex = "91";
+      subz.style.zIndex = "-1";
     } else {
-      subz.style.zIndex="91";
-      subs.style.zIndex="-9";
+      subz.style.zIndex = "91";
+      subs.style.zIndex = "-9";
     }
   }
   // subs.style.borderRadius="1000px";
@@ -1254,7 +1259,7 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
   subs.frameborder = "0";
   subs.style.zIndex = "-4";
   document.getElementById("root").appendChild(subs);
- // document.getElementById("root").appendChild(subsHid);
+  // document.getElementById("root").appendChild(subsHid);
   subsHid.position = "fixed";
   subsHid.style.bottom = "0";
   subsHid.style.zIndex = "3";
@@ -1553,7 +1558,7 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
 
   customizeThumb.innerHTML = "Divra Settings"
   //document.querySelector("#root > div.WholeAppWrapper > div > div.HomeScreenBottomRight").appendChild(customizeThumb);
- // document.querySelector("#root > div.WholeAppWrapper > div > img").style.zIndex="0.9px";
+  // document.querySelector("#root > div.WholeAppWrapper > div > img").style.zIndex="0.9px";
   document.querySelector("#root > div.WholeAppWrapper > div > div.HomeScreenBottomRight").insertBefore(customizeThumb, document.querySelector("#root > div.WholeAppWrapper > div > div.HomeScreenBottomRight > a:nth-child(1)"));
   customizeThumb.style.filter = "drop-shadow(233px 233px 29px gray)";
   customizeThumb.style.zIndex = "314159";
@@ -1562,7 +1567,7 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
   customizeThumb.style.borderRadius = "5000px";
   customizeThumb.border = "none";
 
- // customizeThumb.style.backgroundColor = "#3392ff";
+  // customizeThumb.style.backgroundColor = "#3392ff";
   customizeThumb.style.cursor = "pointer";
   customizeThumb.style.border = "none";
   customizeThumb.style.padding = "1px";
@@ -1571,18 +1576,7 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
   divra.className = "SmallTextLight";
   console.log("code up to line number 1604 has no issues");
 
-  customizeThumb.addEventListener("mouseover", () => {
-    customizeThumb.style.padding = "3px";
-  });
-  customizeThumb.addEventListener("mouseout", () => {
-    customizeThumb.style.padding = "1px";
-  });
-  customizeThumb.addEventListener("mousedown", () => {
-    customizeThumb.padding = "0px";
-  });
-  customizeThumb.addEventListener("mouseup", () => {
-    customizeThumb.padding = "1px";
-  });
+ 
   var thumMenu = document.createElement("div");
   var wea;
   wea = setInterval(() => {
@@ -1619,6 +1613,7 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
   }, 1000);
   console.log(wea);
   var thumbnailwrap = document.createElement("div");
+  
   customizeThumb.addEventListener("click", () => {
     var gbs = document.createElement("div");
 
@@ -1641,7 +1636,8 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
       thumbnail1.remove();
     });
     var scriptcode = document.createElement("script");
-    scriptcode.id = "scriptcode divra";
+    scriptcode.id = "scriptcodedivra";
+    document.body.appendChild(scriptcode);
     document.body.appendChild(scriptcode);
     document.getElementById("root").appendChild(gbs);
     gbs.appendChild(thumMenu);
@@ -1687,9 +1683,9 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
     sel1.selected = true;
     sel1.value = "";
     var sel2 = document.createElement("option");
-    selo(sel2, "Advanced Crosshair Settings ⚙");
+    selo(sel2, "Crosshair & Hotbar Settings ⚙");
     var sel3 = document.createElement("option");
-    selo(sel3, "Advanced Hotbar Settings ⚙");
+    selo(sel3, "Keystrokes & Youtuber Settings ⚙");
     var sel4 = document.createElement("option");
     selo(sel4, "Advanced Divra Settings ⚙");
     var sel5 = document.createElement("option");
@@ -1780,19 +1776,19 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
       console.log(PixelatedBloxdOnOff.checked);
 
     });
-    if(PixelatedBloxdOnOff.checked==false){
-      localStorage.setItem("PBOF","N");
-      console.log("PBOF LS = "+localStorage.getItem("PBOF"));
-      console.log("PBOF R LS ="+PixelatedBloxdOnOff.checked);
-    }else{
-      localStorage.setItem("PBOF","Y");
-      console.log("PBOF LS = "+localStorage.getItem("PBOF"));
-      console.log("PBOF R LS ="+PixelatedBloxdOnOff.checked);
+    if (PixelatedBloxdOnOff.checked == false) {
+      localStorage.setItem("PBOF", "N");
+      console.log("PBOF LS = " + localStorage.getItem("PBOF"));
+      console.log("PBOF R LS =" + PixelatedBloxdOnOff.checked);
+    } else {
+      localStorage.setItem("PBOF", "Y");
+      console.log("PBOF LS = " + localStorage.getItem("PBOF"));
+      console.log("PBOF R LS =" + PixelatedBloxdOnOff.checked);
     }
-    if(localStorage.getItem("PBOF")==null ||localStorage.getItem("PBOF") == undefined){
-      localStorage.setItem("PBOF","N");
+    if (localStorage.getItem("PBOF") == null || localStorage.getItem("PBOF") == undefined) {
+      localStorage.setItem("PBOF", "N");
     }
-    if(localStorage.getItem("PBOF")=="Y"){
+    if (localStorage.getItem("PBOF") == "Y") {
       PixelatedBloxdOnOff.checked = true;
     }
     PBOF.style.marginRight = "10px";

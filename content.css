@@ -5,5 +5,8 @@
     background-color:red;
 }
 .SettingsMenu{
-    z-index:2;
+    z-index:10px;
+}
+.PartnersAndCreditsWrapper{
+    z-index:10px;
 }
