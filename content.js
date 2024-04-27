@@ -50,7 +50,7 @@ function upper() {
   o3b.style.left = "50%";
   o3b.style.transform = "translate(-50%, -50%)";
   o3b.addEventListener("click",()=>{
-var worldList = document.createElemennt("div");
+var worldList = document.createElement("div");
 worldList.style.width="100%";
 worldList.style.height="100%";
 worldList.style.backgroundColor="#22283b";
@@ -59,7 +59,7 @@ worldList.style.top="0px";
 worldList.style.left="0px";
 worldList.style.zIndex="7";
 //The music is 🔥 :)) Subscribe please
-opening.appendChild(world)
+opening.appendChild(worldList)
 
 
   });
