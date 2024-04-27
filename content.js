@@ -49,6 +49,20 @@ function upper() {
   o3b.style.top = "250px";
   o3b.style.left = "50%";
   o3b.style.transform = "translate(-50%, -50%)";
+  o3b.addEventListener("click",()=>{
+var worldList = document.createElemennt("div");
+worldList.style.width="100%";
+worldList.style.height="100%";
+worldList.style.backgroundColor="#22283b";
+worldList.style.position="fixed";
+worldList.style.top="0px";
+worldList.style.left="0px";
+worldList.style.zIndex="7";
+//The music is 🔥 :)) Subscribe please
+opening.appendChild(world)
+
+
+  });
   opening.appendChild(o1);
   opening.appendChild(o2b);
   o3b.addEventListener("mouseover", () => {
