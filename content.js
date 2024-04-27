@@ -49,6 +49,47 @@ function upper() {
   o3b.style.top = "250px";
   o3b.style.left = "50%";
   o3b.style.transform = "translate(-50%, -50%)";
+  o3b.addEventListener("click",()=>{
+var worldList = document.createElement("div");
+worldList.style.width="100%";
+worldList.style.height="100%";
+worldList.style.backgroundColor="#22283b";
+worldList.style.position="fixed";
+worldList.style.top="0px";
+worldList.style.left="0px";
+worldList.style.zIndex="7";
+
+var world1 = document.createElement("div");
+world1.innerHTML="<img style='width:300px;  apect-radio:16/9;' src='https://i.ibb.co/qRMjddr/Screenshot-2024-04-26-8-56-49-PM.png'> <a href='https://bloxd.io/?lobby=%F0%9F%8F%99%EF%B8%8Fninjaville%F0%9F%8F%99%EF%B8%8F&g=worlds'><button style='NewButton BlueButton'>Join</button></a>";
+function world (Imageurl, World, Link,Description,PElement, WrapperDivElement,HeaderElement, ButtonElement, ImageElement){
+ImageElement.src=String(Imageurl);
+HeaderElement.innerHTML="Join "+World;
+WrapperDivElement.appendChild(HeaderElement);
+HeaderElement.style.textAlign="center";
+HeaderElement.style.fontFamily='Brush Script MT,cursive';
+HeaderElement.className="FullyFancyText";
+PElement.innerHTML=Description;
+WrapperDivElement.appendChild(PElement);
+WrapperDivElement.appendChild(ImageElement);
+ButtonElement.innerHTML="Join "+World+" Now!";
+ButtonElement.addEventListener("click",()=>{
+  location.href=Link;
+});
+}
+var WorldP1 = document.createElement("p");
+var WorldW1= document.createElement("div");
+var WorldH1 = document.createElement("h2");
+var WorldB1 = document.createElement("button");
+var WorldI1 = document.createElement("img");
+//Imageurl, World Name, Link to join world, a nice little Description, a Paragraph element, A Wrapper Elemnet, A header element, Button element, Image element
+world("https://i.ibb.co/qRMjddr/Screenshot-2024-04-26-8-56-49-PM.png","🏙️ninjaville🏙️","https://bloxd.io/?lobby=%F0%9F%8F%99%EF%B8%8Fninjaville%F0%9F%8F%99%EF%B8%8F&g=worlds","Role play and explore in a beautifule and open, safe city, The City of Ninjaville!", WorldP1,WorldW1,WorldH1,WorldB1,WorldI1);
+
+worldList.appendChild(world1);
+//The music is 🔥 :)) Subscribe please
+opening.appendChild(worldList)
+
+
+  });
   opening.appendChild(o1);
   opening.appendChild(o2b);
   o3b.addEventListener("mouseover", () => {
@@ -139,7 +180,7 @@ function body() {
   var imgofme = document.createElement("img");
   imgofme.style.borderRadius = "2000px";
   imgofme.style.width = "20px";
-
+//vs code is the best
   imgofme.style.display = "inline-block";
   var cpsSee = document.createElement("p");
   cpsSee.innerHTML = " Cts: ";
