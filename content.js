@@ -58,6 +58,10 @@ worldList.style.position="fixed";
 worldList.style.top="0px";
 worldList.style.left="0px";
 worldList.style.zIndex="7";
+
+var world1 = document.createElement("div");
+world1.innerHTML="<img style='width:100px; height:100px; apect-radio:16/9;' src='https://i.ibb.co/qRMjddr/Screenshot-2024-04-26-8-56-49-PM.png'> <a href='https://bloxd.io/?lobby=%F0%9F%8F%99%EF%B8%8Fninjaville%F0%9F%8F%99%EF%B8%8F&g=worlds'><button style='NewButton BlueButton'>Join</button></a>";
+worldList.appendChild(world1);
 //The music is 🔥 :)) Subscribe please
 opening.appendChild(worldList)
 
