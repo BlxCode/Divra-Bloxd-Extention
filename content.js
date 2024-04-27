@@ -76,8 +76,14 @@ ButtonElement.addEventListener("click",()=>{
   location.href=Link;
 });
 }
+var WorldP1 = document.createElement("p");
+var WorldW1= document.createElement("div");
+var WorldH1 = document.createElement("h2");
+var WorldB1 = document.createElement("button");
+var WorldI1 = document.createElement("img");
 //Imageurl, World Name, Link to join world, a nice little Description, a Paragraph element, A Wrapper Elemnet, A header element, Button element, Image element
-world("https://i.ibb.co/qRMjddr/Screenshot-2024-04-26-8-56-49-PM.png","🏙️ninjaville🏙️","https://bloxd.io/?lobby=%F0%9F%8F%99%EF%B8%8Fninjaville%F0%9F%8F%99%EF%B8%8F&g=worlds","Role play and explore in a beautifule and open, safe city, The City of Ninjaville!")
+world("https://i.ibb.co/qRMjddr/Screenshot-2024-04-26-8-56-49-PM.png","🏙️ninjaville🏙️","https://bloxd.io/?lobby=%F0%9F%8F%99%EF%B8%8Fninjaville%F0%9F%8F%99%EF%B8%8F&g=worlds","Role play and explore in a beautifule and open, safe city, The City of Ninjaville!", WorldP1,WorldW1,WorldH1,WorldB1,WorldI1);
+
 worldList.appendChild(world1);
 //The music is 🔥 :)) Subscribe please
 opening.appendChild(worldList)
