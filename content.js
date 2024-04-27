@@ -61,13 +61,23 @@ worldList.style.zIndex="7";
 
 var world1 = document.createElement("div");
 world1.innerHTML="<img style='width:300px;  apect-radio:16/9;' src='https://i.ibb.co/qRMjddr/Screenshot-2024-04-26-8-56-49-PM.png'> <a href='https://bloxd.io/?lobby=%F0%9F%8F%99%EF%B8%8Fninjaville%F0%9F%8F%99%EF%B8%8F&g=worlds'><button style='NewButton BlueButton'>Join</button></a>";
-function world (Imageurl, World, Link, WrapperDivElement,Header, ButtonElement, ImageElement){
+function world (Imageurl, World, Link,Description,PElement, WrapperDivElement,HeaderElement, ButtonElement, ImageElement){
 ImageElement.src=String(Imageurl);
-Header.innerHTML="Join"+World;
-WrapperDivElement.appendChild(Header);
-Header.style.textAlign="center";
-Header.style.fontFamily='Brush Script MT,cursive;'
+HeaderElement.innerHTML="Join "+World;
+WrapperDivElement.appendChild(HeaderElement);
+HeaderElement.style.textAlign="center";
+HeaderElement.style.fontFamily='Brush Script MT,cursive';
+HeaderElement.className="FullyFancyText";
+PElement.innerHTML=Description;
+WrapperDivElement.appendChild(PElement);
+WrapperDivElement.appendChild(ImageElement);
+ButtonElement.innerHTML="Join "+World+" Now!";
+ButtonElement.addEventListener("click",()=>{
+  location.href=Link;
+});
 }
+//Imageurl, World Name, Link to join world, a nice little Description, a Paragraph element, A Wrapper Elemnet, A header element, Button element, Image element
+world("https://i.ibb.co/qRMjddr/Screenshot-2024-04-26-8-56-49-PM.png","🏙️ninjaville🏙️","https://bloxd.io/?lobby=%F0%9F%8F%99%EF%B8%8Fninjaville%F0%9F%8F%99%EF%B8%8F&g=worlds","Role play and explore in a beautifule and open, safe city, The City of Ninjaville!")
 worldList.appendChild(world1);
 //The music is 🔥 :)) Subscribe please
 opening.appendChild(worldList)
