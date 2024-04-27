@@ -153,7 +153,7 @@ function body() {
   var imgofme = document.createElement("img");
   imgofme.style.borderRadius = "2000px";
   imgofme.style.width = "20px";
-
+//vs code is the best
   imgofme.style.display = "inline-block";
   var cpsSee = document.createElement("p");
   cpsSee.innerHTML = " Cts: ";
