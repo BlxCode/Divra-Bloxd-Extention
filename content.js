@@ -65,6 +65,7 @@ function upper() {
     Xworldlist.className = "NewButton RedButton SettingsResumeExitButton SettingsExitButton";
     Xworldlist.style.color = "white";
     Xworldlist.addEventListener("click",()=>{
+      o2b.click();
       worldList.style.zIndex="-1";
     })
     worldList.appendChild(Xworldlist);
