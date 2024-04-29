@@ -100,7 +100,7 @@ function upper() {
       WrapperDivElement.appendChild(ImageElement);
       ButtonElement.innerHTML = "Join " + World + " Now!";
       ButtonElement.addEventListener("click", () => {
-        location.href = Link;
+        location.open(Link);
       });
       worldList.appendChild(WrapperDivElement);
       ButtonElement.className = "NewButton GoldButton";
