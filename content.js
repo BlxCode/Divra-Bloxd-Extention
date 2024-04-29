@@ -52,41 +52,74 @@ function upper() {
   o3b.addEventListener("click", () => {
     var worldList = document.createElement("div");
     worldList.style.width = "100%";
+    worldList.style.display = "flex";
     worldList.style.height = "100%";
     worldList.style.backgroundColor = "#22283b";
     worldList.style.position = "fixed";
     worldList.style.top = "0px";
     worldList.style.left = "0px";
     worldList.style.zIndex = "7";
-
-    var world1 = document.createElement("div");
-    world1.innerHTML = "<img style='width:300px;  apect-radio:16/9;' src='https://i.ibb.co/qRMjddr/Screenshot-2024-04-26-8-56-49-PM.png'> <a href='https://bloxd.io/?lobby=%F0%9F%8F%99%EF%B8%8Fninjaville%F0%9F%8F%99%EF%B8%8F&g=worlds'><button style='NewButton BlueButton'>Join</button></a>";
+    var Xworldlist = document.createElement("button");
+    Xworldlist.innerHTML = "Exit World List";
+    Xworldlist.className = "NewButton RedButton SettingsResumeExitButton SettingsExitButton";
+    Xworldlist.style.color = "white";
+    worldList.appendChild(Xworldlist);
     function world(Imageurl, World, Link, Description, PElement, WrapperDivElement, HeaderElement, ButtonElement, ImageElement) {
       ImageElement.src = String(Imageurl);
+      ImageElement.draggable = "false";
+      ImageElement.style.width = "300px";
+      ImageElement.style.aspectRatio = "16/9";
+      ImageElement.style.textAlign = "center";
+      ImageElement.style.marginLeft = "5px";
+      ImageElement.style.marginRight = "5px";
       HeaderElement.innerHTML = "Join " + World;
+      HeaderElement.style.fontSize = "30px";
+      ButtonElement.style.padding = "5px";
+      WrapperDivElement.style.padding = "10px";
+      WrapperDivElement.style.marginLeft = "5px";
+      WrapperDivElement.style.borderRadius = "10px";
+      WrapperDivElement.style.borderStyle = "solid";
+      WrapperDivElement.style.marginRight = "5px";
+      WrapperDivElement.style.marginTop = "5px";
+      WrapperDivElement.style.marginBottom = "5px";
       WrapperDivElement.appendChild(HeaderElement);
-      WrapperDivElement.style.width="310px";
-      WrapperDivElement.style.backgroundColor="#545efa";
+      WrapperDivElement.style.width = "310px";
+      WrapperDivElement.style.backgroundColor = "#545efa";
       HeaderElement.style.textAlign = "center";
       HeaderElement.style.fontFamily = 'Brush Script MT,cursive';
       HeaderElement.className = "FullyFancyText";
       PElement.innerHTML = Description;
+      PElement.style.marginLeft = "5px";
+      PElement.style.marginRight = "5px";
       WrapperDivElement.appendChild(PElement);
       WrapperDivElement.appendChild(ImageElement);
       ButtonElement.innerHTML = "Join " + World + " Now!";
       ButtonElement.addEventListener("click", () => {
         location.href = Link;
       });
+      worldList.appendChild(WrapperDivElement);
+      ButtonElement.className = "NewButton GoldButton";
+      ButtonElement.style.color = "white";
+      ButtonElement.textAlign = "center";
+      WrapperDivElement.appendChild(ButtonElement);
     }
     var WorldP1 = document.createElement("p");
     var WorldW1 = document.createElement("div");
+
     var WorldH1 = document.createElement("h2");
     var WorldB1 = document.createElement("button");
     var WorldI1 = document.createElement("img");
     //Imageurl, World Name, Link to join world, a nice little Description, a Paragraph element, A Wrapper Elemnet, A header element, Button element, Image element
-    world("https://i.ibb.co/qRMjddr/Screenshot-2024-04-26-8-56-49-PM.png", "🏙️ninjaville🏙️", "https://bloxd.io/?lobby=%F0%9F%8F%99%EF%B8%8Fninjaville%F0%9F%8F%99%EF%B8%8F&g=worlds", "Role play and explore in a beautifule and open, safe city, The City of Ninjaville!", WorldP1, WorldW1, WorldH1, WorldB1, WorldI1);
 
-    worldList.appendChild(world1);
+    world("https://i.ibb.co/qRMjddr/Screenshot-2024-04-26-8-56-49-PM.png", "🏙️ninjaville🏙️", "https://bloxd.io/?lobby=%F0%9F%8F%99%EF%B8%8Fninjaville%F0%9F%8F%99%EF%B8%8F&g=worlds", "Role play and explore in a beautifule and open, safe city, The City of Ninjaville!", WorldP1, WorldW1, WorldH1, WorldB1, WorldI1);
+    var WorldP2 = document.createElement("p");
+    var WorldW2 = document.createElement("div");
+
+    var WorldH2 = document.createElement("h2");
+    var WorldB2 = document.createElement("button");
+    var WorldI2 = document.createElement("img");
+    world("https://i.ibb.co/4dDTJcb/Screenshot-2024-04-26-10-07-51-PM.png", "💎pvp_rp😎", "https://bloxd.io/?lobby=%F0%9F%92%8Epvp_rp%F0%9F%98%8E&g=worlds", "A purly PVP based world to practice, or to just have fun killing noobs.", WorldP2, WorldW2, WorldH2, WorldB2, WorldI2);
+
     //The music is 🔥 :)) Subscribe please
     opening.appendChild(worldList)
 
