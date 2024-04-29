@@ -48,9 +48,10 @@ function upper() {
   o3b.style.position = "fixed";
   o3b.style.top = "250px";
   o3b.style.left = "50%";
+  var worldList = document.createElement("div");
   o3b.style.transform = "translate(-50%, -50%)";
   o3b.addEventListener("click", () => {
-    var worldList = document.createElement("div");
+   
     worldList.style.width = "100%";
     worldList.style.display = "flex";
     worldList.style.height = "100%";
@@ -63,6 +64,9 @@ function upper() {
     Xworldlist.innerHTML = "Exit World List";
     Xworldlist.className = "NewButton RedButton SettingsResumeExitButton SettingsExitButton";
     Xworldlist.style.color = "white";
+    Xworldlist.addEventListener("click",()=>{
+      worldList.style.zIndex="-1";
+    })
     worldList.appendChild(Xworldlist);
     function world(Imageurl, World, Link, Description, PElement, WrapperDivElement, HeaderElement, ButtonElement, ImageElement) {
       ImageElement.src = String(Imageurl);
