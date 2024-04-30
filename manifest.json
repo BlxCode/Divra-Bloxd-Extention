@@ -19,6 +19,9 @@
   },
   "content_scripts": [
     {
+     "exclude_globs":[
+      "https://bloxd.io/?lobby*"
+     ],
       "matches": [
         "https://bloxd.io/",
         "https://www.bloxd.io/",
