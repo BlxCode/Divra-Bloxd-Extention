@@ -88,6 +88,12 @@ function upper() {
       WrapperDivElement.style.marginTop = "5px";
       WrapperDivElement.style.marginBottom = "5px";
       WrapperDivElement.appendChild(HeaderElement);
+      WrapperDivElement.addEventLister("mouseover",()=>{
+        WrapperDivElement.style.transform("scale(1.1)");
+      });
+      WrapperDivElement.addEventLister("mouseout",()=>{
+        WrapperDivElement.style.transform("scale(1)");
+      });
       WrapperDivElement.style.width = "310px";
       WrapperDivElement.style.backgroundColor = "#545efa";
       HeaderElement.style.textAlign = "center";
