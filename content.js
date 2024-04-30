@@ -89,10 +89,10 @@ function upper() {
       WrapperDivElement.style.marginBottom = "5px";
       WrapperDivElement.appendChild(HeaderElement);
       WrapperDivElement.addEventListener("mouseover",()=>{
-        WrapperDivElement.style.transform("scale(1.1)");
+        WrapperDivElement.style.transform="scale(1.1)";
       });
       WrapperDivElement.addEventListener("mouseout",()=>{
-        WrapperDivElement.style.transform("scale(1)");
+        WrapperDivElement.style.transform="scale(1)";
       });
       WrapperDivElement.style.width = "310px";
       WrapperDivElement.style.backgroundColor = "#545efa";
