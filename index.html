@@ -34,14 +34,14 @@
 
       .Flexbox {
         margin: auto;
-        width: 50%;
+
         color: black;
         padding: 0px;
         text-align: center;
         padding: none;
 
-
-        display: flex;
+font-size:2.1vw;
+        display:flex;
       }
 
       body {
@@ -100,7 +100,7 @@
         } else if (browserInfo.includes('Edg')) {
           browser = 'Edge';
         } else if (browserInfo.includes('Chrome')) { 
-          if(browserInfo.includes('Opr')!=false){
+          if(browserInfo.includes('Opr')==false){
             browser="Chrome";
           }
         } else if (browserInfo.includes('Safari')) {
