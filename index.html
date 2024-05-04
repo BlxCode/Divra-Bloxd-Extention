@@ -1,25 +1,125 @@
 <doctype html>
   <html>
-    <head>
-      <style>
-        .varela-round-regular {
-  font-family: "Varela Round", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-h1,h2,h3,h4,h5,h6,label,p{
-  cursor:defualt;
-}
-      </style>
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-      <title>Divra Bloxd Extention</title>
-    </head>
-    <body style="background-color:black; color:white;">
-    
-      <h1 class=".varela-round-regular" style=" color:white; font-size:6em; text-align:center;margin-bottom:0; font-weight:900;cursor:default; user-select:none; ">Divra Client</h1>
 
-<p style="cursor:default; font-size:1.2em; text-align:center;margin-top:0;">The ultimate bloxd.io game client.</p>
-    </body>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      .varela-round-regular {
+        font-family: "Varela Round", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      body {
+        text-align: center;
+      }
+
+
+      #Title {
+        background-image: linear-gradient(140deg, #EADEDB 0%, #53a58b 50%, #9cae15 75%);
+        background-repeat: no-repeat;
+        -webkit-text-stroke: black 0.5vw;
+        text-stroke: black 0.5vw;
+        color: white;
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+      }
+
+      .Flexbox {
+        margin: auto;
+        width: 50%;
+        color: black;
+        padding: 0px;
+        text-align: center;
+        padding: none;
+
+
+        display: flex;
+      }
+
+      body {
+        text-align: center;
+        background-color: black;
+      }
+
+      .boxedt1 {
+        background-color:rgb(108, 160, 162);
+        width: 350px;
+        color: black;
+        height: 350px;
+        transform: perspective(100);
+        border-radius: 30px;
+        padding: 5px;
+        margin-right: 10px;
+        text-align: center;
+        display: flexbox;
+      }
+    </style>
+    <title>Divra Bloxd Extention</title>
+  </head>
+
+  <body>
+    <div>
+      <h1 id="Title" class=".varela-round-regular"
+        style=" color:white; font-size:6em; text-align:center;margin-bottom:0; font-weight:900;cursor:default; user-select:none; ">
+        Divra Client</h1>
+
+      <p
+        style="color:white;-webkit-text-stroke: black 0.25vw;font-weight:900;cursor:default; font-size:2em; text-align:center;margin-top:0;">
+        The ultimate bloxd.io game client</p>
+    </div>
+    <br><br><br>
+
+    <div style="color:white;" class="Flexbox">
+      <div class="boxedt1">
+        <h2>Why use it?</h2>
+        <p>Divra client has been made for bloxd.io by and for YouTubers. It has fetures no other client has. Even better, all fetures are free! There is no pay for extra fetures. All promised fetures will be given to you for free! We belive in free software for those who want or need it!</p>
+
+      </div>
+      <div class="boxedt1" style="float:right;">
+        <h2>How to use it?</h2>
+        <p>Divra Client is currently in beta development. Free beta testing is avaliable in our Discord server! Divra Client is a Browser Extention. Beta testing <span id="yesnobrowser">is avaliable for Edge, Opera, and Chrome!</span></p><br><br> <p>Your browser is <span id="watbrowser"></span> the browsers that support Beta Testing are <br><b style="font-size:larger;">⋅</b>Chrome <br><b style="font-size:larger;">⋅</b>Opera <br><b style="font-size:larger;">⋅</b>Edge</p>
+      </div>
+    </div>
+<script>
+  var broshow = document.getElementById("watbrowser");
+  const getBrowserName = () => {
+        let browserInfo = navigator.userAgent;
+        let browser;
+        if (browserInfo.includes('Opera') || browserInfo.includes('OPR')) {
+          if(browserInfo.includes('Safari')){
+            browser="Opera";
+          }
+        } else if (browserInfo.includes('Edg')) {
+          browser = 'Edge';
+        } else if (browserInfo.includes('Chrome')) { 
+          if(browserInfo.includes('Opr')!=false){
+            browser="Chrome";
+          }
+        } else if (browserInfo.includes('Safari')) {
+          browser = 'Safari';
+        } else if (browserInfo.includes('Firefox')) {
+          browser = 'Firefox'
+        } else {
+          browser = 'unknown'
+        }
+          return browser;
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+
+        const browserName = getBrowserName();
+        broshow.innerHTML = `${browserName}`;
+        console.log(browserName);
+      });
+
+</script>
+  </body>
+
   </html>
