@@ -6,7 +6,7 @@ Divra Bloxd Extention will be an upcoming extension for bloxd.io. It will replac
 What was Divra Bloxd Userscript
 Divra Bloxd Userscript was one of the top 5 bloxd.io userscript made by Blxm. Divra Bloxd Userscipt’s official website is https://blxcode.github.io/Divra-Bloxd-Extention. All installs for Divra Bloxd Userscript are deleted as of the user script null.
 ## Goals
-To increase player playtime
+⋅To increase player playtime
 To help players play
 ## Specifications
 Divra Userscipt will be the backbone for Divra Extention. All of Divra Userscript’s features will be in Divra Extention. Custom Crosshairs, Custom Hotbars, Live Sub Counts (no one has done that before), Home screen changes, etc.
