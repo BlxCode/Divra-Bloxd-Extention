@@ -132,15 +132,15 @@ font-size:14px;
       });
 function forever(){
       if(window.innerWidth>600){
-        document.querySelector("body > doctype > div:nth-child(13) > div:nth-child(2)").style.borderLeftColor= 'rgb(255, 255, 255)';
-        document.querySelector("body > doctype > div:nth-child(13) > div:nth-child(2)").style.borderLeftStyle= 'solid';
-        document.querySelector("body > doctype > div:nth-child(13) > div:nth-child(1)").style.borderRightColor= 'rgb(255, 255, 255)';
-        document.querySelector("body > doctype > div:nth-child(13) > div:nth-child(1)").style.borderRightStyle= 'solid';
+        document.getElementsByClassName("boxedt1")[0].style.borderLeftColor= 'rgb(255, 255, 255)';
+        document.getElementsByClassName("boxedt1")[0].style.borderLeftStyle= 'solid';
+        document.getElementsByClassName("boxedt1")[1].style.borderRightColor= 'rgb(255, 255, 255)';
+        document.getElementsByClassName("boxedt1")[1].style.borderRightStyle= 'solid';
       }else{
-        document.querySelector("body > doctype > div:nth-child(13) > div:nth-child(2)").style.borderLeftColor= 'rgb(255, 255, 255)';
-        document.querySelector("body > doctype > div:nth-child(13) > div:nth-child(2)").style.borderLeftStyle= 'none';
-        document.querySelector("body > doctype > div:nth-child(13) > div:nth-child(1)").style.borderRightColor= 'rgb(255, 255, 255)';
-        document.querySelector("body > doctype > div:nth-child(13) > div:nth-child(1)").style.borderRightStyle= 'none';
+      document.getElementsByClassName("boxedt1")[0].style.borderLeftColor= 'rgb(255, 255, 255)';
+      document.getElementsByClassName("boxedt1")[0].style.borderLeftStyle= 'none';
+      document.getElementsByClassName("boxedt1")[0].style.borderRightColor= 'rgb(255, 255, 255)';
+      document.getElementsByClassName("boxedt1")[0].style.borderRightStyle= 'none';
    
       }
     }
