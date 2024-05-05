@@ -1662,7 +1662,7 @@ var dseb = 0;
   DevLOG.addEventListener("mouseout", () => {
     DevLOG.style.transform = "scale(1.0)";
   });
-  var los = "my dad is so fucking annoying when i test divra, he's like WHY THE FUCK ARE YOU PLAYING VIDEO GAMES YOU IDIOT? AND HE WILL GROUND ME. I WOULD TELL HIM WHAT IM DOING AND HE'll NEVER FUCKING LISTEN. My mum understands tho so disables the ground immidiatly.";
+var los = "Divra";
   divraButts.appendChild(DevLOG);
   var record = document.createElement("a");
   record.innerHTML = "Record";
