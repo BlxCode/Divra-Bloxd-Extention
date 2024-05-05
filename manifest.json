@@ -10,6 +10,9 @@
     "default_popup": "popup.html",
     "default_icon": "Images/hello_extensions.png"
   },
+  "optional_permissions": [
+    "desktopCapture"
+  ],
   "icons": {
     "16": "Images/16.png",
     "32": "Images/32.png",
