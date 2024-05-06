@@ -418,28 +418,28 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
     }
 
   }
-var dseb = 0;
+  var dseb = 0;
   console.log("code up to line number 375 has no issues");
   function okeyup(eventis) {
     let ksey = eventis.key;
-    
+
     console.log(eventis + "okeyup");
     if (ksey == "x" || ksey == "X") {
-   
-      if (dseb==1) {
-        document.getElementById("DivrraSettingsExitButton").click();
-      if(document.getElementById("aas1")){
-        document.getElementById("aas1").remove();
-        dseb=0;
-      }
-      }else{
 
-   console.log(dseb);
-   dseb=1;
-      customizeThumb.click();
-      togglePointerLock: !1;
+      if (dseb == 1) {
+        document.getElementById("DivrraSettingsExitButton").click();
+        if (document.getElementById("aas1")) {
+          document.getElementById("aas1").remove();
+          dseb = 0;
+        }
+      } else {
+
+        console.log(dseb);
+        dseb = 1;
+        customizeThumb.click();
+        togglePointerLock: !1;
       }
-     
+
       console.log(eventis);
 
     }
@@ -722,6 +722,9 @@ var dseb = 0;
 
       if (document.getElementsByClassName("CrossHair")[0].innerHTML == "+") {
         document.body.removeEventListener("keyup", okeyup);
+        if (document.getElementById("noa-canvas")) {
+          document.getElementById("noa-canvas").style.imageRendering = "smooth";
+        }
         if (localStorage.getItem("PBOF") == "Y") {
 
           document.getElementById("noa-canvas").style.imageRendering = "pixelated";
@@ -922,7 +925,7 @@ var dseb = 0;
       }
     }
 
-    if (kley == "b" ||kley== "B") {
+    if (kley == "b" || kley == "B") {
       if (divra.style.display == "none") {
         divra.style.display = "block";
       } else if (divra.style.display == "block") {
@@ -930,26 +933,26 @@ var dseb = 0;
       }
     }
 
-    if (kley == "x" ||kley== "X") {
-      if (dseb==1) {
-        document.getElementById("root").dispatchEvent(new KeyboardEvent('keydown', {'key': 'Tab'}));
+    if (kley == "x" || kley == "X") {
+      if (dseb == 1) {
+        document.getElementById("root").dispatchEvent(new KeyboardEvent('keydown', { 'key': 'Tab' }));
         document.getElementById("DivrraSettingsExitButton").click();
-      if(document.getElementById("aas1")){
-        document.getElementById("aas1").remove();
-        dseb=0;
-        document.getElementById("root").dispatchEvent(new KeyboardEvent('keydown', {'key': 'Tab'}));
-      }
-      }else{
+        if (document.getElementById("aas1")) {
+          document.getElementById("aas1").remove();
+          dseb = 0;
+          document.getElementById("root").dispatchEvent(new KeyboardEvent('keydown', { 'key': 'Tab' }));
+        }
+      } else {
         exitPointerLock();
-   console.log(dseb);
-   dseb=1;
-      customizeThumb.click();
-      togglePointerLock: !1;
+        console.log(dseb);
+        dseb = 1;
+        customizeThumb.click();
+        togglePointerLock: !1;
       }
-     
+
       console.log(eventis);
 
-   
+
 
     }
 
@@ -1186,7 +1189,7 @@ var dseb = 0;
   vuiewRulz.addEventListener("click", () => {
     alert("1. Be respectful of others. \n\n2. Don't harass or bully other players. \n\n3. Discriminatory jokes and hate speech (attacks on an individual or group based on their race, ethnicity, national origin, sex, gender, sexual orientation, or disabilities) is not allowed. \n\n4. Cursing is not allowed, so do not try to avoid the swear filter. \n\n5. Spamming is not allowed in any form whatsoever. \n\n6. Do not try to post any links in game, it doesn't normally allow you to do so for that reason. \n\n7. Don't do anything NSFW related or sexually suggestive. \n\n8. Online dating is not allowed. \n\n9. Don't use any offensive/inappropriate names. \n\n10. Don't impersonate any staff or developers. This can include players if the player is clearly trying to impersonate you. \n\n11. Hacking/Cheating/Autoclicking is strictly against the rules, don't try it. \n\n12. Advocating for or encouraging any of the above rule breaking is not allowed.")
   });
-  vuiewRulz.style.zIndex="-1";
+  vuiewRulz.style.zIndex = "-1";
   document.getElementsByClassName("DiscordButtonDiv").tabIndex = "-1";
 
   function hotbarG(abs) {
@@ -1662,7 +1665,7 @@ var dseb = 0;
   DevLOG.addEventListener("mouseout", () => {
     DevLOG.style.transform = "scale(1.0)";
   });
-var los = "Divra";
+  var los = "Divra";
   divraButts.appendChild(DevLOG);
   var record = document.createElement("a");
   record.innerHTML = "Record";
@@ -1741,8 +1744,8 @@ var los = "Divra";
 
   customizeThumb.addEventListener("click", () => {
     var gbs = document.createElement("div");
-    dseb=1;
-gbs.id="aas1";
+    dseb = 1;
+    gbs.id = "aas1";
     customizeThumb.style.display = "none";
     gbs.className = "GameBackgroundScreen ";
     gbs.style.display = "flex";
@@ -1758,7 +1761,7 @@ gbs.id="aas1";
       gbs.remove();
       customizeThumb.style.display = "block";
       thumbnailwrap.remove();
-      dseb=0;
+      dseb = 0;
       bads.remove();
       thumbnail1.remove();
     });
@@ -1769,13 +1772,13 @@ gbs.id="aas1";
     document.getElementById("root").appendChild(gbs);
     gbs.appendChild(thumMenu);
     thumMenu.className = "SettingsMenu SmallTextLight";
-    thumMenu.id="thumMenu"
+    thumMenu.id = "thumMenu"
     thumMenu.style.fixed = true;
     thumMenu.style.width = "75%";
     thumMenu.style.height = "75%";
 
     var exitbutton = document.createElement("div");
-exitbutton.id="DivrraSettingsExitButton"
+    exitbutton.id = "DivrraSettingsExitButton"
     exitbutton.className = "NewButton RedButton SettingsResumeExitButton SettingsExitButton";
     var exitbutton1 = document.createElement("div");
     exitbutton1.className = "ButtonBottomBorder";
@@ -1852,7 +1855,7 @@ exitbutton.id="DivrraSettingsExitButton"
     console.log("thumbnaills" + localStorage.getItem("thumbnail"));
     thumbnail1.style.top = "10%";
 
-
+    thumbnail1.style.position = "fixed";
     thumbnail1.style.cursor = "pointer";
     thumbnail1.style.borderStyle = "solid";
     thumbnail1.addEventListener("click", () => {
@@ -1896,6 +1899,17 @@ exitbutton.id="DivrraSettingsExitButton"
     PBOF.htmlFor = "PBOF";
     PBOF.innerHTML = "Pixelated Bloxd.io";
     abis.appendChild(PBOF);
+    var s2b2 = document.createElement("input");
+    s2b2.type = "checkbox";
+    var s2l2 = document.createElement("label");
+    s2b2.id = "s2b2";
+    s2b2.htmlFor = "s2b2";
+    s2l2.style.verticalAlign = "middle";
+    s2l2.style.lineHeight = "1.75px";
+    abis.appendChild(s2b2);
+    abis.appendChild(s2l2);
+    
+    s2l2.value = "On";
     PixelatedBloxdOnOff.style.verticalAlign = "middle";
     PixelatedBloxdOnOff.style.lineHeight = "1.75px";
     PixelatedBloxdOnOff.value = "On";
@@ -1903,6 +1917,9 @@ exitbutton.id="DivrraSettingsExitButton"
       console.log(PixelatedBloxdOnOff.value);
       console.log(PixelatedBloxdOnOff.checked);
       if (PixelatedBloxdOnOff.checked == false) {
+        if (document.getElementById("noa-canvas")) {
+          document.getElementById("noa-canvas").style.imageRendering = "smooth";
+        }
         localStorage.setItem("PBOF", "N");
         console.log("PBOF LS = " + localStorage.getItem("PBOF"));
         console.log("PBOF R LS =" + PixelatedBloxdOnOff.checked);
@@ -1910,8 +1927,8 @@ exitbutton.id="DivrraSettingsExitButton"
       } else {
         localStorage.setItem("PBOF", "Y");
         console.log("PBOF LS = " + localStorage.getItem("PBOF"));
-        if(document.getElementById("noa-canvas")){
-        document.getElementById("noa-canvas").style.imageRendering = "pixelated";
+        if (document.getElementById("noa-canvas")) {
+          document.getElementById("noa-canvas").style.imageRendering = "pixelated";
         }
         console.log("PBOF R LS =" + PixelatedBloxdOnOff.checked);
       }
