@@ -4,7 +4,7 @@
 ## Overview
 Divra Bloxd Extention will be an upcoming extension for bloxd.io. It will replace Divra Bloxd Userscript and will have similar features too. 
 What was Divra Bloxd Userscript
-Divra Bloxd Userscript was one of the top 5 bloxd.io userscript made by Blxm. Divra Bloxd Userscipt’s official website is https://blxcode.github.io/Divra-Bloxd-Extention. All installs for Divra Bloxd Userscript are deleted as of the user script null.
+Divra Bloxd Userscript was one of the top 5 bloxd.io userscript made by Blxm. Divra Bloxd Userscipt’s official website is divra.vercel.app/. All installs for Divra Bloxd Userscript are deleted as of the user script null.
 ## Goals
 ⋅To increase player playtime
 To help players play
