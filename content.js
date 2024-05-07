@@ -1,4 +1,4 @@
-var cssnew= document.createElement("style");
+var cssnew = document.createElement("style");
 cssnew.textContent = ".PartnersAndCreditsWrapper{z-index:10;}";
 
 document.getElementById("root").insertBefore(cssnew, document.getElementById("root").children[0]);
@@ -427,9 +427,18 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
     if (ksey == "x" || ksey == "X") {
 
       if (dseb == 1) {
-        document.getElementById("DivrraSettingsExitButton").click();
+        gbsw.click();
+  
         if (document.getElementById("aas1")) {
+         
           document.getElementById("aas1").remove();
+          gbs.remove();
+          customizeThumb.style.display = "block";
+          thumbnailwrap.remove();
+          dseb = 0;
+          bads.remove();
+          thumbnail1.remove();
+          abis.remove();
           dseb = 0;
         }
       } else {
@@ -557,6 +566,7 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
     //console.log(cps);
 
   }
+  var gbsw;
   var whatwascps = 1;
 
   function stopCps() {
@@ -723,7 +733,7 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
       if (document.getElementsByClassName("CrossHair")[0].innerHTML == "+") {
         document.body.removeEventListener("keyup", okeyup);
         if (document.getElementById("noa-canvas")) {
-          document.getElementById("noa-canvas").style.imageRendering = "smooth";
+          document.getElementById("noa-canvas").style.imageRendering = "auto";
         }
         if (localStorage.getItem("PBOF") == "Y") {
 
@@ -887,30 +897,11 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
     }
   }
   console.log("code up to line number 817 has no issues");
-  /*function weal (ecoli){
-          okeyup(ecoli);
-          if(ecoli.key=="x"||ecoli.key=="X"){
-              document.getElementById("noa-container").style.height="auto";
-              document.getElementById("noa-canvas").width=screen.availWidth;
-              document.getElementById("noa-canvas").height=screen.availHeight;
-              document.getElementById("noa-canvas").style.width=screen.availWidth+"px;";
-              document.getElementById("noa-canvas").style.height=screen.availHeight.height+"px;";
-          }
-      }
-      function qeal(ecoli){
-          keydown(ecoli);
-          if(ecoli.key=="x"||ecoli.key=="X"){
-                     document.getElementById("noa-container").style.height="auto";
-              document.getElementById("noa-canvas").width=Number(screen.availWidth)+650;
-              document.getElementById("noa-canvas").height=Number(screen.availHeight)+650;
-              document.getElementById("noa-canvas").style.width=Number(screen.availWidth)+650+"px;";
-              document.getElementById("noa-canvas").style.height=Number(screen.availHeight)+650+"px;";
-          }
-      }*/
+  
 
   function gamekeyup(eventis) {
     console.log(document.getElementsByClassName("ChatInput")[0].value);
-    if (document.getElementsByClassName("ChatInput")[0].value=="") {
+    if (document.getElementsByClassName("ChatInput")[0].value == "") {
       console.log("gkuac");
       okeyup(eventis);
       var kley = eventis;
@@ -936,10 +927,18 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
 
       if (kley == "x" || kley == "X") {
         if (dseb == 1) {
+          gbsw.click();
           document.getElementById("root").dispatchEvent(new KeyboardEvent('keydown', { 'key': 'Tab' }));
           document.getElementById("DivrraSettingsExitButton").click();
           if (document.getElementById("aas1")) {
             document.getElementById("aas1").remove();
+            gbs.remove();
+            customizeThumb.style.display = "block";
+            thumbnailwrap.remove();
+            dseb = 0;
+            bads.remove();
+            thumbnail1.remove();
+            abis.remove();
             dseb = 0;
             document.getElementById("root").dispatchEvent(new KeyboardEvent('keydown', { 'key': 'Tab' }));
           }
@@ -1753,7 +1752,7 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
     gbs.style.display = "flex";
     gbs.style.zIndex = "4";
     thumMenu.style.zIndex = "43";
-    var gbsw = document.createElement("div");
+   gbsw = document.createElement("div");
     gbsw.className = "GameBackgroundScreen ";
     gbsw.style.zIndex = "5";
     gbsw.style.display = "flex";
@@ -1766,6 +1765,7 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
       dseb = 0;
       bads.remove();
       thumbnail1.remove();
+      abis.remove();
     });
     var scriptcode = document.createElement("script");
     scriptcode.id = "scriptcodedivra";
@@ -1901,18 +1901,24 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
     PBOF.htmlFor = "PBOF";
     PBOF.innerHTML = "Pixelated Bloxd.io";
     abis.appendChild(PBOF);
+    var br1 = document.createElement("br");
+    abis.appendChild(PixelatedBloxdOnOff);
+    abis.appendChild(br1);
     var s2b2 = document.createElement("input");
     s2b2.type = "checkbox";
     var s2l2 = document.createElement("label");
     s2b2.id = "s2b2";
     s2b2.htmlFor = "s2b2";
+
     s2l2.style.verticalAlign = "middle";
     s2l2.style.lineHeight = "1.75px";
-    abis.appendChild(s2b2);
     abis.appendChild(s2l2);
+    abis.appendChild(s2b2);
+
     s2b2.style.transform = "scale(2)";
     s2l2.value = "On";
-    s2l2.innerHTML="aPrIl &#129315; FoOlS &#129315; mOdE &#129315;"
+    s2l2.innerHTML = "aPrIl &#129315; FoOlS &#129315; mOdE &#129315; ";
+    s2b2.style.cursor = "pointer";
     PixelatedBloxdOnOff.style.verticalAlign = "middle";
     PixelatedBloxdOnOff.style.lineHeight = "1.75px";
     s2l2.style.lineHeight = "1.75px";
@@ -1922,8 +1928,10 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
       console.log(PixelatedBloxdOnOff.value);
       console.log(PixelatedBloxdOnOff.checked);
       if (PixelatedBloxdOnOff.checked == false) {
-        if (document.getElementById("noa-canvas")) {
-          document.getElementById("noa-canvas").style.imageRendering = "smooth";
+        console.log(document.getElementById("noa-canvas"));
+        if (document.getElementById("noa-canvas") != null) {
+          document.getElementById("noa-canvas").style.imageRendering = "auto";
+          console.log( document.getElementById("noa-canvas").style.imageRendering+" Image rendering of the noa");
         }
         localStorage.setItem("PBOF", "N");
         console.log("PBOF LS = " + localStorage.getItem("PBOF"));
@@ -1932,12 +1940,15 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
       } else {
         localStorage.setItem("PBOF", "Y");
         console.log("PBOF LS = " + localStorage.getItem("PBOF"));
-        if (document.getElementById("noa-canvas")) {
+        if (document.getElementById("noa-canvas")!=null) {
+          console.log( document.getElementById("noa-canvas").style.imageRendering+" Image rendering of the noa");
           document.getElementById("noa-canvas").style.imageRendering = "pixelated";
+
         }
         console.log("PBOF R LS =" + PixelatedBloxdOnOff.checked);
       }
     });
+    PBOF.addEventListener("click",PixelatedBloxdOnOff.click());
     if (PixelatedBloxdOnOff.checked == false) {
       localStorage.setItem("PBOF", "N");
       console.log("PBOF LS = " + localStorage.getItem("PBOF"));
@@ -1952,12 +1963,14 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
     }
     if (localStorage.getItem("PBOF") == "Y") {
       PixelatedBloxdOnOff.checked = true;
+    }else if(localStorage.getItem("PBOF") == "N"){
+      PixelatedBloxdOnOff.checked = false;
     }
     PBOF.style.marginRight = "10px";
     PBOF.style.marginLeft = "10px";
     PBOF.style.lineHeight = "1.75px";
     PBOF.style.verticalAlign = "middle";
-    abis.appendChild(PixelatedBloxdOnOff);
+
     selection.addEventListener("change", () => {
       localStorage.setItem("DASFB", selection.value);
 
