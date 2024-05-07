@@ -428,9 +428,9 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
 
       if (dseb == 1) {
         gbsw.click();
-  
+
         if (document.getElementById("aas1")) {
-         
+
           document.getElementById("aas1").remove();
           gbs.remove();
           customizeThumb.style.display = "block";
@@ -897,7 +897,7 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
     }
   }
   console.log("code up to line number 817 has no issues");
-  
+
 
   function gamekeyup(eventis) {
     console.log(document.getElementsByClassName("ChatInput")[0].value);
@@ -1752,7 +1752,7 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
     gbs.style.display = "flex";
     gbs.style.zIndex = "4";
     thumMenu.style.zIndex = "43";
-   gbsw = document.createElement("div");
+    gbsw = document.createElement("div");
     gbsw.className = "GameBackgroundScreen ";
     gbsw.style.zIndex = "5";
     gbsw.style.display = "flex";
@@ -1914,22 +1914,22 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
     s2l2.style.lineHeight = "1.75px";
     abis.appendChild(s2l2);
     abis.appendChild(s2b2);
-    function afdgmn(Numbericks,laughtext){
-      document.querySelector("#root > div.WholeAppWrapper > div > div:nth-child(3) > div > div.ChooseGameWrapper > div:nth-child("+String(Numbericks)+") > div > div").innerHTML=laughtext;
+    function afdgmn(Numbericks, laughtext) {
+      document.querySelector("#root > div.WholeAppWrapper > div > div:nth-child(3) > div > div.ChooseGameWrapper > div:nth-child(" + String(Numbericks) + ") > div > div").innerHTML = laughtext;
     }
-    if(localStorage.getItem("s2b2")==null||localStorage.getItem("s2b2")==undefined){
-      localStorage.setItem("s2b2","N");
-    }else{
-      if(localStorage.getItem("s2b2")=="Y"){
-        s2b2.checked=true;
-      }else if(localStorage.getItem("s2b2")=="N"){
-        s2b2.checked=false;
+    if (localStorage.getItem("s2b2") == null || localStorage.getItem("s2b2") == undefined) {
+      localStorage.setItem("s2b2", "N");
+    } else {
+      if (localStorage.getItem("s2b2") == "Y") {
+        s2b2.checked = true;
+      } else if (localStorage.getItem("s2b2") == "N") {
+        s2b2.checked = false;
       }
     }
-s2b2.addEventListener("click",()=>{
-//something
- 
-});
+    s2b2.addEventListener("click", () => {
+      //something
+
+    });
     s2b2.style.transform = "scale(2)";
     s2l2.value = "On";
     s2l2.innerHTML = "aPrIl &#129315; FoOlS &#129315; mOdE &#129315; ";
@@ -1946,7 +1946,7 @@ s2b2.addEventListener("click",()=>{
         console.log(document.getElementById("noa-canvas"));
         if (document.getElementById("noa-canvas") != null) {
           document.getElementById("noa-canvas").style.imageRendering = "auto";
-          console.log( document.getElementById("noa-canvas").style.imageRendering+" Image rendering of the noa");
+          console.log(document.getElementById("noa-canvas").style.imageRendering + " Image rendering of the noa");
         }
         localStorage.setItem("PBOF", "N");
         console.log("PBOF LS = " + localStorage.getItem("PBOF"));
@@ -1955,15 +1955,15 @@ s2b2.addEventListener("click",()=>{
       } else {
         localStorage.setItem("PBOF", "Y");
         console.log("PBOF LS = " + localStorage.getItem("PBOF"));
-        if (document.getElementById("noa-canvas")!=null) {
-          console.log( document.getElementById("noa-canvas").style.imageRendering+" Image rendering of the noa");
+        if (document.getElementById("noa-canvas") != null) {
+          console.log(document.getElementById("noa-canvas").style.imageRendering + " Image rendering of the noa");
           document.getElementById("noa-canvas").style.imageRendering = "pixelated";
 
         }
         console.log("PBOF R LS =" + PixelatedBloxdOnOff.checked);
       }
     });
-    PBOF.addEventListener("click",PixelatedBloxdOnOff.click());
+    PBOF.addEventListener("click", PixelatedBloxdOnOff.click());
     if (PixelatedBloxdOnOff.checked == false) {
       localStorage.setItem("PBOF", "N");
       console.log("PBOF LS = " + localStorage.getItem("PBOF"));
@@ -1978,7 +1978,7 @@ s2b2.addEventListener("click",()=>{
     }
     if (localStorage.getItem("PBOF") == "Y") {
       PixelatedBloxdOnOff.checked = true;
-    }else if(localStorage.getItem("PBOF") == "N"){
+    } else if (localStorage.getItem("PBOF") == "N") {
       PixelatedBloxdOnOff.checked = false;
     }
     PBOF.style.marginRight = "10px";
