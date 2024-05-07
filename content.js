@@ -1912,6 +1912,7 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
     abis.appendChild(s2l2);
 
     s2l2.value = "On";
+    s2l2.innerHTML="aPrIl &#129315; FoOlS &#129315; mOdE &#129315;"
     PixelatedBloxdOnOff.style.verticalAlign = "middle";
     PixelatedBloxdOnOff.style.lineHeight = "1.75px";
     s2l2.style.lineHeight = "1.75px";
