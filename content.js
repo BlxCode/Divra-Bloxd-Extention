@@ -1927,7 +1927,7 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
       }
     }
 s2b2.addEventListener("click",()=>{
-
+//something
  
 });
     s2b2.style.transform = "scale(2)";
