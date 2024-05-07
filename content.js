@@ -1914,7 +1914,22 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
     s2l2.style.lineHeight = "1.75px";
     abis.appendChild(s2l2);
     abis.appendChild(s2b2);
+    function afdgmn(Numbericks,laughtext){
+      document.querySelector("#root > div.WholeAppWrapper > div > div:nth-child(3) > div > div.ChooseGameWrapper > div:nth-child("+String(Numbericks)+") > div > div").innerHTML=laughtext;
+    }
+    if(localStorage.getItem("s2b2")==null||localStorage.getItem("s2b2")==undefined){
+      localStorage.setItem("s2b2","N");
+    }else{
+      if(localStorage.getItem("s2b2")=="Y"){
+        s2b2.checked=true;
+      }else if(localStorage.getItem("s2b2")=="N"){
+        s2b2.checked=false;
+      }
+    }
+s2b2.addEventListener("click",()=>{
 
+ 
+});
     s2b2.style.transform = "scale(2)";
     s2l2.value = "On";
     s2l2.innerHTML = "aPrIl &#129315; FoOlS &#129315; mOdE &#129315; ";
