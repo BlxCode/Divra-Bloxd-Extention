@@ -1,4 +1,4 @@
-var cssnew = document.createElement("style");
+var cssnew= document.createElement("style");
 cssnew.textContent = ".PartnersAndCreditsWrapper{z-index:10;}";
 
 document.getElementById("root").insertBefore(cssnew, document.getElementById("root").children[0]);
@@ -909,62 +909,64 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
       }*/
 
   function gamekeyup(eventis) {
+    console.log(document.getElementsByClassName("ChatInput")[0].value);
+    if (document.getElementsByClassName("ChatInput")[0].value=="") {
+      console.log("gkuac");
+      okeyup(eventis);
+      var kley = eventis;
 
-    console.log("gkuac");
-    okeyup(eventis);
-    var kley = eventis;
+      if (kley == "t" || kley == "T") {
+        console.log("ASDFSADFASDGSDAGSDAFDSAGSDAFSDAsdlfkjsdlakhgsdlkagjsdljfsladkglksdhfslkdaghdkas;lfjdskalghfdskaljfgdskajgfkwejgsdfiudsgwudkf");
+        document.body.removeEventListener("keyup", gamekeyup);
+        console.log("chattingaleewrt");
+        if (kley == "Enter") {
+          console.log("chattingalgoawyosadifusadofhjsdklafjsadkljeweewrt");
+          document.body.addEventListener("keyup", gamekeyup);
 
-    if (kley == "t" || kley == "T") {
-      console.log("ASDFSADFASDGSDAGSDAFDSAGSDAFSDAsdlfkjsdlakhgsdlkagjsdljfsladkglksdhfslkdaghdkas;lfjdskalghfdskaljfgdskajgfkwejgsdfiudsgwudkf");
-      document.body.removeEventListener("keyup", gamekeyup);
-      console.log("chattingaleewrt");
-      if (kley == "Enter") {
-        console.log("chattingalgoawyosadifusadofhjsdklafjsadkljeweewrt");
-        document.body.addEventListener("keyup", gamekeyup);
-
-      }
-    }
-
-    if (kley == "b" || kley == "B") {
-      if (divra.style.display == "none") {
-        divra.style.display = "block";
-      } else if (divra.style.display == "block") {
-        divra.style.display = "none";
-      }
-    }
-
-    if (kley == "x" || kley == "X") {
-      if (dseb == 1) {
-        document.getElementById("root").dispatchEvent(new KeyboardEvent('keydown', { 'key': 'Tab' }));
-        document.getElementById("DivrraSettingsExitButton").click();
-        if (document.getElementById("aas1")) {
-          document.getElementById("aas1").remove();
-          dseb = 0;
-          document.getElementById("root").dispatchEvent(new KeyboardEvent('keydown', { 'key': 'Tab' }));
         }
-      } else {
-        exitPointerLock();
-        console.log(dseb);
-        dseb = 1;
-        customizeThumb.click();
-        togglePointerLock: !1;
       }
 
-      console.log(eventis);
+      if (kley == "b" || kley == "B") {
+        if (divra.style.display == "none") {
+          divra.style.display = "block";
+        } else if (divra.style.display == "block") {
+          divra.style.display = "none";
+        }
+      }
+
+      if (kley == "x" || kley == "X") {
+        if (dseb == 1) {
+          document.getElementById("root").dispatchEvent(new KeyboardEvent('keydown', { 'key': 'Tab' }));
+          document.getElementById("DivrraSettingsExitButton").click();
+          if (document.getElementById("aas1")) {
+            document.getElementById("aas1").remove();
+            dseb = 0;
+            document.getElementById("root").dispatchEvent(new KeyboardEvent('keydown', { 'key': 'Tab' }));
+          }
+        } else {
+          exitPointerLock();
+          console.log(dseb);
+          dseb = 1;
+          customizeThumb.click();
+          togglePointerLock: !1;
+        }
+
+        console.log(eventis);
 
 
 
-    }
+      }
 
-    if (kley == "Enter") {
-      document.body.removeEventListener("keyup", gamekeyup);
       if (kley == "Enter") {
-        document.body.addEventListener("keyup", gamekeyup);
+        document.body.removeEventListener("keyup", gamekeyup);
+        if (kley == "Enter") {
+          document.body.addEventListener("keyup", gamekeyup);
 
+        }
       }
-    }
-    if (kley == "e" || kley == "E") {
-      WriteOnBoardTextArea();
+      if (kley == "e" || kley == "E") {
+        WriteOnBoardTextArea();
+      }
     }
   }
 
@@ -1908,12 +1910,12 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
     s2l2.style.lineHeight = "1.75px";
     abis.appendChild(s2b2);
     abis.appendChild(s2l2);
-    
+
     s2l2.value = "On";
     PixelatedBloxdOnOff.style.verticalAlign = "middle";
     PixelatedBloxdOnOff.style.lineHeight = "1.75px";
-    s2l2.style.lineHeight="1.75px";
-    
+    s2l2.style.lineHeight = "1.75px";
+
     PixelatedBloxdOnOff.value = "On";
     PixelatedBloxdOnOff.addEventListener("click", () => {
       console.log(PixelatedBloxdOnOff.value);
