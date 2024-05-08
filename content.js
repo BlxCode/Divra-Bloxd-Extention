@@ -19,6 +19,12 @@ function upper() {
   opening.style.zIndex = "6000000000";
   opening.className = "FullyFancyText";
   document.body.appendChild(opening);
+  var Name = document.createElement("div");
+  
+  opening.appendChild(Name);
+  Name.style.position="fixed";
+  Name.style.right="5px";
+  Name.style.top="5px";
   opening.style.backgroundColor = "#3d4b79";
   var o1 = document.createElement("h1");
   o1.innerHTML = "Bloxd.io";
@@ -738,6 +744,10 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
         if (localStorage.getItem("PBOF") == "Y") {
 
           document.getElementById("noa-canvas").style.imageRendering = "pixelated";
+
+        }else if(localStorage.getItem("PBOF")=="N"){
+
+          document.getElementById("noa-canvas").style.imageRendering = "auto";
 
         }
 
@@ -1939,6 +1949,14 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
     s2l2.style.lineHeight = "1.75px";
 
     PixelatedBloxdOnOff.value = "On";
+    if (localStorage.getItem("PBOF") == null || localStorage.getItem("PBOF") == undefined) {
+      localStorage.setItem("PBOF", "N");
+    }
+    if (localStorage.getItem("PBOF") == "Y") {
+      PixelatedBloxdOnOff.checked = true;
+    } else if (localStorage.getItem("PBOF") == "N") {
+      PixelatedBloxdOnOff.checked = false;
+    }
     PixelatedBloxdOnOff.addEventListener("click", () => {
       console.log(PixelatedBloxdOnOff.value);
       console.log(PixelatedBloxdOnOff.checked);
@@ -1964,23 +1982,8 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
       }
     });
     PBOF.addEventListener("click", PixelatedBloxdOnOff.click());
-    if (PixelatedBloxdOnOff.checked == false) {
-      localStorage.setItem("PBOF", "N");
-      console.log("PBOF LS = " + localStorage.getItem("PBOF"));
-      console.log("PBOF R LS =" + PixelatedBloxdOnOff.checked);
-    } else {
-      localStorage.setItem("PBOF", "Y");
-      console.log("PBOF LS = " + localStorage.getItem("PBOF"));
-      console.log("PBOF R LS =" + PixelatedBloxdOnOff.checked);
-    }
-    if (localStorage.getItem("PBOF") == null || localStorage.getItem("PBOF") == undefined) {
-      localStorage.setItem("PBOF", "N");
-    }
-    if (localStorage.getItem("PBOF") == "Y") {
-      PixelatedBloxdOnOff.checked = true;
-    } else if (localStorage.getItem("PBOF") == "N") {
-      PixelatedBloxdOnOff.checked = false;
-    }
+
+   
     PBOF.style.marginRight = "10px";
     PBOF.style.marginLeft = "10px";
     PBOF.style.lineHeight = "1.75px";
