@@ -1983,7 +1983,6 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
     });
     PBOF.addEventListener("click", PixelatedBloxdOnOff.click());
 
-   
     PBOF.style.marginRight = "10px";
     PBOF.style.marginLeft = "10px";
     PBOF.style.lineHeight = "1.75px";

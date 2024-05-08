@@ -30,7 +30,7 @@
         "https://bloxd.io/index.html"
       ],
       "js": [
-        "content.js"
+      "content.js"
       ],
       "css": [
         "content.css"
