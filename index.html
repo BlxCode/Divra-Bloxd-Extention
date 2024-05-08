@@ -1,16 +1,16 @@
-<doctype html>
+<!DOCTYPE html>
   <html>
 
   <head>
     <link rel="apple-touch-icon" href="Images/hello_extensions.png">
-   
-<link rel="apple-touch-icon" sizes="16x16" href="Images/16.png">
-  
-<link rel="apple-touch-icon" sizes="32x32" href="Images/32.png">
-  
-<link rel="apple-touch-icon" sizes="48x48" href="Images/48.png">
-  
-<link rel="apple-touch-icon" sizes="128x128" href="Images/128.png">
+
+    <link rel="apple-touch-icon" sizes="16x16" href="Images/16.png">
+
+    <link rel="apple-touch-icon" sizes="32x32" href="Images/32.png">
+
+    <link rel="apple-touch-icon" sizes="48x48" href="Images/48.png">
+
+    <link rel="apple-touch-icon" sizes="128x128" href="Images/128.png">
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,7 +33,7 @@
       #Title {
         background-image: linear-gradient(140deg, #EADEDB 0%, #53a58b 50%, #9cae15 75%);
         background-repeat: no-repeat;
- 
+
         text-stroke: black 0.5vw;
         color: white;
         background-size: 100%;
@@ -51,8 +51,8 @@
         text-align: center;
         padding: none;
 
-font-size:14px;
-        display:flex;
+        font-size: 14px;
+        display: flex;
       }
 
       body {
@@ -61,17 +61,17 @@ font-size:14px;
       }
 
       .boxedt1 {
-        background-color:rgb(108, 160, 162);
+        background-color: rgb(108, 160, 162);
         width: 350px;
         color: black;
-        margin-bottom:5px;
-        height:550px;
-    
+        margin-bottom: 5px;
+        height: 550px;
+
         height: 350px;
         transform: perspective(100);
         border-radius: 30px;
         padding: 5px;
-      
+
         text-align: center;
         display: flexbox;
       }
@@ -85,45 +85,51 @@ font-size:14px;
         style=" color:white; font-size:6em; text-align:center;margin-bottom:0; font-weight:900;cursor:default; user-select:none; ">
         Divra Client</h1>
 
-      <p
-        style="color:white;font-weight:900;cursor:default; font-size:2em; text-align:center;margin-top:0;">
+      <p style="color:white;font-weight:900;cursor:default; font-size:2em; text-align:center;margin-top:0;">
         The ultimate bloxd.io modded client</p>
     </div>
     <br><br><br>
-      <iframe hidden src="https://discord.com/widget?id=1169057153861038101&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+    <iframe hidden src="https://discord.com/widget?id=1169057153861038101&theme=dark" width="350" height="500"
+      allowtransparency="true" frameborder="0"
+      sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
     <div class="w3-row">
-   
-        </div>
-      <div >
-     
-   
-      <div class="boxedt1 w3-col m6 l6 s12" >
+
+    </div>
+    <div>
+
+
+      <div class="boxedt1 w3-col m6 l6 s12">
         <h2>Why use it?</h2>
-        <p>Divra client has been made for bloxd.io by and for YouTubers. It has fetures no other client has. Even better, all fetures are free! There is no pay for extra fetures. All promised fetures will be given to you for free! We belive in free software for those who want or need it!</p>
+        <p>Divra client has been made for bloxd.io by and for YouTubers. It has fetures no other client has. Even
+          better, all fetures are free! There is no pay for extra fetures. All promised fetures will be given to you for
+          free! We belive in free software for those who want or need it!</p>
 
       </div>
-      <div class="boxedt1 w3-col m6 l6 s12" >
+      <div class="boxedt1 w3-col m6 l6 s12">
         <h2>How to use it?</h2>
-        <p>Divra Client is currently in beta development. Free beta testing is avaliable in our Discord server! Divra Client is a Browser Extention. Beta testing <span id="yesnobrowser">is avaliable for Edge, Opera, and Chrome!</span></p> <p>Your browser is <span id="watbrowser"></span>. </p>
+        <p>Divra Client is currently in beta development. Free beta testing is avaliable in our Discord server! Divra
+          Client is a Browser Extention. Beta testing <span id="yesnobrowser">is avaliable for Edge, Opera, and
+            Chrome!</span></p>
+        <p>Your browser is <span id="watbrowser"></span>. </p>
       </div>
-   
-  </div>
-  <br>
-  <footer></footer>
-<script>
-  var broshow = document.getElementById("watbrowser");
-  const getBrowserName = () => {
+
+    </div>
+    <br>
+    <footer></footer>
+    <script>
+      var broshow = document.getElementById("watbrowser");
+      const getBrowserName = () => {
         let browserInfo = navigator.userAgent;
         let browser;
         if (browserInfo.includes('Opera') || browserInfo.includes('OPR')) {
-          if(browserInfo.includes('Safari')){
-            browser="Opera";
+          if (browserInfo.includes('Safari')) {
+            browser = "Opera";
           }
         } else if (browserInfo.includes('Edg')) {
           browser = 'Edge';
-        } else if (browserInfo.includes('Chrome')) { 
-          if(browserInfo.includes('Opr')==false){
-            browser="Chrome";
+        } else if (browserInfo.includes('Chrome')) {
+          if (browserInfo.includes('Opr') == false) {
+            browser = "Chrome";
           }
         } else if (browserInfo.includes('Safari')) {
           browser = 'Safari';
@@ -132,7 +138,7 @@ font-size:14px;
         } else {
           browser = 'either Internet Explorer, or a browser we\'ve never seen before';
         }
-          return browser;
+        return browser;
       }
       document.addEventListener("DOMContentLoaded", function () {
 
@@ -140,24 +146,24 @@ font-size:14px;
         broshow.innerHTML = `${browserName}`;
         console.log(browserName);
       });
-function forever(){
-      if(window.innerWidth>600){
-        document.getElementsByClassName("boxedt1")[1].style.borderLeftColor= 'rgb(255, 255, 255)';
-        document.getElementsByClassName("boxedt1")[1].style.borderLeftStyle= 'solid';
-        document.getElementsByClassName("boxedt1")[0].style.borderRightColor= 'rgb(255, 255, 255)';
-        document.getElementsByClassName("boxedt1")[0].style.borderRightStyle= 'solid';
-      }else{
-      document.getElementsByClassName("boxedt1")[1].style.borderLeftColor= 'rgb(255, 255, 255)';
-      document.getElementsByClassName("boxedt1")[1].style.borderLeftStyle= 'none';
-      document.getElementsByClassName("boxedt1")[0].style.borderRightColor= 'rgb(255, 255, 255)';
-      document.getElementsByClassName("boxedt1")[0].style.borderRightStyle= 'none';
-   
-      }
-    }
-    forever();
-    setInterval(forever,100);
+      function forever() {
+        if (window.innerWidth > 600) {
+          document.getElementsByClassName("boxedt1")[1].style.borderLeftColor = 'rgb(255, 255, 255)';
+          document.getElementsByClassName("boxedt1")[1].style.borderLeftStyle = 'solid';
+          document.getElementsByClassName("boxedt1")[0].style.borderRightColor = 'rgb(255, 255, 255)';
+          document.getElementsByClassName("boxedt1")[0].style.borderRightStyle = 'solid';
+        } else {
+          document.getElementsByClassName("boxedt1")[1].style.borderLeftColor = 'rgb(255, 255, 255)';
+          document.getElementsByClassName("boxedt1")[1].style.borderLeftStyle = 'none';
+          document.getElementsByClassName("boxedt1")[0].style.borderRightColor = 'rgb(255, 255, 255)';
+          document.getElementsByClassName("boxedt1")[0].style.borderRightStyle = 'none';
 
-</script>
+        }
+      }
+      forever();
+      setInterval(forever, 100);
+
+    </script>
   </body>
 
   </html>
