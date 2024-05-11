@@ -19,6 +19,12 @@ function upper() {
   opening.style.zIndex = "6000000000";
   opening.className = "FullyFancyText";
   document.body.appendChild(opening);
+  var Name = document.createElement("div");
+
+  opening.appendChild(Name);
+  Name.style.position = "fixed";
+  Name.style.right = "5px";
+  Name.style.top = "5px";
   opening.style.backgroundColor = "#3d4b79";
   var o1 = document.createElement("h1");
   o1.innerHTML = "Bloxd.io";
@@ -349,15 +355,7 @@ function body() {
   });
   document.getElementById("root").appendChild(divra);
 
-  //icon changes
-  /* document.getElementsByTagName("link")[2].href="https://i.imgur.com/uMvDbDr.png";
-document.getElementsByTagName("link")[2].sizes="512x512";
-document.getElementsByTagName("link")[1].href="https://i.imgur.com/uMvDbDr.png";
-document.getElementsByTagName("link")[1].sizes="512x512";
-document.getElementsByTagName("link")[0].href="https://i.imgur.com/uMvDbDr.png";
-document.getElementsByTagName("link")[0].sizes="512x512";*/
-  //document.getElementsByTagName("script")[1].remove();
-  //KEY DOWN
+
   var divraSB;
   var keysElement = document.createElement("div");
 
@@ -739,6 +737,10 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
 
           document.getElementById("noa-canvas").style.imageRendering = "pixelated";
 
+        } else if (localStorage.getItem("PBOF") == "N") {
+
+          document.getElementById("noa-canvas").style.imageRendering = "auto";
+
         }
 
         document.body.addEventListener("keyup", gamekeyup);
@@ -747,8 +749,8 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
         customizeThumb.style.zIndex = "0";
         gbs.remove();
         divraButts.style.display = "none";
-        document.querySelector(".CrossHair").style.width = localStorage.getItem("crosswidth") + 'em';
-        document.querySelector(".CrossHair").style.height = localStorage.getItem("crosswidth") + "em";
+        document.querySelector(".CrossHair").style.width = localStorage.getItem("crosswidth") + 'px';
+        document.querySelector(".CrossHair").style.height = localStorage.getItem("crosswidth") + "px";
 
         setInterval(croz, 1500);
       }
@@ -872,9 +874,9 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
         document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://cdn.discordapp.com/attachments/1193362300745285713/1193362645571612762/crosshair.png?ex=65ac7092&is=6599fb92&hm=64ba4263fb1c1cfa3ea1e554d0a3acb9a67104ccc2a44f06a06fb2107daeb445&)';
         document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
         document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "https://i.imgur.com/arYc1V6.png") {
+      } else if (changeCrosshair.value == "https://i.ibb.co/n8pFY3b/arYc1V6.png") {
         document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/arYc1V6.png)';
+        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.ibb.co/n8pFY3b/arYc1V6.png)';
         document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
         document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
       } else if (changeCrosshair.value == "https://i.imgur.com/OwwsiPH.png") {
@@ -1150,7 +1152,7 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
   var p4 = document.createElement("option");
   Cross(p4, "Pro Crosshair 4", "https://i.imgur.com/OwwsiPH.png");
   var p5 = document.createElement("option");
-  Cross(p5, "Pro Crosshair 5", "https://i.imgur.com/arYc1V6.png");
+  Cross(p5, "Pro Crosshair 5", "https://i.ibb.co/n8pFY3b/arYc1V6.png");
   var p6 = document.createElement("option");
   Cross(p6, "Pro Crosshair 6", "https://i.imgur.com/J6BMKcj.png");
   var Blxm = document.createElement("option");
@@ -1158,7 +1160,7 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
   Blxm.disabled = true;
 
 
-
+console.log("DivraClientisthebest");
 
   changeCrosshair.addEventListener("mouseover", () => {
     changeCrosshair.style.transform = "scale(1.1)";
@@ -1743,6 +1745,15 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
   console.log(wea);
   var thumbnailwrap = document.createElement("div");
 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ //Divra Settings
   customizeThumb.addEventListener("click", () => {
     var gbs = document.createElement("div");
     dseb = 1;
@@ -1801,7 +1812,7 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
 
     selection.title = "i was 2 lazy to make a proper menu lol";
     selection.className = "SmallTextLight NewButton BlueButton";
-    console.log(localStorage.getItem("DASFB"));
+    console.log(localStorage.getItem("DASFB")+" = "+ selection.value);
     selection.value = localStorage.getItem("DASFB");
     var sel1 = document.createElement("option");
 
@@ -1890,6 +1901,19 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
       ais.style.display = "none";
     }
     css4ds(abis);
+    var CrosshairAndYTSettings = document.createElement("div");
+    thumMenu.appendChild(CrosshairAndYTSettings);
+    css4ds(CrosshairAndYTSettings);
+    var Crosshair_Width = document.createElement("input");
+    Crosshair_Width.type="range";
+    Crosshair_Width.max="30";
+    Crosshair_Width.min="10";
+    Crosshair_Width.id="Cri";
+    var l4Crosshair_Width = document.createElement("label");
+    l4Crosshair_Width.htmlFor = "Cri";
+    l4Crosshair_Width.innerHTML="Crosshair Size";
+    CrosshairAndYTSettings.appendChild(l4Crosshair_Width);
+    CrosshairAndYTSettings.appendChild(Crosshair_Width);
     var PixelatedBloxdOnOff = document.createElement("input");
     PixelatedBloxdOnOff.type = "checkbox";
     PixelatedBloxdOnOff.style.fontSize = "34px";
@@ -1928,20 +1952,48 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
     }
     s2b2.addEventListener("click", () => {
       //something
+      if (s2b2.checked == true) {
+
+        localStorage.setItem("s2b2", "Y");
+      } else if (s2b2.checked == false) {
+        localStorage.getItem("s2b2", "N");
+      }
 
     });
     s2b2.style.transform = "scale(2)";
-    s2l2.value = "On";
+
     s2l2.innerHTML = "aPrIl &#129315; FoOlS &#129315; mOdE &#129315; ";
     s2b2.style.cursor = "pointer";
     PixelatedBloxdOnOff.style.verticalAlign = "middle";
     PixelatedBloxdOnOff.style.lineHeight = "1.75px";
     s2l2.style.lineHeight = "1.75px";
-
-    PixelatedBloxdOnOff.value = "On";
+    console.log(localStorage.getItem("PBOF"));
+    console.log(localStorage.getItem("PBOF"));
+    if (localStorage.getItem("PBOF") == null || localStorage.getItem("PBOF") == undefined) {
+      localStorage.setItem("PBOF", "N");
+      console.log(localStorage.getItem("PBOF"));
+      console.log(localStorage.getItem("PBOF"));
+      console.log(localStorage.getItem("PBOF"));
+    }
+    if (localStorage.getItem("PBOF") == "Y") {
+      PixelatedBloxdOnOff.checked = true;
+      console.log(localStorage.getItem("PBOF"));
+      console.log(localStorage.getItem("PBOF"));
+      console.log(localStorage.getItem("PBOF"));
+    } else if (localStorage.getItem("PBOF") == "N") {
+      console.log(localStorage.getItem("PBOF"));
+      PixelatedBloxdOnOff.checked = false;
+      console.log(localStorage.getItem("PBOF"));
+      console.log(localStorage.getItem("PBOF"));
+    }
     PixelatedBloxdOnOff.addEventListener("click", () => {
-      console.log(PixelatedBloxdOnOff.value);
-      console.log(PixelatedBloxdOnOff.checked);
+      console.log(localStorage.getItem("PBOF"));
+      console.log(localStorage.getItem("PBOF"));
+      console.log(localStorage.getItem("PBOF"));
+
+      console.log(localStorage.getItem("PBOF"));
+
+      console.log(localStorage.getItem("PBOF"));
       if (PixelatedBloxdOnOff.checked == false) {
         console.log(document.getElementById("noa-canvas"));
         if (document.getElementById("noa-canvas") != null) {
@@ -1949,8 +2001,7 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
           console.log(document.getElementById("noa-canvas").style.imageRendering + " Image rendering of the noa");
         }
         localStorage.setItem("PBOF", "N");
-        console.log("PBOF LS = " + localStorage.getItem("PBOF"));
-        console.log("PBOF R LS =" + PixelatedBloxdOnOff.checked);
+      
 
       } else {
         localStorage.setItem("PBOF", "Y");
@@ -1960,27 +2011,12 @@ document.getElementsByTagName("link")[0].sizes="512x512";*/
           document.getElementById("noa-canvas").style.imageRendering = "pixelated";
 
         }
-        console.log("PBOF R LS =" + PixelatedBloxdOnOff.checked);
+      
+
       }
     });
-    PBOF.addEventListener("click", PixelatedBloxdOnOff.click());
-    if (PixelatedBloxdOnOff.checked == false) {
-      localStorage.setItem("PBOF", "N");
-      console.log("PBOF LS = " + localStorage.getItem("PBOF"));
-      console.log("PBOF R LS =" + PixelatedBloxdOnOff.checked);
-    } else {
-      localStorage.setItem("PBOF", "Y");
-      console.log("PBOF LS = " + localStorage.getItem("PBOF"));
-      console.log("PBOF R LS =" + PixelatedBloxdOnOff.checked);
-    }
-    if (localStorage.getItem("PBOF") == null || localStorage.getItem("PBOF") == undefined) {
-      localStorage.setItem("PBOF", "N");
-    }
-    if (localStorage.getItem("PBOF") == "Y") {
-      PixelatedBloxdOnOff.checked = true;
-    } else if (localStorage.getItem("PBOF") == "N") {
-      PixelatedBloxdOnOff.checked = false;
-    }
+   
+
     PBOF.style.marginRight = "10px";
     PBOF.style.marginLeft = "10px";
     PBOF.style.lineHeight = "1.75px";
