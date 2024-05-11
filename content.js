@@ -7,6 +7,9 @@ document.querySelector("#root > div.WholeAppWrapper > div > div.HomeScreenBottom
     document.getElementsByClassName(".PartnersAndCreditsWrapper").style.zIndex = "10";
   }
 });
+function print(helloworld){
+  console.log(helloworld);
+}
 //var infirior = document.querySelector("#root");
 //cssnew.insertAdjacentElement("beforebegin", infirior);
 function upper() {
@@ -718,14 +721,9 @@ function body() {
     localStorage.setItem("Crosshair", changeCrosshair.value);
     console.log(localStorage.getItem("Crosshair") + " lcchvalue");
   });
-  if (localStorage.getItem("crosswidth") == null || localStorage.getItem("crosswidth") == undefined) {
-    console.log("crosshairwidth=undefinedawcrapnotagainihatewhenthishappens");
-    localStorage.setItem("crosswidth", "1");
-  }
+ 
   console.log("code up to line number 653 has no issues");
   function makeCh() {
-
-    if (document.querySelector(".CrossHair")) {
 
 
       if (document.getElementsByClassName("CrossHair")[0].innerHTML == "+") {
@@ -742,6 +740,12 @@ function body() {
           document.getElementById("noa-canvas").style.imageRendering = "auto";
 
         }
+
+    if (document.querySelector(".CrossHair")) {
+      if (localStorage.getItem("crosswidth") == null || localStorage.getItem("crosswidth") == undefined) {
+        console.log("crosshairwidth=undefinedawcrapnotagainihatewhenthishappens");
+        localStorage.setItem("crosswidth", "16");
+      }
 
         document.body.addEventListener("keyup", gamekeyup);
 
