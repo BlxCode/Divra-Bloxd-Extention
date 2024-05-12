@@ -714,7 +714,10 @@ function body() {
 
   }
 
-
+  if (localStorage.getItem("crosswidth") == null || localStorage.getItem("crosswidth") == undefined) {
+    console.log("crosshairwidth=undefinedawcrapnotagainihatewhenthishappens");
+    localStorage.setItem("crosswidth", "16");
+  }
 
   console.log(lS + " localstoragecrosshairvalue");
   changeCrosshair.addEventListener("change", () => {
@@ -1759,6 +1762,7 @@ console.log("DivraClientisthebest");
  
  //Divra Settings
   customizeThumb.addEventListener("click", () => {
+  
     var gbs = document.createElement("div");
     dseb = 1;
     gbs.id = "aas1";
@@ -1905,9 +1909,9 @@ console.log("DivraClientisthebest");
       ais.style.display = "none";
     }
     css4ds(abis);
-    var CrosshairAndYTSettings = document.createElement("div");
-    thumMenu.appendChild(CrosshairAndYTSettings);
-    css4ds(CrosshairAndYTSettings);
+    var CrosshairAndHTBSettings = document.createElement("div");
+    thumMenu.appendChild(CrosshairAndHTBSettings);
+    css4ds(CrosshairAndHTBSettings);
     var Crosshair_Width = document.createElement("input");
     Crosshair_Width.type="range";
     Crosshair_Width.max="30";
@@ -1916,8 +1920,8 @@ console.log("DivraClientisthebest");
     var l4Crosshair_Width = document.createElement("label");
     l4Crosshair_Width.htmlFor = "Cri";
     l4Crosshair_Width.innerHTML="Crosshair Size";
-    CrosshairAndYTSettings.appendChild(l4Crosshair_Width);
-    CrosshairAndYTSettings.appendChild(Crosshair_Width);
+    CrosshairAndHTBSettings.appendChild(l4Crosshair_Width);
+    CrosshairAndHTBSettings.appendChild(Crosshair_Width);
     var PixelatedBloxdOnOff = document.createElement("input");
     PixelatedBloxdOnOff.type = "checkbox";
     PixelatedBloxdOnOff.style.fontSize = "34px";
@@ -1973,6 +1977,7 @@ console.log("DivraClientisthebest");
     s2l2.style.lineHeight = "1.75px";
     console.log(localStorage.getItem("PBOF"));
     console.log(localStorage.getItem("PBOF"));
+   
     if (localStorage.getItem("PBOF") == null || localStorage.getItem("PBOF") == undefined) {
       localStorage.setItem("PBOF", "N");
       console.log(localStorage.getItem("PBOF"));
@@ -1990,6 +1995,8 @@ console.log("DivraClientisthebest");
       console.log(localStorage.getItem("PBOF"));
       console.log(localStorage.getItem("PBOF"));
     }
+  
+    
     PixelatedBloxdOnOff.addEventListener("click", () => {
       console.log(localStorage.getItem("PBOF"));
       console.log(localStorage.getItem("PBOF"));
@@ -2030,13 +2037,27 @@ console.log("DivraClientisthebest");
       localStorage.setItem("DASFB", selection.value);
 
       thumbnailwrap.hidden;
+
+     
+
+
+
       thumbnail1.hidden;
+
+
+      //Add/Remove Settings
       if (selection.value == "Gamemode Thumbnails 🖼") {
         thumbnailwrap.style.display = "block";
         abis.style.display = "none";
+        CrosshairAndHTBSettings.style.display="none";
       } else if (selection.value == "Advanced Bloxd.io Settings ⚙") {
         abis.style.display = "block";
         thumbnailwrap.style.display = "none";
+        CrosshairAndHTBSettings.style.display="none";
+      } else if(selection.value=="Crosshair & Hotbar Settings ⚙"){
+        abis.style.display = "none";
+        thumbnailwrap.style.display = "none";
+        CrosshairAndHTBSettings.style.display="block";
       }
     });
     selection.style.color = "white";
