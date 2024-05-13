@@ -24,10 +24,13 @@ function upper() {
   document.body.appendChild(opening);
   var Name = document.createElement("div");
 
+
+
   opening.appendChild(Name);
   Name.style.position = "fixed";
   Name.style.right = "5px";
   Name.style.top = "5px";
+
   opening.style.backgroundColor = "#3d4b79";
   var o1 = document.createElement("h1");
   o1.innerHTML = "Bloxd.io";
@@ -744,10 +747,12 @@ function body() {
 
       }
 
+
       if (document.querySelector(".CrossHair")) {
         if (localStorage.getItem("crosswidth") == null || localStorage.getItem("crosswidth") == undefined) {
           console.log("crosshairwidth=undefinedawcrapnotagainihatewhenthishappens");
           localStorage.setItem("crosswidth", "16");
+
         }
 
         document.body.addEventListener("keyup", gamekeyup);
@@ -1998,6 +2003,7 @@ function body() {
       console.log(localStorage.getItem("PBOF"));
       console.log(localStorage.getItem("PBOF"));
     }
+
 
 
     PixelatedBloxdOnOff.addEventListener("click", () => {
