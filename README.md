@@ -1,7 +1,7 @@
 # Divra-Bloxd-Extention
 13.04.2024
 ## Website Repository
-github.com/BlxCode/Divra-Bloxd-Website
+https://github.com/BlxCode/Divra-Bloxd-Website
 ## Overview
 Divra Bloxd Extention will be an upcoming extension for bloxd.io. It will replace Divra Bloxd Userscript and will have similar features too. 
 What was Divra Bloxd Userscript
