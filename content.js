@@ -192,13 +192,7 @@ function upper() {
 
 }
 function body() {
-  function croz() {
-    if (document.getElementsByClassName("RespawnButton")[0] != null) {
-      makeCh();
-    } else {
-      console.log('could not find the thing');
-    }
-  }
+
 
   var mch;
   var cps = 0;
@@ -512,12 +506,7 @@ function body() {
           divraSB.style.display="none";
           document.getElementsByClassName("SettingsCategoriesList")[0].appendChild(divraSB);
          */
-      if (document.getElementsByClassName("SettingsExitButton")[0] != null) {
-        document.getElementsByClassName("SettingsExitButton")[0].addEventListener("click", () => {
 
-          mch = setInterval(makeCh, 1600);
-        });
-      }
       if (document.querySelector("#root > div.WholeAppWrapper > div > div.GameBackgroundScreen > div > div.SettingsMenuLeft.SmallTextBold > div.SettingsCategoriesList > div.SettingsSectionTitle.ActiveSettingsSectionTitle") != null) {
         document.querySelector("#root > div.WholeAppWrapper > div > div.GameBackgroundScreen > div > div.SettingsMenuLeft.SmallTextBold > div.SettingsCategoriesList > div.SettingsSectionTitle.ActiveSettingsSectionTitle").addEventListener("click", () => {
           document.querySelector("#root > div.WholeAppWrapper > div > div.GameBackgroundScreen > div > div.SettingsMenuRight > div.SettingsTextDiv > div > i").addEventListener("mouseover", () => {
@@ -717,6 +706,8 @@ function body() {
   if (localStorage.getItem("crosswidth") == null || localStorage.getItem("crosswidth") == undefined) {
     console.log("crosshairwidth=undefinedawcrapnotagainihatewhenthishappens");
     localStorage.setItem("crosswidth", "16");
+  }else if(localStorage.getItem("crosswidth")<10||localStorage.getItem("crosswidth")>30){
+    localStorage.setItem("crosswidth","16");
   }
 
   console.log(lS + " localstoragecrosshairvalue");
@@ -730,6 +721,16 @@ function body() {
 
 
     if (document.getElementsByClassName("CrossHair")[0] != null) {
+  var poweredbydivra=document.createElement("p");
+  poweredbydivra.innerHTML="Powered by Divra Client";
+  poweredbydivra.style.fontSize="10px";
+  poweredbydivra.style.position="fixed";
+  poweredbydivra.style.textAlign="center";
+  poweredbydivra.style.zIndex="10";
+  poweredbydivra.style.top="0px";
+  poweredbydivra.style.marginLeft="50%";
+  poweredbydivra.style.marginRight="50%";
+  document.getElementById("root").appendChild(poweredbydivra);
       document.body.removeEventListener("keyup", okeyup);
       if (document.getElementById("noa-canvas")) {
         document.getElementById("noa-canvas").style.imageRendering = "auto";
@@ -748,20 +749,24 @@ function body() {
         if (localStorage.getItem("crosswidth") == null || localStorage.getItem("crosswidth") == undefined) {
           console.log("crosshairwidth=undefinedawcrapnotagainihatewhenthishappens");
           localStorage.setItem("crosswidth", "16");
+        }else if(localStorage.getItem("crosswidth")<10||localStorage.getItem("crosswidth")>30){
+          localStorage.setItem("crosswidth","16");
         }
+      
 
         document.body.addEventListener("keyup", gamekeyup);
 
         clearInterval(mch);
+        console.log(mch);
+        console.log("If this is here, then it's still running and ur computer will lag mroe");
         customizeThumb.style.zIndex = "0";
         gbs.remove();
         divraButts.style.display = "none";
         document.querySelector(".CrossHair").style.width = localStorage.getItem("crosswidth") + 'px';
         document.querySelector(".CrossHair").style.height = localStorage.getItem("crosswidth") + "px";
-
+        console.log(localStorage.getItem("crosswidth"));
         console.log(document.querySelector(".CrossHair").style.height);
-        console.log(document.querySelector(".CrossHair").style.width);
-        setInterval(croz, 1500);
+        console.log(document.querySelector(".CrossHair").style.widtth);
       }
 
 
@@ -1787,6 +1792,7 @@ function body() {
       bads.remove();
       thumbnail1.remove();
       abis.remove();
+      CrosshairAndHTBSettings.remove();
     });
     var scriptcode = document.createElement("script");
     scriptcode.id = "scriptcodedivra";
@@ -2042,7 +2048,8 @@ function body() {
       thumbnailwrap.hidden;
 
 
-
+Crosshair_Width.hidden;
+CrosshairAndHTBSettings.hidden;
 
 
       thumbnail1.hidden;
@@ -2117,7 +2124,7 @@ function body() {
   }
   // setInterval(autoRESPAWN,6001);
 
-  mch = setInterval(makeCh, 1500);
+  mch = setInterval(makeCh, 3500);
 
   function attheendofthecodeyouwillalwaysmakeafunctionsnamethatissolongucantcomprehendandobviouslyyouneednospacesanduhav2spelletwromg() {
     changeCrosshair.value = String(localStorage.getItem("Crosshair"));

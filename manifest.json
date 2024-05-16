@@ -11,7 +11,8 @@
     "default_icon": "Images/hello_extensions.png"
   },
   "optional_permissions": [
-    "desktopCapture"
+    "desktopCapture",
+    "contextMenus"
   ],
   "icons": {
     "16": "Images/16.png",
