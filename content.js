@@ -724,6 +724,8 @@ function body() {
       var poweredbydivra = document.createElement("p");
       poweredbydivra.innerHTML = "Powered by Divra Client";
       poweredbydivra.style.fontSize = "10px";
+      poweredbydivra.className="SmallTextLight";
+      poweredbydivra.width="100px";
       poweredbydivra.style.position = "fixed";
       poweredbydivra.style.textAlign = "center";
       poweredbydivra.style.zIndex = "10";
