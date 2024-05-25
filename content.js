@@ -225,6 +225,7 @@ function body() {
 
   console.log("Loading Divra Client...");
   var divra = document.createElement("div");
+  divra.style.display="block";
   var divraRMB = document.createElement("p");
   var divraLMB = document.createElement("p");
   divra.innerHTML = "";
