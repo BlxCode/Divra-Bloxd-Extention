@@ -706,8 +706,8 @@ function body() {
   if (localStorage.getItem("crosswidth") == null || localStorage.getItem("crosswidth") == undefined) {
     console.log("crosshairwidth=undefinedawcrapnotagainihatewhenthishappens");
     localStorage.setItem("crosswidth", "16");
-  }else if(localStorage.getItem("crosswidth")<10||localStorage.getItem("crosswidth")>30){
-    localStorage.setItem("crosswidth","16");
+  } else if (localStorage.getItem("crosswidth") < 10 || localStorage.getItem("crosswidth") > 30) {
+    localStorage.setItem("crosswidth", "16");
   }
 
   console.log(lS + " localstoragecrosshairvalue");
@@ -721,16 +721,16 @@ function body() {
 
 
     if (document.getElementsByClassName("CrossHair")[0] != null) {
-  var poweredbydivra=document.createElement("p");
-  poweredbydivra.innerHTML="Powered by Divra Client";
-  poweredbydivra.style.fontSize="10px";
-  poweredbydivra.style.position="fixed";
-  poweredbydivra.style.textAlign="center";
-  poweredbydivra.style.zIndex="10";
-  poweredbydivra.style.top="0px";
-  poweredbydivra.style.marginLeft="50%";
-  poweredbydivra.style.marginRight="50%";
-  document.getElementById("root").appendChild(poweredbydivra);
+      var poweredbydivra = document.createElement("p");
+      poweredbydivra.innerHTML = "Powered by Divra Client";
+      poweredbydivra.style.fontSize = "10px";
+      poweredbydivra.style.position = "fixed";
+      poweredbydivra.style.textAlign = "center";
+      poweredbydivra.style.zIndex = "10";
+      poweredbydivra.style.top = "0px";
+      poweredbydivra.style.marginLeft = "50%";
+      poweredbydivra.style.marginRight = "50%";
+      document.getElementById("root").appendChild(poweredbydivra);
       document.body.removeEventListener("keyup", okeyup);
       if (document.getElementById("noa-canvas")) {
         document.getElementById("noa-canvas").style.imageRendering = "auto";
@@ -749,10 +749,10 @@ function body() {
         if (localStorage.getItem("crosswidth") == null || localStorage.getItem("crosswidth") == undefined) {
           console.log("crosshairwidth=undefinedawcrapnotagainihatewhenthishappens");
           localStorage.setItem("crosswidth", "16");
-        }else if(localStorage.getItem("crosswidth")<10||localStorage.getItem("crosswidth")>30){
-          localStorage.setItem("crosswidth","16");
+        } else if (localStorage.getItem("crosswidth") < 10 || localStorage.getItem("crosswidth") > 30) {
+          localStorage.setItem("crosswidth", "16");
         }
-      
+
 
         document.body.addEventListener("keyup", gamekeyup);
 
@@ -2048,8 +2048,8 @@ function body() {
       thumbnailwrap.hidden;
 
 
-Crosshair_Width.hidden;
-CrosshairAndHTBSettings.hidden;
+      Crosshair_Width.hidden;
+      CrosshairAndHTBSettings.hidden;
 
 
       thumbnail1.hidden;
