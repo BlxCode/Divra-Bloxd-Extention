@@ -218,7 +218,7 @@ function body() {
   divraButts.id = "divraButtons";
   divraButts.title = "Divra Buttons";
 
-  document.getElementsByClassName("Title")[0].innerHTML = "<img src='https://i.ibb.co/ctsSZmr/favicon.png' alt='bloxd.io logo' title='this is the official logo for bloxd btw' style='  image-rendering: pixelated; width:5%; height:5%;'>Divra for Bloxd";
+  document.getElementsByClassName("Title")[0].innerHTML = "Bloxd";
   document.getElementsByClassName("Title")[0].title = "Divra btw the name was chosen because of randomosy and my knowlage of code.";
   // document.getElementsByClassName("Background")[0].src = "https://cdn.discordapp.com/attachments/1200293652258377759/1200293652719734784/20240126_094706_0000.png?ex=65c5a793&is=65b33293&hm=ba5bca862b9222a2651defc771449024d52fdf2a045b4bfb2f66b17390f5e432&";
 
