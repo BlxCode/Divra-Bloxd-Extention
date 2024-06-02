@@ -13,7 +13,7 @@ To help players play
 Divra Userscipt will be the backbone for Divra Extention. All of Divra Userscript’s features will be in Divra Extention. Custom Crosshairs, Custom Hotbars, Live Sub Counts (no one has done that before), Home screen changes, etc.
 ## Milestones for Divra Extension
 1. Update Version 1
-Get everything that currently lives in Divra Userscript to Divra Extension.
+Get everything that currently lives in Divra Userscript to Divra Extension. ✅
 2. Update Version 2
 Get all promised features in Divra Userscript to be in Divra Extensions.
 3. Update Version 3
