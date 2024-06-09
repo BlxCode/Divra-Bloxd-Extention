@@ -1946,7 +1946,11 @@ if( document.getElementsByClassName("CrossHair")[0].innerHTML != ""){
     asmr.style.marginTop = "10px";
     asmr.id = "asmr";
     var asmrLab = document.createElement("label");
-    asmrLab.innerHTML="Asmr stuff" 
+    asmrLab.innerHTML="Asmr stuff";
+    asmrLab.htmlFor="asmr";
+    CrosshairAndHTBSettings.appendChild(asmr);
+    CrosshairAndHTBSettings.appendChild(asmrLab);
+    
     var PixelatedBloxdOnOff = document.createElement("input");
     PixelatedBloxdOnOff.type = "checkbox";
     PixelatedBloxdOnOff.style.fontSize = "34px";
