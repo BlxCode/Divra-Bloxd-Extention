@@ -919,6 +919,9 @@ function body() {
 
 
   function gamekeyup(eventis) {
+if( document.getElementsByClassName("CrossHair")[0].innerHTML != ""){
+  makeCh();
+}
     console.log(document.getElementsByClassName("ChatInput")[0].value);
     if (document.getElementsByClassName("ChatInput")[0].value == "") {
       console.log("gkuac");
@@ -1846,11 +1849,9 @@ function body() {
     sel1.selected = true;
     sel1.value = "";
     var sel2 = document.createElement("option");
-    selo(sel2, "Crosshair & Hotbar Settings ⚙");
+    selo(sel2, "Hotbar & Miscilanious Settings ⚙");
     var sel3 = document.createElement("option");
-    selo(sel3, "Keystrokes & Youtuber Settings ⚙");
-    var sel4 = document.createElement("option");
-    selo(sel4, "Advanced Divra Settings ⚙");
+    selo(sel3, "Keystrokes & Crosshair Settings ⚙");
     var sel5 = document.createElement("option");
     var devmode = document.createElement("option");
     var thumbnal = document.createElement("option");
@@ -1934,6 +1935,18 @@ function body() {
     l4Crosshair_Width.innerHTML = "Crosshair Size";
     CrosshairAndHTBSettings.appendChild(l4Crosshair_Width);
     CrosshairAndHTBSettings.appendChild(Crosshair_Width);
+    Crosshair_Width.addEventListener("change",()=>{
+      localStorage.setItem('crosswidth',Crosshair_Width.value)
+    });
+    var asmr = document.createElement("input");
+    asmr.type="checkbox";
+    asmr.style.fontSize="34px";
+    asmr.style.cursor='pointer'
+    asmr.style.transform = "scale(2)";
+    asmr.style.marginTop = "10px";
+    asmr.id = "asmr";
+    var asmrLab = document.createElement("label");
+    asmrLab.innerHTML="Asmr stuff" 
     var PixelatedBloxdOnOff = document.createElement("input");
     PixelatedBloxdOnOff.type = "checkbox";
     PixelatedBloxdOnOff.style.fontSize = "34px";
@@ -2067,7 +2080,7 @@ function body() {
         abis.style.display = "block";
         thumbnailwrap.style.display = "none";
         CrosshairAndHTBSettings.style.display = "none";
-      } else if (selection.value == "Crosshair & Hotbar Settings ⚙") {
+      } else if (selection.value == "Keystrokes & Crosshair Settings ⚙") {
         abis.style.display = "none";
         thumbnailwrap.style.display = "none";
         CrosshairAndHTBSettings.style.display = "block";
