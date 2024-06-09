@@ -1952,7 +1952,10 @@ if( document.getElementsByClassName("CrossHair")[0].innerHTML != ""){
     CrosshairAndHTBSettings.appendChild(asmrLab);
     var audio1 = document.createElement("audio");
     var audio1info = document.createElement("source");
-    audio1info.src="https://divra.vercel.app/assets/mouse.mp3"
+    audio1info.src="https://divra.vercel.app/assets/mouse.mp3";
+    audio1.appendChild(audio1info);
+    document.body.appendChild(audio1);
+    
     var PixelatedBloxdOnOff = document.createElement("input");
     PixelatedBloxdOnOff.type = "checkbox";
     PixelatedBloxdOnOff.style.fontSize = "34px";
