@@ -1950,7 +1950,9 @@ if( document.getElementsByClassName("CrossHair")[0].innerHTML != ""){
     asmrLab.htmlFor="asmr";
     CrosshairAndHTBSettings.appendChild(asmr);
     CrosshairAndHTBSettings.appendChild(asmrLab);
-    
+    var audio1 = document.createElement("audio");
+    var audio1info = document.createElement("source");
+    audio1info.src="https://divra.vercel.app/assets/mouse.mp3"
     var PixelatedBloxdOnOff = document.createElement("input");
     PixelatedBloxdOnOff.type = "checkbox";
     PixelatedBloxdOnOff.style.fontSize = "34px";
