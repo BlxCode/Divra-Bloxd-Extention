@@ -919,6 +919,7 @@ function body() {
   var audio1 = document.createElement("audio");
   var audio1info = document.createElement("source");
   audio1info.src="https://divra.vercel.app/assets/key.mp3";
+  audio1info.volume="0.6";
   audio1.appendChild(audio1info);
   document.body.appendChild(audio1);
   var audio2 = document.createElement("audio");
@@ -1873,7 +1874,7 @@ if( document.getElementsByClassName("CrossHair")[0].innerHTML != ""){
     selo(thumbnal, "Gamemode Thumbnails 🖼");
     selo(devmode, 'Dev Mode 🧑‍💻<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>');
     selo(sel5, "Advanced Bloxd.io Settings ⚙");
-    sel4.hidden = true;
+ 
 
     var thumbnail1 = document.createElement("img");
     thumbnail1.src = "https://i.ibb.co/BsfGKYC/worlds.webp";
@@ -1951,7 +1952,11 @@ if( document.getElementsByClassName("CrossHair")[0].innerHTML != ""){
     CrosshairAndHTBSettings.appendChild(l4Crosshair_Width);
     CrosshairAndHTBSettings.appendChild(Crosshair_Width);
     Crosshair_Width.addEventListener("change",()=>{
-      localStorage.setItem('crosswidth',Crosshair_Width.value)
+      localStorage.setItem('crosswidth',Crosshair_Width.value);
+      if(document.getElementsByClassName("CrossHair")[0]!=null||document.getElementsByClassName("CrossHair")[0]!=undefined){
+        document.getElementsByClassName("CrossHair")[0].width = localStorage.getItem("crosswidth")+"px";
+        document.getElementsByClassName("CrossHair")[0].height = localStorage.getItem("crosswidth")+"px";
+      }
     });
     var asmr = document.createElement("input");
     asmr.type="checkbox";
