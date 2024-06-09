@@ -571,6 +571,7 @@ function body() {
   setInterval(stopCps, 1000);
 
   function moosedown(mouse) {
+    audio2.play();
     if (mouse.button == 0) {
       divraLMB.style.backgroundColor = "black";
     } else if (mouse.button == 2) {
