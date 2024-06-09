@@ -916,9 +916,24 @@ function body() {
     }
   }
   console.log("code up to line number 817 has no issues");
+  var audio1 = document.createElement("audio");
+  var audio1info = document.createElement("source");
+  audio1info.src="https://divra.vercel.app/assets/key.mp3";
+  audio1.appendChild(audio1info);
+  document.body.appendChild(audio1);
+  var audio2 = document.createElement("audio");
+  var audio2info = document.createElement("source");
+  audio2info.src="https://divra.vercel.app/assets/mouse.mp3";
+  audio2.appendChild(audio2info);
+  document.body.appendChild(audio2);
+  // ** Remember that audio 1 is for keyboard and audio 2 is for mouse
 
 
   function gamekeyup(eventis) {
+    if(localStorage.getItem("asmr")=="Y"){
+      audio1.play();
+    }
+    
 if( document.getElementsByClassName("CrossHair")[0].innerHTML != ""){
   makeCh();
 }
@@ -1949,18 +1964,22 @@ if( document.getElementsByClassName("CrossHair")[0].innerHTML != ""){
     asmrLab.innerHTML="Asmr stuff";
     asmrLab.htmlFor="asmr";
     CrosshairAndHTBSettings.appendChild(asmr);
+    asmr.addEventListener("click",()=>{
+if(asmr.checked==true){
+  localStorage.setItem("asmr","Y");
+
+}else{
+  localStorage.setItem("asmr","F");
+}
+    });
     CrosshairAndHTBSettings.appendChild(asmrLab);
-    var audio1 = document.createElement("audio");
-    var audio1info = document.createElement("source");
-    audio1info.src="https://divra.vercel.app/assets/key.mp3";
-    audio1.appendChild(audio1info);
-    document.body.appendChild(audio1);
-    var audio2 = document.createElement("audio");
-    var audio2info = document.createElement("source");
-    audio2info.src="https://divra.vercel.app/assets/key.mp3";
-    audio2.appendChild(audio2info);
-    document.body.appendChild(audio2);
-    
+   if(localStorage.getItem("asmr")=="Y"){
+    asmr.checked=true;
+   }else{
+    asmr.checked=false;
+   }
+
+
     var PixelatedBloxdOnOff = document.createElement("input");
     PixelatedBloxdOnOff.type = "checkbox";
     PixelatedBloxdOnOff.style.fontSize = "34px";
