@@ -1958,6 +1958,8 @@ if( document.getElementsByClassName("CrossHair")[0].innerHTML != ""){
         document.getElementsByClassName("CrossHair")[0].height = localStorage.getItem("crosswidth")+"px";
       }
     });
+    var br2 = document.createElement("br");
+    CrosshairAndHTBSettings.appendChild(br2);
     var asmr = document.createElement("input");
     asmr.type="checkbox";
     asmr.style.fontSize="34px";
