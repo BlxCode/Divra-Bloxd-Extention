@@ -10,6 +10,19 @@ document.querySelector("#root > div.WholeAppWrapper > div > div.HomeScreenBottom
 function print(helloworld) {
   console.log(helloworld);
 }
+var audio1 = document.createElement("audio");
+var audio1info = document.createElement("source");
+audio1info.src="https://divra.vercel.app/assets/key.mp3";
+audio1info.volume="0.6";
+audio1.appendChild(audio1info);
+document.body.appendChild(audio1);
+var audio2 = document.createElement("audio");
+var audio2info = document.createElement("source");
+audio2info.src="https://divra.vercel.app/assets/mouse.mp3";
+audio2.appendChild(audio2info);
+document.body.appendChild(audio2);
+// ** Remember that audio 1 is for keyboard and audio 2 is for mouse
+
 //var infirior = document.querySelector("#root");
 //cssnew.insertAdjacentElement("beforebegin", infirior);
 function upper() {
@@ -571,7 +584,9 @@ function body() {
   setInterval(stopCps, 1000);
 
   function moosedown(mouse) {
+    if(localStorage.getItem("asmr")=="Y"){
     audio2.play();
+    }
     if (mouse.button == 0) {
       divraLMB.style.backgroundColor = "black";
     } else if (mouse.button == 2) {
@@ -917,19 +932,7 @@ function body() {
     }
   }
   console.log("code up to line number 817 has no issues");
-  var audio1 = document.createElement("audio");
-  var audio1info = document.createElement("source");
-  audio1info.src="https://divra.vercel.app/assets/key.mp3";
-  audio1info.volume="0.6";
-  audio1.appendChild(audio1info);
-  document.body.appendChild(audio1);
-  var audio2 = document.createElement("audio");
-  var audio2info = document.createElement("source");
-  audio2info.src="https://divra.vercel.app/assets/mouse.mp3";
-  audio2.appendChild(audio2info);
-  document.body.appendChild(audio2);
-  // ** Remember that audio 1 is for keyboard and audio 2 is for mouse
-
+ 
 
   function gamekeyup(eventis) {
     if(localStorage.getItem("asmr")=="Y"){
