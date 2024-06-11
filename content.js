@@ -396,6 +396,10 @@ function body() {
 
 
   function keydown(eventis) {
+    if(localStorage.getItem("asmr")=="Y"){
+      audio12.play();
+    }
+    
     console.log(eventis);
 
     let ksey = eventis.key;
@@ -444,7 +448,10 @@ function body() {
   console.log("code up to line number 375 has no issues");
   function okeyup(eventis) {
     let ksey = eventis.key;
-
+    if(localStorage.getItem("asmr")=="Y"){
+      audio1.play();
+    }
+    
     console.log(eventis + "okeyup");
     if (ksey == "x" || ksey == "X") {
 
@@ -598,7 +605,7 @@ function body() {
 
   function moosedown(mouse) {
     if(localStorage.getItem("asmr")=="Y"){
-    audio2.play();
+    audio22.play();
     }
     if (mouse.button == 0) {
       divraLMB.style.backgroundColor = "black";
@@ -610,6 +617,10 @@ function body() {
   document.body.addEventListener("mouseup", mooseup);
   document.body.addEventListener("mousedown", moosedown);
   function mooseup(moose) {
+    if(localStorage.getItem("asmr")=="Y"){
+      audio2.play();
+    }
+    
     if (moose.button == 0) {
 
       divraLMB.style.background = "none";
