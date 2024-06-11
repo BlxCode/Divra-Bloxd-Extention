@@ -10,16 +10,29 @@ document.querySelector("#root > div.WholeAppWrapper > div > div.HomeScreenBottom
 function print(helloworld) {
   console.log(helloworld);
 }
+
 var audio1 = document.createElement("audio");
 var audio1info = document.createElement("source");
-audio1info.src="https://divra.vercel.app/assets/key.mp3";
-audio1info.volume="0.6";
+audio1info.src="https://divra.vercel.app/assets/keyUp.mp3";
+
 audio1.appendChild(audio1info);
+
+
+var audio12 = document.createElement("audio");
+var audio12info = document.createElement("source");
+audio12info.src="https://divra.vercel.app/assets/keydown.mp3";
+
+audio12.appendChild(audio12info);
 document.body.appendChild(audio1);
 var audio2 = document.createElement("audio");
 var audio2info = document.createElement("source");
-audio2info.src="https://divra.vercel.app/assets/mouse.mp3";
+audio2info.src="https://divra.vercel.app/assets/mouseup.mp3";
 audio2.appendChild(audio2info);
+document.body.appendChild(audio2);
+var audio22 = document.createElement("audio");
+var audio22info = document.createElement("source");
+audio22info.src="https://divra.vercel.app/assets/mousedown.mp3";
+audio22.appendChild(audio2info);
 document.body.appendChild(audio2);
 // ** Remember that audio 1 is for keyboard and audio 2 is for mouse
 
