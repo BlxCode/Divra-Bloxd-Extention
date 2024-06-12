@@ -18,13 +18,15 @@ var audio12info = document.createElement("source");
 audio12info.src="https://divra.vercel.app/assets/keydown.mp3";
 
 audio12.appendChild(audio12info);
-document.body.appendChild(audio1);
+document.body.appendChild(audio12);
 var audio2 = document.createElement("audio");
+audio2.volume="0.5";
 var audio2info = document.createElement("source");
 audio2info.src="https://divra.vercel.app/assets/mouseup.mp3";
 audio2.appendChild(audio2info);
 document.body.appendChild(audio2);
 var audio22 = document.createElement("audio");
+audio22.volume="0.5"
 var audio22info = document.createElement("source");
 audio22info.src="https://divra.vercel.app/assets/mousedown.mp3";
 audio22.appendChild(audio2info);
