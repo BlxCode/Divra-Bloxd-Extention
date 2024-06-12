@@ -1,7 +1,6 @@
 var cssnew = document.createElement("style");
 cssnew.textContent = ".PartnersAndCreditsWrapper{z-index:10;}";
 
-document.getElementById("root").insertBefore(cssnew, document.getElementById("root").children[0]);
 
 function print(helloworld) {
   console.log(helloworld);
