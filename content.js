@@ -2,11 +2,7 @@ var cssnew = document.createElement("style");
 cssnew.textContent = ".PartnersAndCreditsWrapper{z-index:10;}";
 
 document.getElementById("root").insertBefore(cssnew, document.getElementById("root").children[0]);
-document.querySelector("#root > div.WholeAppWrapper > div > div.HomeScreenBottomRight > div:nth-child(3)").addEventListener("click", () => {
-  if (document.getElementsByClassName(".PartnersAndCreditsWrapper")) {
-    document.getElementsByClassName(".PartnersAndCreditsWrapper").style.zIndex = "10";
-  }
-});
+
 function print(helloworld) {
   console.log(helloworld);
 }
@@ -445,6 +441,7 @@ function body() {
 
   }
   var dseb = 0;
+  var gbsw;
   console.log("code up to line number 375 has no issues");
   function okeyup(eventis) {
     let ksey = eventis.key;
@@ -590,7 +587,7 @@ function body() {
     //console.log(cps);
 
   }
-  var gbsw;
+ 
   var whatwascps = 1;
 
   function stopCps() {
