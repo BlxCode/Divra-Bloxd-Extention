@@ -449,7 +449,7 @@ function body() {
     }
     
     console.log(eventis + "okeyup");
-    if (ksey == "x" || ksey == "X") {
+    if (ksey == "l" || ksey == "L") {
 
       if (dseb == 1) {
         gbsw.click();
@@ -987,7 +987,7 @@ if( document.getElementsByClassName("CrossHair")[0].innerHTML != ""){
         }
       }
 
-      if (kley == "x" || kley == "X") {
+      if (kley == "l" || kley == "L") {
         if (dseb == 1) {
           gbsw.click();
           document.getElementById("root").dispatchEvent(new KeyboardEvent('keydown', { 'key': 'Tab' }));
@@ -1750,7 +1750,6 @@ if( document.getElementsByClassName("CrossHair")[0].innerHTML != ""){
   customizeThumb.innerHTML = "Divra Settings"
   //document.querySelector("#root > div.WholeAppWrapper > div > div.HomeScreenBottomRight").appendChild(customizeThumb);
   // document.querySelector("#root > div.WholeAppWrapper > div > img").style.zIndex="0.9px";
-  document.querySelector("#root > div.WholeAppWrapper > div > div.HomeScreenBottomRight").insertBefore(customizeThumb, document.querySelector("#root > div.WholeAppWrapper > div > div.HomeScreenBottomRight > a:nth-child(1)"));
   customizeThumb.style.filter = "drop-shadow(233px 233px 29px gray)";
   customizeThumb.style.zIndex = "314159";
 
