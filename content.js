@@ -390,10 +390,11 @@ function body() {
   var isChatTyping = false;
   document.getElementById("root").appendChild(keysElement);
 
-
+var asmrkeyremove;
 
   function keydown(eventis) {
-    if(localStorage.getItem("asmr")=="Y"){
+    if(localStorage.getItem("asmr")=="Y"&&asmrkeyremove!=eventis){
+      asmrkeyremove=eventis;
       audio12.play();
     }
     
@@ -957,7 +958,8 @@ function body() {
  
 
   function gamekeyup(eventis) {
-    if(localStorage.getItem("asmr")=="Y"){
+    if(localStorage.getItem("asmr")=="Y"&&asmrkeyremove==eventis){
+      
       audio1.play();
     }
     
