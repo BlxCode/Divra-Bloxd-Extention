@@ -10,3 +10,38 @@
 .PartnersAndCreditsWrapper{
     z-index:10px;
 }
+.AvailableGame{
+    border-radius:10px;
+    border:none;
+    width:15.4444444444rem;
+    aspect-ratio:16/9;
+    box-shadow:none !important;
+}
+.AvailableGameImg{
+    border-radius:10px;
+    aspect-ratio:16/9 !important;
+    height:auto !important;
+    width:15.4444444444rem !important;
+}
+.AvailableGameText{
+    font-size:15px;
+    color:aqua;
+}
+.PlayerNameInfoHeader{
+   display:none;
+}
+.SelectLobbyOuterWrapper{
+    border-radius:10px !important;
+}
+.SelectLobbyWrapper{
+    color:black !important;
+    text-stroke:none !important;
+    -webkit-text-stroke:none !important;
+    background-color:deepskyblue !important;
+}
+.RecentlyPlayedLobbiesWrapper{
+    background-color:aquamarine !important;
+    color:black !important;
+    text-stroke:none !important;
+    -webkit-text-stroke:none !important;
+}
