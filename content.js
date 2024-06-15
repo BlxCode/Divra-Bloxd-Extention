@@ -2066,6 +2066,21 @@ if(asmr.checked==true){
     s2b2.style.cursor = "pointer";
     PixelatedBloxdOnOff.style.verticalAlign = "middle";
     PixelatedBloxdOnOff.style.lineHeight = "1.75px";
+    function setting (elementB,elementL, text, wrapper, id){
+      wrapper.appendChild(document.createElement("br"));
+      elementB.type="checkbox";
+      
+      elementB.style.fontSize = "34px";
+      elementB.style.cursor = "pointer";
+      elementB.style.transform = "scale(2)";
+      elementB.style.marginTop = "10px";
+      elementB.id = id;
+      wrapper.appendChihld(elementB);
+      elementL.textContent=text;
+      elementL.htmlFor=id;
+      wrapper.appendChild(elementL);
+    }
+    
     s2l2.style.lineHeight = "1.75px";
     console.log(localStorage.getItem("PBOF"));
     console.log(localStorage.getItem("PBOF"));
