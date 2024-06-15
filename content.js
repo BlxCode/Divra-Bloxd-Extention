@@ -2080,7 +2080,30 @@ if(asmr.checked==true){
       elementL.htmlFor=id;
       wrapper.appendChild(elementL);
     }
-    
+    var s3b3;
+    var s3l3;
+    setting(s3b3,s3l3,"Disable show email", abis, "asfasd");
+    if (localStorage.getItem("s3b3") == null || localStorage.getItem("s3b3") == undefined) {
+      localStorage.setItem("s3b3", "N");
+    } else {
+      if (localStorage.getItem("s3b3") == "Y") {
+        s3b3.checked = true;
+      } else if (localStorage.getItem("s3b3") == "N") {
+        s3b3.checked = false;
+      }
+    }
+    s3b3.addEventListener("click", () => {
+      //something
+      if (s3b3.checked == true) {
+if(document.getElementsByClassName("PlayerNameInfoHeader")){
+  document.getElementsByClassName("PlayerNameInfoHeader").textContent="Playing As:"
+}
+        localStorage.setItem("sebe", "Y");
+      } else if (s3b3.checked == false) {
+        localStorage.getItem("s3b3", "N");
+      }
+
+    });
     s2l2.style.lineHeight = "1.75px";
     console.log(localStorage.getItem("PBOF"));
     console.log(localStorage.getItem("PBOF"));

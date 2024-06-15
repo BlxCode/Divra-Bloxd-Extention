@@ -12,4 +12,25 @@ HOW TO USE: TEMPlATE
 var elementB;
 var elementL;
 setting(elementB,elementL,"Show email",abis,"id1);
-----------------------------------------------------        `
+----------------------------------------------------    
+### Settings save
+if (localStorage.getItem("") == null || localStorage.getItem("") == undefined) {
+      localStorage.setItem("", "N");
+    } else {
+      if (localStorage.getItem("") == "Y") {
+        .checked = true;
+      } else if (localStorage.getItem("") == "N") {
+        .checked = false;
+      }
+    }
+    .addEventListener("click", () => {
+      //something
+      if (.checked == true) {
+
+        localStorage.setItem("", "Y");
+      } else if (.checked == false) {
+        localStorage.getItem("", "N");
+      }
+
+    });    
+------------------------------------------------------------------------------------------\
