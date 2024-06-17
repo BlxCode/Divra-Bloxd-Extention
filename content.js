@@ -211,7 +211,7 @@ function body() {
   divraButts.innerHTML = "Divra Quick Setup";
   divraButts.id = "divraButtons";
   divraButts.title = "Divra Buttons";
-  document.getElementsByClassName("Title")[0].innerHTML = "Divra";
+ 
   document.getElementsByClassName("Title")[0].title = "Divra btw the name was chosen because of randomosy and my knowlage of code.";
   // document.getElementsByClassName("Background")[0].src = "https://cdn.discordapp.com/attachments/1200293652258377759/1200293652719734784/20240126_094706_0000.png?ex=65c5a793&is=65b33293&hm=ba5bca862b9222a2651defc771449024d52fdf2a045b4bfb2f66b17390f5e432&";
   console.log("Loading Divra Client...");
@@ -1972,5 +1972,5 @@ function body() {
   setTimeout(attheendofthecodeyouwillalwaysmakeafunctionsnamethatissolongucantcomprehendandobviouslyyouneednospacesanduhav2spelletwromg, 1000);
   console.log("All code has no issues");
 }
-setTimeout(body, 200);
-upper();
+setTimeout(body, 500);
+setTimeout(upper, 200);
