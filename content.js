@@ -7,26 +7,27 @@ function upper() {
   var audio1 = document.createElement("audio");
   var audio1info = document.createElement("source");
   audio1info.src = "https://divra.vercel.app/assets/keyUp.mp3";
-  audio1.volume = "0.45";
+  audio1.volume = 0.45; // volume should be a number
   audio1.appendChild(audio1info);
+  document.body.appendChild(audio1); // append audio1 to the document body
   var audio12 = document.createElement("audio");
   var audio12info = document.createElement("source");
-  audio12.volume = "0.45"
   audio12info.src = "https://divra.vercel.app/assets/keydown.mp3";
+  audio12.volume = 0.45; // volume should be a number
   audio12.appendChild(audio12info);
   document.body.appendChild(audio12);
   var audio2 = document.createElement("audio");
-  audio2.volume = "0.5";
   var audio2info = document.createElement("source");
   audio2info.src = "https://divra.vercel.app/assets/mouseup.mp3";
+  audio2.volume = 0.5; // volume should be a number
   audio2.appendChild(audio2info);
   document.body.appendChild(audio2);
   var audio22 = document.createElement("audio");
-  audio22.volume = "0.5"
   var audio22info = document.createElement("source");
   audio22info.src = "https://divra.vercel.app/assets/mousedown.mp3";
-  audio22.appendChild(audio2info);
-  document.body.appendChild(audio2);
+  audio22.volume = 0.5; // volume should be a number
+  audio22.appendChild(audio22info);
+  document.body.appendChild(audio22);
   var opening = document.createElement("div");
   opening.style.position = "fixed";
   opening.style.width = "100%";

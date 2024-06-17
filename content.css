@@ -1,11 +1,31 @@
+.item{
+    opacity:0.5 !important;
+    border-radius:10px !important;
+    background-color:yellow !important;
+    border-color:rgb(215, 215, 1) !important;
+    padding:10px !important;
+}
+.CrossHair{
+    opacity:0.5 !important;
+}
+div{
+    border-radius:10px !important;
+}
+.BlockItem,BlockItem2,BlockItem3{
+    border-radius:0px !important;
+}
 .BlueButton, .NewButton{
     background-color:red;
 }
 .NewButton{
     background-color:red;
 }
-.SettingsMenu{
-    z-index:10px;
+.SettingsMenu,.SettingsMenuLeft,.SettingsMenuRight{
+    z-index:10px !important;
+    border-radius:10px !important;
+}
+.Dropdown-menu{
+    border-radius:10px !important;
 }
 .PartnersAndCreditsWrapper{
     z-index:10px;
@@ -41,12 +61,13 @@
     border-radius:10px !important;
 }
 .Chat, ChatInput{
-    background-color:rgb(235, 235, 215) !important;
+    background-color:rgb(235, 235, 215,0.42) !important;
     color:black !important;
-    border-radius:0px 0px 0px 10px !important;
+    border-radius:10px !important;
 }
-.FpsWrapperDiv, .CoordinateUI{
-    background-color:rgb(235, 235, 215) !important;
+.FpsWrapperDiv, .CoordinateUI,.LobbyNameWrapper{
+    padding:10px;
+    background-color:rgb(235, 235, 215,0.42) !important;
     color:black !important;
     border-radius:10px !important;
 }
