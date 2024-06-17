@@ -19,7 +19,7 @@
 }
 .AvailableGameImg{
     border-radius:10px;
-    filter: contrast(130%) hue-rotate(90deg) saturate(2);
+    filter: contrast(105%) hue-rotate(5deg) saturate(1.5);
     aspect-ratio:16/9 !important;
     height:auto !important;
     width:15.4444444444rem !important;
