@@ -1,17 +1,18 @@
 .item{
     opacity:0.5 !important;
     border-radius:10px !important;
-    background-color:yellow !important;
-    border-color:rgb(215, 215, 1) !important;
-    padding:10px !important;
+    background-color:rgb(189, 114, 39) !important;
+    border-color:rgb(175, 53, 53) !important;
+    padding:1px !important;
 }
 .CrossHair{
-    opacity:0.5 !important;
+    opacity:0.95 !important;
+    border-radius:0px;
 }
 div{
     border-radius:10px !important;
 }
-.BlockItem,BlockItem2,BlockItem3{
+.BlockItem,.BlockItem2,.BlockItem3,.BlockItem3Inner{
     border-radius:0px !important;
 }
 .BlueButton, .NewButton{
@@ -60,13 +61,16 @@ div{
 .rangeslider{
     border-radius:10px !important;
 }
-.Chat, ChatInput{
+.ChatInputChannel{
+    color:white;
+}
+.ChattingWrapper, ChatInput{
     background-color:rgb(235, 235, 215,0.42) !important;
     color:black !important;
     border-radius:10px !important;
 }
 .FpsWrapperDiv, .CoordinateUI,.LobbyNameWrapper{
-    padding:10px;
+    padding:2.5px;
     background-color:rgb(235, 235, 215,0.42) !important;
     color:black !important;
     border-radius:10px !important;
