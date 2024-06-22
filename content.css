@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+.GameBadgeBottomInner{
+    display:none !important;
+}
+.EffectInfo{
+    z-index:442 !important;
+}
 .item{
-    opacity:0.5 !important;
+    opacity:0.825 !important;
     border-radius:10px !important;
     background-color:rgb(189, 114, 39) !important;
     border-color:rgb(175, 53, 53) !important;

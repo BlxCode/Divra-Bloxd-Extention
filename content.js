@@ -2,8 +2,12 @@ function print(helloworld) {
   "use strict";
   console.log(helloworld);
 }
+
 function upper() {
   "use strict";
+  var style = document.createElement("style");
+style.textContent="@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');";
+document.querySelector("head").appendChild(style);
   var audio1 = document.createElement("audio");
   var audio1info = document.createElement("source");
   audio1info.src = "https://divra.vercel.app/assets/keyUp.mp3";
@@ -234,7 +238,8 @@ function body() {
   imgofme.alt = "BloxdMaster Logo";
   var brick = document.createElement("br");
   divra.appendChild(brick);
-  document.getElementsByClassName("DiscordButtonDiv")[0].draggable = false;
+
+  document.getElementsByClassName("DiscordButtonDiv")[0].addEventListener("drag",(e)=>{e.preventDefault();})
   divraRMB.style.padding = "2px";
   divraRMB.innerHTML = "RMB ";
   divra.appendChild(divraLMB);
@@ -359,39 +364,39 @@ function body() {
     //bloxdmaster= noob coder copy cat insaign lvl (and bluify has no idea abt that)
     if (ksey == "a" || ksey == "A") {
       console.log(eventis);
-      divraA.style.backgroundColor = "black";
+      divraA.style.backgroundColor = "green";
     }
     if (ksey == "s" || ksey == "s") {
       console.log(eventis);
-      divraS.style.backgroundColor = "black";
+      divraS.style.backgroundColor = "green";
     }
     if (ksey == "d" || ksey == "D") {
       console.log(eventis);
-      divraD.style.backgroundColor = "black";
+      divraD.style.backgroundColor = "green";
     }
     if (ksey == "w" || ksey == "W") {
       console.log(eventis);
-      divraW.style.backgroundColor = "black";
+      divraW.style.backgroundColor = "green";
     }
     if (ksey == "Shift") {
       console.log(eventis);
-      divraShift.style.backgroundColor = "black";
+      divraShift.style.backgroundColor = "green";
     }
     if (ksey == "c" || ksey == "C") {
       console.log(eventis);
-      divraC.style.backgroundColor = "black";
+      divraC.style.backgroundColor = "green";
     }
     if (ksey == "z" || ksey == "Z") {
       console.log(eventis);
-      divraC.style.backgroundColor = "black";
+      divraC.style.backgroundColor = "green";
     }
     if (ksey == "<" || ksey == "Control") {
       console.log(eventis);
-      divraC.style.backgroundColor = "black";
+      divraC.style.backgroundColor = "green";
     }
     if (ksey == " " || ksey == "space") {
       console.log(eventis);
-      divraSpace.style.backgroundColor = "black";
+      divraSpace.style.backgroundColor = "green";
     }
   }
   var dseb = 0;
@@ -830,12 +835,42 @@ function body() {
   }
   console.log("code up to line number 817 has no issues");
   function gamekeyup(eventis) {
+    if (kley == "l" || kley == "L") {
+      if (dseb == 1) {
+        gbsw.click();
+        document.getElementById("root").dispatchEvent(new KeyboardEvent('keydown', { 'key': 'Tab' }));
+        document.getElementById("DivrraSettingsExitButton").click();
+        if (document.getElementById("aas1")) {
+          document.getElementById("aas1").remove();
+          gbs.remove();
+          customizeThumb.style.display = "block";
+          thumbnailwrap.remove();
+          dseb = 0;
+          bads.remove();
+          thumbnail1.remove();
+          abis.remove();
+          dseb = 0;
+          document.getElementById("root").dispatchEvent(new KeyboardEvent('keydown', { 'key': 'Tab' }));
+        }
+      } else {
+        exitPointerLock();
+        console.log(dseb);
+        dseb = 1;
+        customizeThumb.click();
+        togglePointerLock: !1;
+      }
+      console.log(eventis);
+    }
     if (localStorage.getItem("asmr") == "Y" && asmrkeyremove == eventis) {
       audio1.play();
     }
+    if(document.getElementsByClassName("CrossHair")[0]){
     if (document.getElementsByClassName("CrossHair")[0].innerHTML != "") {
       makeCh();
+    }}else{
+      //Something
     }
+    if(document.getElementsByClassName("ChatInput")[0]){
     console.log(document.getElementsByClassName("ChatInput")[0].value);
     if (document.getElementsByClassName("ChatInput")[0].value == "") {
       console.log("gkuac");
@@ -857,32 +892,7 @@ function body() {
           divra.style.display = "none";
         }
       }
-      if (kley == "l" || kley == "L") {
-        if (dseb == 1) {
-          gbsw.click();
-          document.getElementById("root").dispatchEvent(new KeyboardEvent('keydown', { 'key': 'Tab' }));
-          document.getElementById("DivrraSettingsExitButton").click();
-          if (document.getElementById("aas1")) {
-            document.getElementById("aas1").remove();
-            gbs.remove();
-            customizeThumb.style.display = "block";
-            thumbnailwrap.remove();
-            dseb = 0;
-            bads.remove();
-            thumbnail1.remove();
-            abis.remove();
-            dseb = 0;
-            document.getElementById("root").dispatchEvent(new KeyboardEvent('keydown', { 'key': 'Tab' }));
-          }
-        } else {
-          exitPointerLock();
-          console.log(dseb);
-          dseb = 1;
-          customizeThumb.click();
-          togglePointerLock: !1;
-        }
-        console.log(eventis);
-      }
+     
       if (kley == "Enter") {
         document.body.removeEventListener("keyup", gamekeyup);
         if (kley == "Enter") {
@@ -892,7 +902,7 @@ function body() {
       if (kley == "e" || kley == "E") {
         WriteOnBoardTextArea();
       }
-    }
+    }}
   }
   changeCrosshair.stabIndex = "-1";
   changeCrosshair.innerHTML = "Change Crosshair";
@@ -1590,6 +1600,41 @@ function body() {
     }
   }, 1000);
   console.log(wea);
+
+
+
+
+
+  if (localStorage.getItem("PBOF") == null || localStorage.getItem("PBOF") == undefined) {
+    localStorage.setItem("PBOF", "N");
+    console.log(localStorage.getItem("PBOF"));
+    console.log(localStorage.getItem("PBOF"));
+    document.body.style.fontFamily= 'var(--root-font-family)';
+    console.log(localStorage.getItem("PBOF"));
+    print(document.body.style.fontFamily);
+  }
+  
+  if (localStorage.getItem("PBOF") == "Y") {
+  
+    console.log(localStorage.getItem("PBOF"));
+    document.body.style.fontFamily="Pixelify Sans, sans-serif";
+    console.log(localStorage.getItem("PBOF"));
+    document.body.style.setProperty("font-family", "Pixelify Sans, sans-serif", "important");
+    console.log(localStorage.getItem("PBOF"));
+  } else if (localStorage.getItem("PBOF") == "N") {
+    document.body.style.fontFamily= 'var(--root-font-family)';
+    console.log(localStorage.getItem("PBOF"));
+
+    print(document.body.style.fontFamily);
+    console.log(localStorage.getItem("PBOF"));
+    console.log(localStorage.getItem("PBOF"));
+  }
+
+
+
+
+
+
   var thumbnailwrap = document.createElement("div");
   //Divra Settings
   customizeThumb.addEventListener("click", () => {
@@ -1823,23 +1868,26 @@ function body() {
     PixelatedBloxdOnOff.style.verticalAlign = "middle";
     PixelatedBloxdOnOff.style.lineHeight = "1.75px";
     function setting(elementB, elementL, text, wrapper, id) {
-      wrapper.appendChild(document.createElement("br"));
+      let brsa= document.createElement("br");
+      wrapper.appendChild(brsa);
+      elementB = document.createElement("input");
+      elementL=document.createElement("label");
       elementB.type = "checkbox";
       elementB.style.fontSize = "34px";
       elementB.style.cursor = "pointer";
       elementB.style.transform = "scale(2)";
       elementB.style.marginTop = "10px";
       elementB.id = id;
-      wrapper.appendChihld(elementB);
+      wrapper.appendChild(elementB);
       elementL.textContent = text;
       elementL.htmlFor = id;
       wrapper.appendChild(elementL);
     }
-    var s3b3;
-    var s3l3;
-    setting(s3b3, s3l3, "Disable show email", abis, "asfasd");
+    var s3b3= document.createElement("input");
+    var s3l3= document.createElement("label");
+    //setting(s3b3, s3l3, "Disable show email", abis, "asfasd");
     if (localStorage.getItem("s3b3") == null || localStorage.getItem("s3b3") == undefined) {
-      localStorage.setItem("s3b3", "N");
+      localStorage.setItem("s3b3", "Y");
     } else {
       if (localStorage.getItem("s3b3") == "Y") {
         s3b3.checked = true;
@@ -1858,23 +1906,40 @@ function body() {
         localStorage.getItem("s3b3", "N");
       }
     });
-    s2l2.style.lineHeight = "1.75px";
+    s3l3.style.lineHeight = "1.75px";
+
+var  s4l4 = document.createElement("label");
+var s4b4 = document.createElement("input");
+setting(s4b4,s4l4,"Show all keys", CrosshairAndHTBSettings,"ess"); 
+
+
+
+
+
+
     console.log(localStorage.getItem("PBOF"));
     console.log(localStorage.getItem("PBOF"));
     if (localStorage.getItem("PBOF") == null || localStorage.getItem("PBOF") == undefined) {
       localStorage.setItem("PBOF", "N");
       console.log(localStorage.getItem("PBOF"));
       console.log(localStorage.getItem("PBOF"));
+      document.body.style.fontFamily= 'var(--root-font-family)';
       console.log(localStorage.getItem("PBOF"));
+      print(document.body.style.fontFamily);
     }
+    
     if (localStorage.getItem("PBOF") == "Y") {
       PixelatedBloxdOnOff.checked = true;
       console.log(localStorage.getItem("PBOF"));
+      document.body.style.fontFamily="Pixelify Sans, sans-serif";
       console.log(localStorage.getItem("PBOF"));
+      document.body.style.setProperty("font-family", "Pixelify Sans, sans-serif", "important");
       console.log(localStorage.getItem("PBOF"));
     } else if (localStorage.getItem("PBOF") == "N") {
+      document.body.style.fontFamily= 'var(--root-font-family)';
       console.log(localStorage.getItem("PBOF"));
       PixelatedBloxdOnOff.checked = false;
+      print(document.body.style.fontFamily);
       console.log(localStorage.getItem("PBOF"));
       console.log(localStorage.getItem("PBOF"));
     }
@@ -1882,10 +1947,12 @@ function body() {
       console.log(localStorage.getItem("PBOF"));
       console.log(localStorage.getItem("PBOF"));
       console.log(localStorage.getItem("PBOF"));
+      print(document.body.style.fontFamily)
       console.log(localStorage.getItem("PBOF"));
       console.log(localStorage.getItem("PBOF"));
       if (PixelatedBloxdOnOff.checked == false) {
         console.log(document.getElementById("noa-canvas"));
+        document.body.style.fontFamily= 'var(--root-font-family)';
         if (document.getElementById("noa-canvas") != null) {
           document.getElementById("noa-canvas").style.imageRendering = "auto";
           console.log(document.getElementById("noa-canvas").style.imageRendering + " Image rendering of the noa");
@@ -1893,9 +1960,13 @@ function body() {
         localStorage.setItem("PBOF", "N");
       } else {
         localStorage.setItem("PBOF", "Y");
+        document.body.style.setProperty("font-family", "Pixelify Sans, sans-serif", "important");
         console.log("PBOF LS = " + localStorage.getItem("PBOF"));
         if (document.getElementById("noa-canvas") != null) {
           console.log(document.getElementById("noa-canvas").style.imageRendering + " Image rendering of the noa");
+          document.body.style.fontFamily="Pixelify Sans, sans-serif";
+          document.body.style.setProperty("font-family", "Pixelify Sans, sans-serif", "important");
+          print(document.body.style.fontFamily);
           document.getElementById("noa-canvas").style.imageRendering = "pixelated";
         }
       }
