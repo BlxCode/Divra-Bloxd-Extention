@@ -989,7 +989,6 @@ function body() {
   option10CROSSHAIR.value = "⚔";
   changeCrosshair.appendChild(option10CROSSHAIR);
   var sacrelabeu = document.createElement("option");
-  sacrelabeu.value = "MOM STINKS";
   sacrelabeu.value = "{⋅}";
   sacrelabeu.innerHTML = "{⋅}";
   changeCrosshair.appendChild(sacrelabeu);
