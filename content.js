@@ -795,7 +795,11 @@ function body() {
     }
     localStorage.setItem("Crosshair", changeCrosshair.value);
   }
-}
+
+
+
+
+mch = setInterval(makeCh, 8000);
   function makeCh() {
     if (document.getElementsByClassName("CrossHair")[0] != null) {
       ChangetheCrosshair();
@@ -842,6 +846,7 @@ function body() {
       }
       
   }
+}
   console.log("code up to line number 817 has no issues");
   function gamekeyup(eventis) {
     if (kley == "l" || kley == "L") {
@@ -916,6 +921,7 @@ function body() {
       }
     }
   }
+
   changeCrosshair.stabIndex = "-1";
   changeCrosshair.innerHTML = "Change Crosshair";
   divraButts.appendChild(changeCrosshair);
@@ -2056,7 +2062,7 @@ function body() {
     setTimeout(makerespawn, 1000);
   }
   // setInterval(autoRESPAWN,6001);
-  mch = setInterval(makeCh, 3500);
+ 
   function attheendofthecodeyouwillalwaysmakeafunctionsnamethatissolongucantcomprehendandobviouslyyouneednospacesanduhav2spelletwromg() {
     changeCrosshair.value = String(localStorage.getItem("Crosshair"));
     console.log("Divra done loading. Entering Bloxd.io.");
