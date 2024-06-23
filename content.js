@@ -14,6 +14,7 @@ function upper() {
   opening.style.height = "100%";
   opening.style.opacity = "0.99999999999999";
   opening.style.zIndex = "6000000000";
+  opening.style.backgroundImage="url(https://divra.vercel.app/assets/BG.png)"
   opening.className = "FullyFancyText";
   document.body.appendChild(opening);
   var Name = document.createElement("div");
@@ -27,19 +28,17 @@ function upper() {
   o1.className = "Title FullyFancyText";
   var o2b = document.createElement("div");
   o2b.style.textAllign = "center";
-  o2b.style.width = "350px";
+  o2b.style.width = "150px";
   o2b.style.left = "50%";
   o2b.style.top = "50px";
+  o2b.style.fontSize="25px";
+ 
   o2b.style.transform = "translate(-50%, -50%)";
   o2b.innerHTML = "Play";
+  o2b.style.padding="5px";
   o2b.className = "NewButton GoldButton ForceRotateEnterFullscreenButton";
   o2b.style.color = "white";
-  var o2bb1 = document.createElement("div");
-  o2bb1.className = "ButtonBottomBorder";
-  o2b.appendChild(o2bb1);
-  var o2bb2 = document.createElement("div");
-  o2bb2.className = "ButtonTopBorder";
-  o2b.appendChild(o2bb2);
+ o2b.style.backgroundColor="rgba(181, 176, 176,0.95)";
   var o3b = document.createElement("div");
   o3b.innerHTML = "Worlds";
   o3b.className = "FullyFancyText NewButton BlueButton";
@@ -336,9 +335,9 @@ function body() {
     divraButts.style.display = "none";
     document.getElementsByClassName("Title")[0].innerHTML = "Bloxd.io";
   });
-  divra.addEventListener("mouseover", () => {
+  
     divra.style.cursor = "auto";
-  });
+
   document.getElementById("root").appendChild(divra);
   var divraSB;
   var keysElement = document.createElement("div");
@@ -872,11 +871,11 @@ function body() {
       asmrkeyremove = "";
     }
     if (document.getElementsByClassName("CrossHair")[0]) {
-      if (document.getElementsByClassName("CrossHair")[0].innerHTML != "") {
+     
         makeCh();
-      }
+      
     } else {
-      //Something
+      location.reload();
     }
     if (document.getElementsByClassName("ChatInput")[0]) {
       console.log(document.getElementsByClassName("ChatInput")[0].value);
