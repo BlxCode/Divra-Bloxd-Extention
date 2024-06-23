@@ -642,7 +642,7 @@ function body() {
   console.log(lS + " localstoragecrosshairvalue");
   console.log(localStorage.getItem("Crosshair") + " localstoragecrosshairvalue");
   if (lS == null || lS == undefined) {
-    localStorage.setItem("Crosshair", "+");
+    localStorage.setItem("Crosshair", "https://i.ibb.co/n8pFY3b/arYc1V6.png");
   } else {
     changeCrosshair.value = String(lS);
   }
@@ -658,13 +658,152 @@ function body() {
     console.log(localStorage.getItem("Crosshair") + " lcchvalue");
   });
   console.log("code up to line number 653 has no issues");
+  function ChangetheCrosshair(){
+    if (changeCrosshair.value == 'sudiCrosshair') {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://lh3.googleusercontent.com/mfdjL6r1en6mWI3QVMnBbcSX-7QpgBE5EyXo0YbK6299QSJsi58GkfecyL0W7yYljK37vV6Mk7wD69QNdp8LiNw=s400)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == '+Crosshair') {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/JeJjZ9j.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "poopCss") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/3784ppG.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "bala") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://www.google.com/s2/favicons?sz=64&domain=bloxd.io)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "crosshair00") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/Y4Mxe1B.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "crosshair01") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/tbfd0eb.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "crosshair02") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/aFw5z9z.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "crosshair03") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/0M98QU7.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "crosshair04") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/96PGABg.pngg)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "crosshair05") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/lCutXr9.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "crosshair06") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/EHdo6Y9.png';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "crosshair07") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/6LFkbMH.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "crosshair08") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/IbSSS5T.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "crosshair09") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/NDpEANb.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "crosshair10") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/y9slq0w.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "crosshair11") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/Wp7FoBU.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "crosshair12") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/JC54ey0.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "crosshair13") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/B6NC0OG.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "rick") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://c.tenor.com/yheo1GGu3FwAAAAd/tenor.gif)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "P1") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/B29af1N.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "https://i.imgur.com/ggGTkhY.png") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/K1mBFTz.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "https://i.imgur.com/t0wxBxL.png") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/t0wxBxL.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "https://cdn.discordapp.com/attachments/1193362300745285713/1193362645571612762/crosshair.png?ex=65ac7092&is=6599fb92&hm=64ba4263fb1c1cfa3ea1e554d0a3acb9a67104ccc2a44f06a06fb2107daeb445&") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://cdn.discordapp.com/attachments/1193362300745285713/1193362645571612762/crosshair.png?ex=65ac7092&is=6599fb92&hm=64ba4263fb1c1cfa3ea1e554d0a3acb9a67104ccc2a44f06a06fb2107daeb445&)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "https://i.ibb.co/n8pFY3b/arYc1V6.png") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.ibb.co/n8pFY3b/arYc1V6.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "https://i.imgur.com/OwwsiPH.png") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/OwwsiPH.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "https://i.imgur.com/J6BMKcj.png") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/J6BMKcj.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = changeCrosshair.value;
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'none';
+    }
+    localStorage.setItem("Crosshair", changeCrosshair.value);
+  }
+}
   function makeCh() {
     if (document.getElementsByClassName("CrossHair")[0] != null) {
+      ChangetheCrosshair();
       var poweredbydivra = document.createElement("p");
       poweredbydivra.innerHTML = "Powered by Divra Client";
       poweredbydivra.style.fontSize = "10px";
       poweredbydivra.className = "SmallTextLight";
-      poweredbydivra.width = "100px";
+      
       poweredbydivra.style.position = "fixed";
       poweredbydivra.style.textAlign = "center";
       poweredbydivra.style.zIndex = "10";
@@ -701,142 +840,7 @@ function body() {
         console.log(document.querySelector(".CrossHair").style.height);
         console.log(document.querySelector(".CrossHair").style.widtth);
       }
-      if (changeCrosshair.value == 'sudiCrosshair') {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://lh3.googleusercontent.com/mfdjL6r1en6mWI3QVMnBbcSX-7QpgBE5EyXo0YbK6299QSJsi58GkfecyL0W7yYljK37vV6Mk7wD69QNdp8LiNw=s400)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == '+Crosshair') {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/JeJjZ9j.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "poopCss") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/3784ppG.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "bala") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://www.google.com/s2/favicons?sz=64&domain=bloxd.io)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "crosshair00") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/Y4Mxe1B.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "crosshair01") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/tbfd0eb.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "crosshair02") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/aFw5z9z.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "crosshair03") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/0M98QU7.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "crosshair04") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/96PGABg.pngg)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "crosshair05") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/lCutXr9.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "crosshair06") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/EHdo6Y9.png';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "crosshair07") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/6LFkbMH.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "crosshair08") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/IbSSS5T.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "crosshair09") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/NDpEANb.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "crosshair10") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/y9slq0w.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "crosshair11") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/Wp7FoBU.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "crosshair12") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/JC54ey0.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "crosshair13") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/B6NC0OG.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "rick") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://c.tenor.com/yheo1GGu3FwAAAAd/tenor.gif)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "P1") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/B29af1N.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "https://i.imgur.com/ggGTkhY.png") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/K1mBFTz.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "https://i.imgur.com/t0wxBxL.png") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/t0wxBxL.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "https://cdn.discordapp.com/attachments/1193362300745285713/1193362645571612762/crosshair.png?ex=65ac7092&is=6599fb92&hm=64ba4263fb1c1cfa3ea1e554d0a3acb9a67104ccc2a44f06a06fb2107daeb445&") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://cdn.discordapp.com/attachments/1193362300745285713/1193362645571612762/crosshair.png?ex=65ac7092&is=6599fb92&hm=64ba4263fb1c1cfa3ea1e554d0a3acb9a67104ccc2a44f06a06fb2107daeb445&)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "https://i.ibb.co/n8pFY3b/arYc1V6.png") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.ibb.co/n8pFY3b/arYc1V6.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "https://i.imgur.com/OwwsiPH.png") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/OwwsiPH.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "https://i.imgur.com/J6BMKcj.png") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/J6BMKcj.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = changeCrosshair.value;
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'none';
-      }
-      localStorage.setItem("Crosshair", changeCrosshair.value);
-    }
+      
   }
   console.log("code up to line number 817 has no issues");
   function gamekeyup(eventis) {
@@ -870,9 +874,9 @@ function body() {
       audio1.play();
       asmrkeyremove = "";
     }
-    if (document.getElementsByClassName("CrossHair")[0]) {
+    if (document.getElementsByClassName("CrossHair")[0]&&document.getElementsByClassName("CrossHair")[0].textContent=="+") {
      
-        makeCh();
+        ChangetheCrosshair();
       
     } else {
       location.reload();
@@ -2062,5 +2066,5 @@ function body() {
   setTimeout(attheendofthecodeyouwillalwaysmakeafunctionsnamethatissolongucantcomprehendandobviouslyyouneednospacesanduhav2spelletwromg, 1000);
   console.log("All code has no issues");
 }
-setTimeout(body, 500);
-setTimeout(upper, 200);
+setTimeout(body, 800);
+setTimeout(upper, 400);

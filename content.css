@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 .GameBadgeBottomInner{
     display:none !important;
+
 }
 .EffectInfo{
     z-index:442 !important;
@@ -39,15 +40,15 @@ div{
     z-index:10px;
 }
 .AvailableGame{
-    border-radius:10px;
+    border-radius:10px !important;
     border:none;
-    width:15.4444444444rem;
-    aspect-ratio:16/9;
-    box-shadow:none !important;
+    width:15.4444444444rem !important;
+    aspect-ratio:16/9 !important;
+    box-shadow:0 !important;
 }
 .AvailableGameImg{
-    border-radius:10px;
-    filter: contrast(105%) hue-rotate(5deg) saturate(1.5);
+    border-radius:10px !important;
+    filter: contrast(105%) hue-rotate(5deg) saturate(1.5) !important;
     aspect-ratio:16/9 !important;
     height:auto !important;
     width:15.4444444444rem !important;
@@ -117,6 +118,4 @@ div{
     background-color:rgba(134, 176, 226, 0.785) !important;
     border-radius:10px !important;
 }
-body{
-    border-radius:10px !important;
-}
+
