@@ -2,36 +2,12 @@ function print(helloworld) {
   "use strict";
   console.log(helloworld);
 }
-
 function upper() {
   "use strict";
   var style = document.createElement("style");
-style.textContent="@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');";
-document.querySelector("head").appendChild(style);
-  var audio1 = document.createElement("audio");
-  var audio1info = document.createElement("source");
-  audio1info.src = "https://divra.vercel.app/assets/keyUp.mp3";
-  audio1.volume = 0.45; // volume should be a number
-  audio1.appendChild(audio1info);
-  document.body.appendChild(audio1); // append audio1 to the document body
-  var audio12 = document.createElement("audio");
-  var audio12info = document.createElement("source");
-  audio12info.src = "https://divra.vercel.app/assets/keydown.mp3";
-  audio12.volume = 0.45; // volume should be a number
-  audio12.appendChild(audio12info);
-  document.body.appendChild(audio12);
-  var audio2 = document.createElement("audio");
-  var audio2info = document.createElement("source");
-  audio2info.src = "https://divra.vercel.app/assets/mouseup.mp3";
-  audio2.volume = 0.5; // volume should be a number
-  audio2.appendChild(audio2info);
-  document.body.appendChild(audio2);
-  var audio22 = document.createElement("audio");
-  var audio22info = document.createElement("source");
-  audio22info.src = "https://divra.vercel.app/assets/mousedown.mp3";
-  audio22.volume = 0.5; // volume should be a number
-  audio22.appendChild(audio22info);
-  document.body.appendChild(audio22);
+  style.textContent = "@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');";
+  document.querySelector("head").appendChild(style);
+
   var opening = document.createElement("div");
   opening.style.position = "fixed";
   opening.style.width = "100%";
@@ -197,6 +173,30 @@ document.querySelector("head").appendChild(style);
 function body() {
   var mch;
   var cps = 0;
+  var audio1 = document.createElement("audio");
+  var audio1info = document.createElement("source");
+  audio1info.src = "https://divra.vercel.app/assets/keyUp.mp3";
+  audio1.volume = 0.1; // volume should be a number
+  audio1.appendChild(audio1info);
+  document.body.appendChild(audio1); // append audio1 to the document body
+  var audio12 = document.createElement("audio");
+  var audio12info = document.createElement("source");
+  audio12info.src = "https://divra.vercel.app/assets/keydown.mp3";
+  audio12.volume = 0.1; // volume should be a number
+  audio12.appendChild(audio12info);
+  document.body.appendChild(audio12);
+  var audio2 = document.createElement("audio");
+  var audio2info = document.createElement("source");
+  audio2info.src = "https://divra.vercel.app/assets/mouseup.mp3";
+  audio2.volume = 1; // volume should be a number
+  audio2.appendChild(audio2info);
+  document.body.appendChild(audio2);
+  var audio22 = document.createElement("audio");
+  var audio22info = document.createElement("source");
+  audio22info.src = "https://divra.vercel.app/assets/mousedown.mp3";
+  audio22.volume = 1; // volume should be a number
+  audio22.appendChild(audio22info);
+  document.body.appendChild(audio22);
   function name() {
     document.getElementsByClassName("PlayerNameInfoNameClickable")[0].innerHTML = "BloxdMaster_";
   }
@@ -215,7 +215,7 @@ function body() {
   divraButts.innerHTML = "Divra Quick Setup";
   divraButts.id = "divraButtons";
   divraButts.title = "Divra Buttons";
- 
+
   document.getElementsByClassName("Title")[0].title = "Divra btw the name was chosen because of randomosy and my knowlage of code.";
   // document.getElementsByClassName("Background")[0].src = "https://cdn.discordapp.com/attachments/1200293652258377759/1200293652719734784/20240126_094706_0000.png?ex=65c5a793&is=65b33293&hm=ba5bca862b9222a2651defc771449024d52fdf2a045b4bfb2f66b17390f5e432&";
   console.log("Loading Divra Client...");
@@ -239,7 +239,6 @@ function body() {
   var brick = document.createElement("br");
   divra.appendChild(brick);
 
-  document.getElementsByClassName("DiscordButtonDiv")[0].addEventListener("drag",(e)=>{e.preventDefault();})
   divraRMB.style.padding = "2px";
   divraRMB.innerHTML = "RMB ";
   divra.appendChild(divraLMB);
@@ -354,9 +353,10 @@ function body() {
   document.getElementById("root").appendChild(keysElement);
   var asmrkeyremove;
   function keydown(eventis) {
-    if (localStorage.getItem("asmr") == "Y" && asmrkeyremove != eventis) {
-      asmrkeyremove = eventis;
+    if (localStorage.getItem("asmr") == "Y" && asmrkeyremove != eventis.key) {
+      asmrkeyremove = eventis.key;
       audio12.play();
+      console.log(asmrkeyremove + "asmrkeyremove");
     }
     console.log(eventis);
     let ksey = eventis.key;
@@ -406,6 +406,8 @@ function body() {
     let ksey = eventis.key;
     if (localStorage.getItem("asmr") == "Y") {
       audio1.play();
+      asmrkeyremove = "";
+      console.log(asmrkeyremove)
     }
     console.log(eventis + "okeyup");
     if (ksey == "l" || ksey == "L") {
@@ -432,6 +434,7 @@ function body() {
     }
     let key = eventis.key;
     if (key == "k") {
+      timer.style.zIndex = "100032";
       timerstart.click();
     }
     if (key == "`") {
@@ -439,6 +442,7 @@ function body() {
     }
     if (key == "j" || key == "J") {
       timerend.click();
+
     }
     if (key == "a" || key == "A") {
       divraA.style.background = "none";
@@ -479,11 +483,13 @@ function body() {
           document.getElementsByClassName("SettingsCategoriesList")[0].appendChild(divraSB);
          */
       if (document.querySelector("#root > div.WholeAppWrapper > div > div.GameBackgroundScreen > div > div.SettingsMenuLeft.SmallTextBold > div.SettingsCategoriesList > div.SettingsSectionTitle.ActiveSettingsSectionTitle") != null) {
+        console.log("take to get the current tpack url");
         document.querySelector("#root > div.WholeAppWrapper > div > div.GameBackgroundScreen > div > div.SettingsMenuLeft.SmallTextBold > div.SettingsCategoriesList > div.SettingsSectionTitle.ActiveSettingsSectionTitle").addEventListener("click", () => {
-          document.querySelector("#root > div.WholeAppWrapper > div > div.GameBackgroundScreen > div > div.SettingsMenuRight > div.SettingsTextDiv > div > i").addEventListener("mouseover", () => {
-            var texurl = document.querySelector("#root > div.WholeAppWrapper > div > div.GameBackgroundScreen > div > div.SettingsMenuRight > div.SettingsTextDiv > div > div > div.CircleInfoTooltip").textContent.slice(66, 89);
+          document.getElementsByClassName("SettingsTextInputCircleInfo")[0].addEventListener("mouseover", () => {
+            var texurl = document.getElementsByClassName("CircleInfoTooltip")[0].textContent.slice(66, 89);
+
             console.log(texurl);
-            document.querySelector("#root > div.WholeAppWrapper > div > div.GameBackgroundScreen > div > div.SettingsMenuRight > div.SettingsTextDiv > div > div > div.CircleInfoTooltip").innerHTML = "Clear for default. Requires page refresh to take effect. Example: <a href='" + texurl + "'>" + texurl + "</a>";
+            document.getElementsByClassName("CircleInfoTooltip")[0].innerHTML = "Clear for default. Requires page refresh to take effect. Example: <a href='" + texurl + "'>" + texurl + "</a>";
           });
         });
       }
@@ -861,48 +867,51 @@ function body() {
       }
       console.log(eventis);
     }
-    if (localStorage.getItem("asmr") == "Y" && asmrkeyremove == eventis) {
+    if (localStorage.getItem("asmr") == "Y" && asmrkeyremove == eventis.key) {
       audio1.play();
+      asmrkeyremove = "";
     }
-    if(document.getElementsByClassName("CrossHair")[0]){
-    if (document.getElementsByClassName("CrossHair")[0].innerHTML != "") {
-      makeCh();
-    }}else{
+    if (document.getElementsByClassName("CrossHair")[0]) {
+      if (document.getElementsByClassName("CrossHair")[0].innerHTML != "") {
+        makeCh();
+      }
+    } else {
       //Something
     }
-    if(document.getElementsByClassName("ChatInput")[0]){
-    console.log(document.getElementsByClassName("ChatInput")[0].value);
-    if (document.getElementsByClassName("ChatInput")[0].value == "") {
-      console.log("gkuac");
-      okeyup(eventis);
-      var kley = eventis;
-      if (kley == "t" || kley == "T") {
-        console.log("ASDFSADFASDGSDAGSDAFDSAGSDAFSDAsdlfkjsdlakhgsdlkagjsdljfsladkglksdhfslkdaghdkas;lfjdskalghfdskaljfgdskajgfkwejgsdfiudsgwudkf");
-        document.body.removeEventListener("keyup", gamekeyup);
-        console.log("chattingaleewrt");
+    if (document.getElementsByClassName("ChatInput")[0]) {
+      console.log(document.getElementsByClassName("ChatInput")[0].value);
+      if (document.getElementsByClassName("ChatInput")[0].value == "") {
+        console.log("gkuac");
+        okeyup(eventis);
+        var kley = eventis;
+        if (kley == "t" || kley == "T") {
+          console.log("ASDFSADFASDGSDAGSDAFDSAGSDAFSDAsdlfkjsdlakhgsdlkagjsdljfsladkglksdhfslkdaghdkas;lfjdskalghfdskaljfgdskajgfkwejgsdfiudsgwudkf");
+          document.body.removeEventListener("keyup", gamekeyup);
+          console.log("chattingaleewrt");
+          if (kley == "Enter") {
+            console.log("chattingalgoawyosadifusadofhjsdklafjsadkljeweewrt");
+            document.body.addEventListener("keyup", gamekeyup);
+          }
+        }
+        if (kley == "b" || kley == "B") {
+          if (divra.style.display == "none") {
+            divra.style.display = "block";
+          } else if (divra.style.display == "block") {
+            divra.style.display = "none";
+          }
+        }
+
         if (kley == "Enter") {
-          console.log("chattingalgoawyosadifusadofhjsdklafjsadkljeweewrt");
-          document.body.addEventListener("keyup", gamekeyup);
+          document.body.removeEventListener("keyup", gamekeyup);
+          if (kley == "Enter") {
+            document.body.addEventListener("keyup", gamekeyup);
+          }
+        }
+        if (kley == "e" || kley == "E") {
+          WriteOnBoardTextArea();
         }
       }
-      if (kley == "b" || kley == "B") {
-        if (divra.style.display == "none") {
-          divra.style.display = "block";
-        } else if (divra.style.display == "block") {
-          divra.style.display = "none";
-        }
-      }
-     
-      if (kley == "Enter") {
-        document.body.removeEventListener("keyup", gamekeyup);
-        if (kley == "Enter") {
-          document.body.addEventListener("keyup", gamekeyup);
-        }
-      }
-      if (kley == "e" || kley == "E") {
-        WriteOnBoardTextArea();
-      }
-    }}
+    }
   }
   changeCrosshair.stabIndex = "-1";
   changeCrosshair.innerHTML = "Change Crosshair";
@@ -1388,8 +1397,20 @@ function body() {
   timerstart.innerHTML = "Start Timer";
   timerend.innerHTML = "Pause Timer";
   divraButts.appendChild(timerend);
+
   var timer = document.createElement("p");
-  divra.appendChild(timer);
+  timer.style.zIndex = -1;
+  document.getElementById("root").appendChild(timer);
+  timer.style.position = "fixed";
+  timer.style.fontSize = "30px";
+  timer.style.top = "0px";
+
+  timer.style.margin = "0ds";
+  timer.style.padding = "10px";
+  timer.style.borderRadius = "10px";
+  timer.style.right = "0px";
+  timer.style.backgroundColor = "black";
+  timer.style.color = "rgb(50,255,50)";
   var hr = document.createElement("span");
   timer.appendChild(hr);
   var mr = document.createElement("span");
@@ -1609,20 +1630,20 @@ function body() {
     localStorage.setItem("PBOF", "N");
     console.log(localStorage.getItem("PBOF"));
     console.log(localStorage.getItem("PBOF"));
-    document.body.style.fontFamily= 'var(--root-font-family)';
+    document.body.style.fontFamily = 'var(--root-font-family)';
     console.log(localStorage.getItem("PBOF"));
     print(document.body.style.fontFamily);
   }
-  
+
   if (localStorage.getItem("PBOF") == "Y") {
-  
+
     console.log(localStorage.getItem("PBOF"));
-    document.body.style.fontFamily="Pixelify Sans, sans-serif";
+    document.body.style.fontFamily = "Pixelify Sans, sans-serif";
     console.log(localStorage.getItem("PBOF"));
     document.body.style.setProperty("font-family", "Pixelify Sans, sans-serif", "important");
     console.log(localStorage.getItem("PBOF"));
   } else if (localStorage.getItem("PBOF") == "N") {
-    document.body.style.fontFamily= 'var(--root-font-family)';
+    document.body.style.fontFamily = 'var(--root-font-family)';
     console.log(localStorage.getItem("PBOF"));
 
     print(document.body.style.fontFamily);
@@ -1868,10 +1889,10 @@ function body() {
     PixelatedBloxdOnOff.style.verticalAlign = "middle";
     PixelatedBloxdOnOff.style.lineHeight = "1.75px";
     function setting(elementB, elementL, text, wrapper, id) {
-      let brsa= document.createElement("br");
+      let brsa = document.createElement("br");
       wrapper.appendChild(brsa);
       elementB = document.createElement("input");
-      elementL=document.createElement("label");
+      elementL = document.createElement("label");
       elementB.type = "checkbox";
       elementB.style.fontSize = "34px";
       elementB.style.cursor = "pointer";
@@ -1883,8 +1904,8 @@ function body() {
       elementL.htmlFor = id;
       wrapper.appendChild(elementL);
     }
-    var s3b3= document.createElement("input");
-    var s3l3= document.createElement("label");
+    var s3b3 = document.createElement("input");
+    var s3l3 = document.createElement("label");
     //setting(s3b3, s3l3, "Disable show email", abis, "asfasd");
     if (localStorage.getItem("s3b3") == null || localStorage.getItem("s3b3") == undefined) {
       localStorage.setItem("s3b3", "Y");
@@ -1908,9 +1929,9 @@ function body() {
     });
     s3l3.style.lineHeight = "1.75px";
 
-var  s4l4 = document.createElement("label");
-var s4b4 = document.createElement("input");
-setting(s4b4,s4l4,"Show all keys", CrosshairAndHTBSettings,"ess"); 
+    var s4l4 = document.createElement("label");
+    var s4b4 = document.createElement("input");
+    setting(s4b4, s4l4, "Show all keys", CrosshairAndHTBSettings, "ess");
 
 
 
@@ -1923,20 +1944,20 @@ setting(s4b4,s4l4,"Show all keys", CrosshairAndHTBSettings,"ess");
       localStorage.setItem("PBOF", "N");
       console.log(localStorage.getItem("PBOF"));
       console.log(localStorage.getItem("PBOF"));
-      document.body.style.fontFamily= 'var(--root-font-family)';
+      document.body.style.fontFamily = 'var(--root-font-family)';
       console.log(localStorage.getItem("PBOF"));
       print(document.body.style.fontFamily);
     }
-    
+
     if (localStorage.getItem("PBOF") == "Y") {
       PixelatedBloxdOnOff.checked = true;
       console.log(localStorage.getItem("PBOF"));
-      document.body.style.fontFamily="Pixelify Sans, sans-serif";
+      document.body.style.fontFamily = "Pixelify Sans, sans-serif";
       console.log(localStorage.getItem("PBOF"));
       document.body.style.setProperty("font-family", "Pixelify Sans, sans-serif", "important");
       console.log(localStorage.getItem("PBOF"));
     } else if (localStorage.getItem("PBOF") == "N") {
-      document.body.style.fontFamily= 'var(--root-font-family)';
+      document.body.style.fontFamily = 'var(--root-font-family)';
       console.log(localStorage.getItem("PBOF"));
       PixelatedBloxdOnOff.checked = false;
       print(document.body.style.fontFamily);
@@ -1952,7 +1973,7 @@ setting(s4b4,s4l4,"Show all keys", CrosshairAndHTBSettings,"ess");
       console.log(localStorage.getItem("PBOF"));
       if (PixelatedBloxdOnOff.checked == false) {
         console.log(document.getElementById("noa-canvas"));
-        document.body.style.fontFamily= 'var(--root-font-family)';
+        document.body.style.fontFamily = 'var(--root-font-family)';
         if (document.getElementById("noa-canvas") != null) {
           document.getElementById("noa-canvas").style.imageRendering = "auto";
           console.log(document.getElementById("noa-canvas").style.imageRendering + " Image rendering of the noa");
@@ -1964,7 +1985,7 @@ setting(s4b4,s4l4,"Show all keys", CrosshairAndHTBSettings,"ess");
         console.log("PBOF LS = " + localStorage.getItem("PBOF"));
         if (document.getElementById("noa-canvas") != null) {
           console.log(document.getElementById("noa-canvas").style.imageRendering + " Image rendering of the noa");
-          document.body.style.fontFamily="Pixelify Sans, sans-serif";
+          document.body.style.fontFamily = "Pixelify Sans, sans-serif";
           document.body.style.setProperty("font-family", "Pixelify Sans, sans-serif", "important");
           print(document.body.style.fontFamily);
           document.getElementById("noa-canvas").style.imageRendering = "pixelated";
