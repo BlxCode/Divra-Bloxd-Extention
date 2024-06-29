@@ -879,12 +879,12 @@ mch = setInterval(makeCh, 8000);
       audio1.play();
       asmrkeyremove = "";
     }
-    if (document.getElementsByClassName("CrossHair")[0]&&document.getElementsByClassName("CrossHair")[0].textContent=="+") {
+    if (document.getElementsByClassName("CrossHair")[0]!=null&&document.getElementsByClassName("CrossHair")[0].textContent=="+") {
      
         ChangetheCrosshair();
       
     } else {
-      location.reload();
+    console.log("isthis not gaame ain agame");
     }
     if (document.getElementsByClassName("ChatInput")[0]) {
       console.log(document.getElementsByClassName("ChatInput")[0].value);
@@ -1720,7 +1720,7 @@ mch = setInterval(makeCh, 8000);
     thumMenu.appendChild(scl);
     var selection = document.createElement("select");
     selection.title = "i was 2 lazy to make a proper menu lol";
-    selection.className = "SmallTextLight NewButton BlueButton";
+    selection.className = "SmallTextLight NewButtton BlueButton";
     console.log(localStorage.getItem("DASFB") + " = " + selection.value);
     selection.value = localStorage.getItem("DASFB");
     var sel1 = document.createElement("option");
@@ -1733,10 +1733,9 @@ mch = setInterval(makeCh, 8000);
     sel1.disabled = true;
     sel1.selected = true;
     sel1.value = "";
-    var sel2 = document.createElement("option");
-    selo(sel2, "Hotbar & Miscilanious Settings ⚙");
+
     var sel3 = document.createElement("option");
-    selo(sel3, "Keystrokes & Crosshair Settings ⚙");
+    selo(sel3, "Keystrokes, Hotbar, & Crosshair Settings ⚙");
     var sel5 = document.createElement("option");
     var devmode = document.createElement("option");
     var thumbnal = document.createElement("option");
@@ -1795,6 +1794,7 @@ mch = setInterval(makeCh, 8000);
     thumMenu.style.display = "flex";
     var abis = document.createElement("div");
     thumMenu.appendChild(abis);
+
     function css4ds(ais) {
       ais.style.position = "relative";
       ais.style.left = "40%";
@@ -1817,9 +1817,11 @@ mch = setInterval(makeCh, 8000);
     CrosshairAndHTBSettings.appendChild(Crosshair_Width);
     Crosshair_Width.addEventListener("change", () => {
       localStorage.setItem('crosswidth', Crosshair_Width.value);
-      if (document.getElementsByClassName("CrossHair")[0] != null || document.getElementsByClassName("CrossHair")[0] != undefined) {
-        document.getElementsByClassName("CrossHair")[0].width = localStorage.getItem("crosswidth") + "px";
-        document.getElementsByClassName("CrossHair")[0].height = localStorage.getItem("crosswidth") + "px";
+      if (document.getElementsByClassName("CrossHair")) {
+        var cb = String(Crosshair_Width.value)+ "px"
+        document.getElementsByClassName("CrossHair")[0].style.width =  cb;
+        document.getElementsByClassName("CrossHair")[0].style.height = cb;
+        console.log(document.getElementsByClassName("CrossHair")[0].style.height);
       }
     });
     var br2 = document.createElement("br");

@@ -6,6 +6,7 @@
 .EffectInfo{
     z-index:442 !important;
 }
+
 .item{
     opacity:0.825 !important;
     border-radius:10px !important;
@@ -15,7 +16,7 @@
 }
 .CrossHair{
     opacity:0.95 !important;
-    border-radius:0px;
+    border-radius:0px !important;
 }
 div{
     border-radius:10px !important;
@@ -33,6 +34,15 @@ div{
     z-index:10px !important;
     border-radius:10px !important;
 }
+.CraftingStationHeader{
+    margin:0;
+}
+.SettingsMenuRight{
+    padding:1em !important;
+}
+.SettingsSectionTitle{
+    padding:.1rem .1rem !important;
+}
 .Dropdown-menu{
     border-radius:10px !important;
 }
@@ -40,11 +50,17 @@ div{
     z-index:10px;
 }
 .AvailableGame{
+    margin-left:1rem;
     border-radius:10px !important;
     border:none;
-    width:15.4444444444rem !important;
-    aspect-ratio:16/9 !important;
+
     box-shadow:0 !important;
+}
+.cell{
+    border-radius:0px !important; 
+}
+.HomeBackground{
+    filter: blur(3px) brightness(0.75);
 }
 .AvailableGameImg{
     border-radius:10px !important;
@@ -56,6 +72,10 @@ div{
 .AvailableGameText{
     font-size:15px;
     color:aqua;
+    background:none;
+}
+.AvailableGameTextWrapperBackground{
+    background:none !important;
 }
 .PlayerNameInfoHeader{
    display:none;
@@ -118,4 +138,6 @@ div{
     background-color:rgba(134, 176, 226, 0.785) !important;
     border-radius:10px !important;
 }
-
+#noa-container{
+    border-radius:0px !important;
+}
