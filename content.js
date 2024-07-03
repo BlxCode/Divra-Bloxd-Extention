@@ -147,14 +147,7 @@ function upper() {
     o2b.style.transform = 'scale(1) translate(-50%, -50%)';
   });
   o2b.addEventListener("click", () => {
-    if (document.documentElement.requestFullscreen) {
-      console.log("fullscreen done");
-      document.documentElement.requestFullscreen();
-    } else if (document.documentElement.webkitRequestFullscreen) { /* Safari */
-      document.documentElement.webkitRequestFullscreen();
-    } else if (document.documentElement.msRequestFullscreen) { /* IE11 */
-      document.documentElement.msRequestFullscreen();
-    }
+    
     function adsfs() {
       opening.style.display = "none"
     }
@@ -1873,6 +1866,26 @@ mch = setInterval(makeCh, 8000);
     s2l2.style.lineHeight = "1.75px";
     abis.appendChild(s2l2);
     abis.appendChild(s2b2);
+    var br1 = document.createElement("br");
+    abis.appendChild(br1);
+    var abisS1l1 = document.createElement("label");
+    var abisS1B1 = document.createElement("input");
+    abisS1B1.type="range";
+    abisS1B1.min = 0;
+    abisS1B1.max=12500;
+    abisS1B1.id="as1b1";
+    abisS1l1.htmlFor="as1b1";
+    abisS1l1.style.verticalAlign = "middle";
+    abisS1l1.style.lineHeight = "1.75px";
+    abisS1l1.textContent="Advanced Horizontal Chunkload from 0 Chunks to 12500 Chunks *Refresh Required";
+    abis.appendChild(abisS1l1);
+    var br1 = document.createElement("br");
+    abis.appendChild(br1);
+    abis.appendChild(abisS1B1);    
+    abisS1B1.addEventListener("change",()=>{
+      abisS1l1.textContent="Advanced Horizontal Chunkload: "+abisS1B1.value+" Chunks after refresh";
+      localStorage.setItem("bloxd-chunkHorizAddDist", abisS1B1.value);
+    });
     function afdgmn(Numbericks, laughtext) {
       document.querySelector("#root > div.WholeAppWrapper > div > div:nth-child(3) > div > div.ChooseGameWrapper > div:nth-child(" + String(Numbericks) + ") > div > div").innerHTML = laughtext;
     }
@@ -2021,7 +2034,7 @@ mch = setInterval(makeCh, 8000);
         abis.style.display = "block";
         thumbnailwrap.style.display = "none";
         CrosshairAndHTBSettings.style.display = "none";
-      } else if (selection.value == "Keystrokes & Crosshair Settings ⚙") {
+      } else if (selection.value == "Keystrokes, Hotbar, & Crosshair Settings ⚙") {
         abis.style.display = "none";
         thumbnailwrap.style.display = "none";
         CrosshairAndHTBSettings.style.display = "block";
