@@ -2,23 +2,26 @@
   "manifest_version": 3,
   "name": "Divra Client BETA",
   "description": "A great extention that boosts preformance, GUI enhansments, tons of customization capibilities, etc for the online browser game 'Bloxd.io'! THIS EXTENSION IS FOR BETA TESTING",
-  "version": "1.01",
+  "version": "0.1.4.2",
   "permissions": [
     "storage"
+    
   ],
+
   "action": {
     "default_popup": "popup.html",
-    "default_icon": "Images/hello_extensions.png"
+    "default_icon": "Images/Divra-Client-Perfect-Favacon (1).png"
   },
   "optional_permissions": [
-    "desktopCapture"
+    "desktopCapture",
+    "contextMenus"
   ],
   "icons": {
     "16": "Images/16.png",
     "32": "Images/32.png",
     "48": "Images/48.png",
     "128": "Images/128.png",
-    "500": "Images/hello_extensions.png"
+    "256": "Images/hello_extensions.png"
   },
   "content_scripts": [
     {
@@ -30,12 +33,12 @@
         "https://bloxd.io/index.html"
       ],
       "js": [
-      "content.js"
+        "content.js"
       ],
       "css": [
         "content.css"
-      ],
-      "run_at": "document_end"
+      ]
+      
     }
   ]
 }

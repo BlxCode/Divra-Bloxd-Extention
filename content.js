@@ -1,30 +1,23 @@
-var cssnew = document.createElement("style");
-cssnew.textContent = ".PartnersAndCreditsWrapper{z-index:10;}";
-
-document.getElementById("root").insertBefore(cssnew, document.getElementById("root").children[0]);
-document.querySelector("#root > div.WholeAppWrapper > div > div.HomeScreenBottomRight > div:nth-child(3)").addEventListener("click", () => {
-  if (document.getElementsByClassName(".PartnersAndCreditsWrapper")) {
-    document.getElementsByClassName(".PartnersAndCreditsWrapper").style.zIndex = "10";
-  }
-});
 function print(helloworld) {
+  "use strict";
   console.log(helloworld);
 }
-//var infirior = document.querySelector("#root");
-//cssnew.insertAdjacentElement("beforebegin", infirior);
 function upper() {
   "use strict";
+  var style = document.createElement("style");
+  style.textContent = "@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');";
+  document.querySelector("head").appendChild(style);
+
   var opening = document.createElement("div");
   opening.style.position = "fixed";
   opening.style.width = "100%";
   opening.style.height = "100%";
   opening.style.opacity = "0.99999999999999";
   opening.style.zIndex = "6000000000";
+  opening.style.backgroundImage="url(https://divra.vercel.app/assets/BG.png)"
   opening.className = "FullyFancyText";
   document.body.appendChild(opening);
   var Name = document.createElement("div");
-
-
 
   opening.appendChild(Name);
   Name.style.position = "fixed";
@@ -37,19 +30,17 @@ function upper() {
   o1.className = "Title FullyFancyText";
   var o2b = document.createElement("div");
   o2b.style.textAllign = "center";
-  o2b.style.width = "350px";
+  o2b.style.width = "150px";
   o2b.style.left = "50%";
   o2b.style.top = "50px";
+  o2b.style.fontSize="25px";
+ 
   o2b.style.transform = "translate(-50%, -50%)";
   o2b.innerHTML = "Play";
+  o2b.style.padding="5px";
   o2b.className = "NewButton GoldButton ForceRotateEnterFullscreenButton";
   o2b.style.color = "white";
-  var o2bb1 = document.createElement("div");
-  o2bb1.className = "ButtonBottomBorder";
-  o2b.appendChild(o2bb1);
-  var o2bb2 = document.createElement("div");
-  o2bb2.className = "ButtonTopBorder";
-  o2b.appendChild(o2bb2);
+ o2b.style.backgroundColor="rgba(181, 176, 176,0.95)";
   var o3b = document.createElement("div");
   o3b.innerHTML = "Worlds";
   o3b.className = "FullyFancyText NewButton BlueButton";
@@ -63,7 +54,6 @@ function upper() {
   var worldList = document.createElement("div");
   o3b.style.transform = "translate(-50%, -50%)";
   o3b.addEventListener("click", () => {
-
     worldList.style.width = "100%";
     worldList.style.display = "flex";
     worldList.style.height = "100%";
@@ -118,9 +108,7 @@ function upper() {
       WrapperDivElement.appendChild(ImageElement);
       ButtonElement.innerHTML = "Join " + World + " Now!";
       ButtonElement.addEventListener("click", () => {
-
         window.open(Link);
-
       });
       worldList.appendChild(WrapperDivElement);
       ButtonElement.className = "NewButton GoldButton";
@@ -130,31 +118,24 @@ function upper() {
     }
     var WorldP1 = document.createElement("p");
     var WorldW1 = document.createElement("div");
-
     var WorldH1 = document.createElement("h2");
     var WorldB1 = document.createElement("button");
     var WorldI1 = document.createElement("img");
     //Imageurl, World Name, Link to join world, a nice little Description, a Paragraph element, A Wrapper Elemnet, A header element, Button element, Image element
-
     world("https://i.ibb.co/qRMjddr/Screenshot-2024-04-26-8-56-49-PM.png", "🏙️ninjaville🏙️", "https://bloxd.io/?lobby=%F0%9F%8F%99%EF%B8%8Fninjaville%F0%9F%8F%99%EF%B8%8F&g=worlds", "Role play and explore in a beautifule and open, safe city, The City of Ninjaville!", WorldP1, WorldW1, WorldH1, WorldB1, WorldI1);
     var WorldP2 = document.createElement("p");
     var WorldW2 = document.createElement("div");
-
     var WorldH2 = document.createElement("h2");
     var WorldB2 = document.createElement("button");
     var WorldI2 = document.createElement("img");
     world("https://i.ibb.co/4dDTJcb/Screenshot-2024-04-26-10-07-51-PM.png", "💎pvp_rp😎", "https://bloxd.io/?lobby=%F0%9F%92%8Epvp_rp%F0%9F%98%8E&g=worlds", "A purly PVP based world to practice, or to just have fun killing noobs.", WorldP2, WorldW2, WorldH2, WorldB2, WorldI2);
-
     //The music is 🔥 :)) Subscribe please
     opening.appendChild(worldList)
-
-
   });
   opening.appendChild(o1);
   opening.appendChild(o2b);
   o3b.addEventListener("mouseover", () => {
     o3b.style.transform = 'scale(1.2) translate(-50%, -50%)';
-
   });
   o3b.addEventListener("mouseout", () => {
     o3b.style.transform = 'scale(1) translate(-50%, -50%)';
@@ -168,15 +149,7 @@ function upper() {
     o2b.style.transform = 'scale(1) translate(-50%, -50%)';
   });
   o2b.addEventListener("click", () => {
-    if (document.documentElement.requestFullscreen) {
-      console.log("fullscreen done");
-      document.documentElement.requestFullscreen();
-    } else if (document.documentElement.webkitRequestFullscreen) { /* Safari */
-      document.documentElement.webkitRequestFullscreen();
-    } else if (document.documentElement.msRequestFullscreen) { /* IE11 */
-      document.documentElement.msRequestFullscreen();
-    }
-
+    
     function adsfs() {
       opening.style.display = "none"
     }
@@ -190,34 +163,44 @@ function upper() {
     setTimeout(nvr.click(), 1000);
   });
   opening.appendChild(nvr);
-
-
-
 }
 function body() {
-  function croz() {
-    if (document.getElementsByClassName("RespawnButton")[0] != null) {
-      makeCh();
-    } else {
-      console.log('could not find the thing');
-    }
-  }
-
   var mch;
   var cps = 0;
-
+  var audio1 = document.createElement("audio");
+  var audio1info = document.createElement("source");
+  audio1info.src = "https://divra.vercel.app/assets/keyUp.mp3";
+  audio1.volume = 0.1; // volume should be a number
+  audio1.appendChild(audio1info);
+  document.body.appendChild(audio1); // append audio1 to the document body
+  var audio12 = document.createElement("audio");
+  var audio12info = document.createElement("source");
+  audio12info.src = "https://divra.vercel.app/assets/keydown.mp3";
+  audio12.volume = 0.1; // volume should be a number
+  audio12.appendChild(audio12info);
+  document.body.appendChild(audio12);
+  var audio2 = document.createElement("audio");
+  var audio2info = document.createElement("source");
+  audio2info.src = "https://divra.vercel.app/assets/mouseup.mp3";
+  audio2.volume = 1; // volume should be a number
+  audio2.appendChild(audio2info);
+  document.body.appendChild(audio2);
+  var audio22 = document.createElement("audio");
+  var audio22info = document.createElement("source");
+  audio22info.src = "https://divra.vercel.app/assets/mousedown.mp3";
+  audio22.volume = 1; // volume should be a number
+  audio22.appendChild(audio22info);
+  document.body.appendChild(audio22);
   function name() {
     document.getElementsByClassName("PlayerNameInfoNameClickable")[0].innerHTML = "BloxdMaster_";
   }
   var bloxSS = document.createElement("button");
   const d = new Date();
   var timerstart = document.createElement("button");
-
   var divraButts = document.createElement("div");
   divraButts.style.zIndex = "3";
   var timerend = document.createElement("button");
   var gbs = document.createElement("div");
-
   divraButts.style.top = "0px";
   divraButts.style.right = "0px";
   divraButts.style.position = "fixed";
@@ -226,14 +209,24 @@ function body() {
   divraButts.innerHTML = "Divra Quick Setup";
   divraButts.id = "divraButtons";
   divraButts.title = "Divra Buttons";
+// * * Divra All keys
+var DAKWAP = document.createElement("div");
+var DAKKeys = document.createElement("p");
+function dakkey (DakWHO){
 
-  document.getElementsByClassName("Title")[0].innerHTML = "<img src='https://i.ibb.co/ctsSZmr/favicon.png' alt='bloxd.io logo' title='this is the official logo for bloxd btw' style='  image-rendering: pixelated; width:5%; height:5%;'>Divra for Bloxd";
+DakWHO.style.borderRadius="10px";
+
+}
   document.getElementsByClassName("Title")[0].title = "Divra btw the name was chosen because of randomosy and my knowlage of code.";
   // document.getElementsByClassName("Background")[0].src = "https://cdn.discordapp.com/attachments/1200293652258377759/1200293652719734784/20240126_094706_0000.png?ex=65c5a793&is=65b33293&hm=ba5bca862b9222a2651defc771449024d52fdf2a045b4bfb2f66b17390f5e432&";
-
-
   console.log("Loading Divra Client...");
   var divra = document.createElement("div");
+  if(localStorage.getItem("sak")=="N"){
+  divra.style.display = "block";
+  }else if(localStorage.getItem('sak')=="Y"){
+    divra.style.display="none";
+  }
+  
   var divraRMB = document.createElement("p");
   var divraLMB = document.createElement("p");
   divra.innerHTML = "";
@@ -251,22 +244,19 @@ function body() {
   imgofme.alt = "BloxdMaster Logo";
   var brick = document.createElement("br");
   divra.appendChild(brick);
-  document.getElementsByClassName("DiscordButtonDiv")[0].draggable = false;
+
   divraRMB.style.padding = "2px";
   divraRMB.innerHTML = "RMB ";
   divra.appendChild(divraLMB);
   divraRMB.style.borderStyle = "solid";
-
   divraRMB.style.display = "inline-block";
   divraRMB.style.marginLeft = "2px";
-
   function makedivra(vari, index) {
     let stuff = vari.innerHTML = index + " ";
     vari.style.display = "inline-block";
     vari.style.borderStyle = "solid";
     vari.style.padding = "2px";
     vari.style.marginLeft = "2px";
-
     return stuff;
   }
   var customizeThumb = document.createElement("span");
@@ -281,7 +271,6 @@ function body() {
   divraLMB.style.padding = "2px";
   divra.appendChild(divraRMB);
   var nothing = document.createElement("br");
-
   divraLMB.style.display = "inline-block"
   divraLMB.innerHTML = "LMB ";
   var divraA = document.createElement("p");
@@ -318,7 +307,6 @@ function body() {
   divra.style.zIndex = "3";
   divra.style.width = "15%";
   divra.style.height = "32.5%";
-
   var tpak = document.querySelector("#root > div.WholeAppWrapper > div > div.GameBackgroundScreen > div > div.SettingsMenuRight > div.SettingsTextDiv > input");
   divra.style.color = "white";
   divra.style.borderRadius = "10px";
@@ -349,22 +337,17 @@ function body() {
     button_of_doom.style.transform = "scale(1.0)";
   });
   button_of_doom.title = "Turn divra off. To turn back on, press ctrl + r.";
-
   button_of_doom.addEventListener("click", () => {
     divra.style.display = "none";
     divraButts.style.display = "none";
     document.getElementsByClassName("Title")[0].innerHTML = "Bloxd.io";
   });
-
-  divra.addEventListener("mouseover", () => {
+  
     divra.style.cursor = "auto";
-  });
+
   document.getElementById("root").appendChild(divra);
-
-
   var divraSB;
   var keysElement = document.createElement("div");
-
   keysElement.style.display = "none";
   keysElement.style.zIndex = "50";
   keysElement.style.width = "100%";
@@ -374,67 +357,69 @@ function body() {
   keysElement.style.right = "0px";
   var isChatTyping = false;
   document.getElementById("root").appendChild(keysElement);
-
-
-
+  var asmrkeyremove;
   function keydown(eventis) {
+    if (localStorage.getItem("asmr") == "Y" && asmrkeyremove != eventis.key) {
+      asmrkeyremove = eventis.key;
+      audio12.play();
+      console.log(asmrkeyremove + "asmrkeyremove");
+    }
     console.log(eventis);
-
     let ksey = eventis.key;
-
     //bluify = pro coder and copy cat rookie lvl
     //bloxdmaster= noob coder copy cat insaign lvl (and bluify has no idea abt that)
     if (ksey == "a" || ksey == "A") {
       console.log(eventis);
-      divraA.style.backgroundColor = "black";
+      divraA.style.backgroundColor = "green";
     }
     if (ksey == "s" || ksey == "s") {
       console.log(eventis);
-      divraS.style.backgroundColor = "black";
+      divraS.style.backgroundColor = "green";
     }
     if (ksey == "d" || ksey == "D") {
       console.log(eventis);
-      divraD.style.backgroundColor = "black";
+      divraD.style.backgroundColor = "green";
     }
     if (ksey == "w" || ksey == "W") {
       console.log(eventis);
-      divraW.style.backgroundColor = "black";
+      divraW.style.backgroundColor = "green";
     }
     if (ksey == "Shift") {
       console.log(eventis);
-      divraShift.style.backgroundColor = "black";
+      divraShift.style.backgroundColor = "green";
     }
     if (ksey == "c" || ksey == "C") {
       console.log(eventis);
-      divraC.style.backgroundColor = "black";
+      divraC.style.backgroundColor = "green";
     }
     if (ksey == "z" || ksey == "Z") {
       console.log(eventis);
-      divraC.style.backgroundColor = "black";
+      divraC.style.backgroundColor = "green";
     }
     if (ksey == "<" || ksey == "Control") {
       console.log(eventis);
-      divraC.style.backgroundColor = "black";
+      divraC.style.backgroundColor = "green";
     }
     if (ksey == " " || ksey == "space") {
       console.log(eventis);
-      divraSpace.style.backgroundColor = "black";
+      divraSpace.style.backgroundColor = "green";
     }
-
   }
   var dseb = 0;
+  var gbsw;
   console.log("code up to line number 375 has no issues");
   function okeyup(eventis) {
     let ksey = eventis.key;
-
+    if (localStorage.getItem("asmr") == "Y") {
+      audio1.play();
+      asmrkeyremove = "";
+      console.log(asmrkeyremove)
+    }
     console.log(eventis + "okeyup");
-    if (ksey == "x" || ksey == "X") {
-
+    if (ksey == "l" || ksey == "L") {
       if (dseb == 1) {
         gbsw.click();
-
         if (document.getElementById("aas1")) {
-
           document.getElementById("aas1").remove();
           gbs.remove();
           customizeThumb.style.display = "block";
@@ -446,37 +431,25 @@ function body() {
           dseb = 0;
         }
       } else {
-
         console.log(dseb);
         dseb = 1;
         customizeThumb.click();
         togglePointerLock: !1;
       }
-
       console.log(eventis);
-
     }
-
     let key = eventis.key;
-
     if (key == "k") {
-
+      timer.style.zIndex = "100032";
       timerstart.click();
     }
-
-
-
-
     if (key == "`") {
       bloxSS.click();
     }
     if (key == "j" || key == "J") {
       timerend.click();
+
     }
-
-
-
-
     if (key == "a" || key == "A") {
       divraA.style.background = "none";
     }
@@ -515,18 +488,14 @@ function body() {
           divraSB.style.display="none";
           document.getElementsByClassName("SettingsCategoriesList")[0].appendChild(divraSB);
          */
-      if (document.getElementsByClassName("SettingsExitButton")[0] != null) {
-        document.getElementsByClassName("SettingsExitButton")[0].addEventListener("click", () => {
-
-          mch = setInterval(makeCh, 1600);
-        });
-      }
       if (document.querySelector("#root > div.WholeAppWrapper > div > div.GameBackgroundScreen > div > div.SettingsMenuLeft.SmallTextBold > div.SettingsCategoriesList > div.SettingsSectionTitle.ActiveSettingsSectionTitle") != null) {
+        console.log("take to get the current tpack url");
         document.querySelector("#root > div.WholeAppWrapper > div > div.GameBackgroundScreen > div > div.SettingsMenuLeft.SmallTextBold > div.SettingsCategoriesList > div.SettingsSectionTitle.ActiveSettingsSectionTitle").addEventListener("click", () => {
-          document.querySelector("#root > div.WholeAppWrapper > div > div.GameBackgroundScreen > div > div.SettingsMenuRight > div.SettingsTextDiv > div > i").addEventListener("mouseover", () => {
-            var texurl = document.querySelector("#root > div.WholeAppWrapper > div > div.GameBackgroundScreen > div > div.SettingsMenuRight > div.SettingsTextDiv > div > div > div.CircleInfoTooltip").textContent.slice(66, 89);
+          document.getElementsByClassName("SettingsTextInputCircleInfo")[0].addEventListener("mouseover", () => {
+            var texurl = document.getElementsByClassName("CircleInfoTooltip")[0].textContent.slice(66, 89);
+
             console.log(texurl);
-            document.querySelector("#root > div.WholeAppWrapper > div > div.GameBackgroundScreen > div > div.SettingsMenuRight > div.SettingsTextDiv > div > div > div.CircleInfoTooltip").innerHTML = "Clear for default. Requires page refresh to take effect. Example: <a href='" + texurl + "'>" + texurl + "</a>";
+            document.getElementsByClassName("CircleInfoTooltip")[0].innerHTML = "Clear for default. Requires page refresh to take effect. Example: <a href='" + texurl + "'>" + texurl + "</a>";
           });
         });
       }
@@ -539,19 +508,12 @@ function body() {
                   divraSB.classList.add("ActiveSettingsSectionTitle");
                   var divraSB1_1 = document.createElement("div");
                   divraSB1_1.innerHTML=' <div class="CheckboxContainer"> <div class="CheckboxInputAndText"> <label class="CheckboxClickableLabel"> <span class="rc-checkbox rc-checkbox-checked"><input type="checkbox" class="rc-checkbox-input" value="" checked=""><span class="rc-checkbox-inner"></span></span></label><div class="CheckboxText">Show Coordinates</div></div></div>';
-  
               });
   */
     }
-
   }
   document.body.addEventListener("keydown", keydown);
-
   document.body.addEventListener("keyup", okeyup);
-
-
-
-
   //mouse events
   /*  var canvasID = document.getElementById("noa-canvas");
   var YesNoCanvas =9;
@@ -568,34 +530,32 @@ function body() {
     }
     cpsSee.innerHTML = " Cts: " + cps;
     //console.log(cps);
-
   }
-  var gbsw;
   var whatwascps = 1;
-
   function stopCps() {
     setTimeout(makecpslower, 250);
-
     //  console.log("lol");
     cps = 0;
     //  console.log("whatwascps"+whatwascps);
-
   }
   setInterval(stopCps, 1000);
-
   function moosedown(mouse) {
+    if (localStorage.getItem("asmr") == "Y") {
+      audio22.play();
+    }
     if (mouse.button == 0) {
       divraLMB.style.backgroundColor = "black";
     } else if (mouse.button == 2) {
       divraRMB.style.backgroundColor = "black";
-
     }
   }
   document.body.addEventListener("mouseup", mooseup);
   document.body.addEventListener("mousedown", moosedown);
   function mooseup(moose) {
+    if (localStorage.getItem("asmr") == "Y") {
+      audio2.play();
+    }
     if (moose.button == 0) {
-
       divraLMB.style.background = "none";
     } else if (moose.button == 2) {
       WriteOnBoardTextArea();
@@ -603,28 +563,18 @@ function body() {
     }
     cps += 1;
     cpsSee.innerHTML = " Cts: " + cps;
-
   }
-
   function WriteOnBoardTextArea() {
     if (document.getElementsByClassName("WriteOnBoardBg")[0] != null) {
-
       document.getElementById("root").removeEventListener("keyup", gamekeyup);
-
       document.getElementsByClassName("WriteOnBoardBg")[0].addEventListener("click", () => {
-
         document.getElementById("root").addEventListener("keyup", gamekeyup);
-
       });
-
     }
   }
   document.body.addEventListener("mouseup", mooseup);
-
-
   bloxSS.tabIndex = "-1";
   bloxSS.innerHTML = "Screenshot Mode";
-
   function changeFPS() {
     // console.log("lag laglalglaglalglalglalgalglalglalgget0fps0fpsfpspfpspfpsfojeoigjfoewihdfewiouhfoewi[]rsgl'wsdif[e'dsfewosd");
   }
@@ -635,8 +585,6 @@ function body() {
   var lagfps = "yas";
   var option1CROSSHAIR = document.createElement("option");
   option1CROSSHAIR.disabled;
-
-
   changeFFF.style.borderRadius = "10px";
   changeFFF.style.backgroundColor = "rgb(222,222,222)";
   changeFFF.style.border = "none";
@@ -648,7 +596,6 @@ function body() {
   changeFFF.addEventListener("mouseout", () => {
     changeFFF.style.transform = "scale(1.0)";
   });
-
   changeFFF.addEventListener("click", () => {
     changeFFF.innerHTML = "Turn off the lag";
     if (changeFFF.innerHTML == "Lag Ur PC") {
@@ -658,8 +605,6 @@ function body() {
       changeFFF.innerHTML = "Lag Ur PC";
     }
   });
-
-
   bloxSS.addEventListener("click", () => {
     if (bloxSS.innerHTML == "Screenshot Mode") {
       document.getElementById("root").style.display = "none";
@@ -681,7 +626,6 @@ function body() {
   bloxSS.addEventListener("mouseout", () => {
     bloxSS.style.transform = "scale(1.0)";
   });
-
   //  function getVoices() {aa
   //    let voices = .getVoscaices();
   // if (!voices.length) {aaaacsspeechSynthesis
@@ -691,303 +635,301 @@ function body() {
   //  }
   //  return voices;
   // }
-
   function Cross(wth, innrH, val) {
     wth.innerHTML = innrH;
     wth.value = val;
     changeCrosshair.appendChild(wth);
   }
-
   //let utterance = new SpeechSynthesisUtterance("Welcome to divra client for bloxd.io!");
   //let speakData = new SpeechSynthesisUtterance();
   //speakData.voice = getVoices()[0];
   document.getElementById("root").appendChild(divraButts);
   var person;
-
   var lS = localStorage.getItem("Crosshair");
-
   console.log(lS + " localstoragecrosshairvalue");
-
   console.log(localStorage.getItem("Crosshair") + " localstoragecrosshairvalue");
-
   if (lS == null || lS == undefined) {
-    localStorage.setItem("Crosshair", "+");
+    localStorage.setItem("Crosshair", "https://i.ibb.co/n8pFY3b/arYc1V6.png");
   } else {
     changeCrosshair.value = String(lS);
-
   }
-
   if (localStorage.getItem("crosswidth") == null || localStorage.getItem("crosswidth") == undefined) {
     console.log("crosshairwidth=undefinedawcrapnotagainihatewhenthishappens");
     localStorage.setItem("crosswidth", "16");
+  } else if (localStorage.getItem("crosswidth") < 10 || localStorage.getItem("crosswidth") > 30) {
+    localStorage.setItem("crosswidth", "16");
   }
-
   console.log(lS + " localstoragecrosshairvalue");
   changeCrosshair.addEventListener("change", () => {
     localStorage.setItem("Crosshair", changeCrosshair.value);
     console.log(localStorage.getItem("Crosshair") + " lcchvalue");
   });
-
   console.log("code up to line number 653 has no issues");
+  function ChangetheCrosshair(){
+    if (changeCrosshair.value == 'sudiCrosshair') {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://lh3.googleusercontent.com/mfdjL6r1en6mWI3QVMnBbcSX-7QpgBE5EyXo0YbK6299QSJsi58GkfecyL0W7yYljK37vV6Mk7wD69QNdp8LiNw=s400)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == '+Crosshair') {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/JeJjZ9j.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "poopCss") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/3784ppG.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "bala") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://www.google.com/s2/favicons?sz=64&domain=bloxd.io)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "crosshair00") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/Y4Mxe1B.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "crosshair01") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/tbfd0eb.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "crosshair02") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/aFw5z9z.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "crosshair03") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/0M98QU7.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "crosshair04") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/96PGABg.pngg)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "crosshair05") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/lCutXr9.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "crosshair06") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/EHdo6Y9.png';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "crosshair07") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/6LFkbMH.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "crosshair08") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/IbSSS5T.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "crosshair09") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/NDpEANb.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "crosshair10") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/y9slq0w.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "crosshair11") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/Wp7FoBU.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "crosshair12") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/JC54ey0.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "crosshair13") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/B6NC0OG.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "rick") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://c.tenor.com/yheo1GGu3FwAAAAd/tenor.gif)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "P1") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/B29af1N.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "https://i.imgur.com/ggGTkhY.png") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/K1mBFTz.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "https://i.imgur.com/t0wxBxL.png") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/t0wxBxL.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "https://cdn.discordapp.com/attachments/1193362300745285713/1193362645571612762/crosshair.png?ex=65ac7092&is=6599fb92&hm=64ba4263fb1c1cfa3ea1e554d0a3acb9a67104ccc2a44f06a06fb2107daeb445&") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://cdn.discordapp.com/attachments/1193362300745285713/1193362645571612762/crosshair.png?ex=65ac7092&is=6599fb92&hm=64ba4263fb1c1cfa3ea1e554d0a3acb9a67104ccc2a44f06a06fb2107daeb445&)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "https://i.ibb.co/n8pFY3b/arYc1V6.png") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.ibb.co/n8pFY3b/arYc1V6.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "https://i.imgur.com/OwwsiPH.png") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/OwwsiPH.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "https://i.imgur.com/J6BMKcj.png") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/J6BMKcj.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = changeCrosshair.value;
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'none';
+    }
+    localStorage.setItem("Crosshair", changeCrosshair.value);
+  }
+
+
+
+
+mch = setInterval(makeCh, 8000);
   function makeCh() {
-
-
     if (document.getElementsByClassName("CrossHair")[0] != null) {
+      ChangetheCrosshair();
+      var poweredbydivra = document.createElement("p");
+      poweredbydivra.innerHTML = "Powered by Divra Client";
+      poweredbydivra.style.fontSize = "10px";
+      poweredbydivra.className = "SmallTextLight";
+      
+      poweredbydivra.style.position = "fixed";
+      poweredbydivra.style.textAlign = "center";
+      poweredbydivra.style.zIndex = "10";
+      poweredbydivra.style.top = "0px";
+      poweredbydivra.style.marginLeft = "50%";
+      poweredbydivra.style.marginRight = "50%";
+      document.getElementById("root").appendChild(poweredbydivra);
       document.body.removeEventListener("keyup", okeyup);
       if (document.getElementById("noa-canvas")) {
         document.getElementById("noa-canvas").style.imageRendering = "auto";
       }
       if (localStorage.getItem("PBOF") == "Y") {
-
         document.getElementById("noa-canvas").style.imageRendering = "pixelated";
-
       } else if (localStorage.getItem("PBOF") == "N") {
-
         document.getElementById("noa-canvas").style.imageRendering = "auto";
-
       }
-
 
       if (document.querySelector(".CrossHair")) {
         if (localStorage.getItem("crosswidth") == null || localStorage.getItem("crosswidth") == undefined) {
           console.log("crosshairwidth=undefinedawcrapnotagainihatewhenthishappens");
           localStorage.setItem("crosswidth", "16");
 
+        } else if (localStorage.getItem("crosswidth") < 10 || localStorage.getItem("crosswidth") > 30) {
+          localStorage.setItem("crosswidth", "16");
         }
-
         document.body.addEventListener("keyup", gamekeyup);
-
         clearInterval(mch);
+        console.log(mch);
+        console.log("If this is here, then it's still running and ur computer will lag mroe");
         customizeThumb.style.zIndex = "0";
         gbs.remove();
         divraButts.style.display = "none";
         document.querySelector(".CrossHair").style.width = localStorage.getItem("crosswidth") + 'px';
         document.querySelector(".CrossHair").style.height = localStorage.getItem("crosswidth") + "px";
-
+        console.log(localStorage.getItem("crosswidth"));
         console.log(document.querySelector(".CrossHair").style.height);
-        console.log(document.querySelector(".CrossHair").style.width);
-        setInterval(croz, 1500);
+        console.log(document.querySelector(".CrossHair").style.widtth);
       }
-
-
-      if (changeCrosshair.value == 'sudiCrosshair') {
-
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://lh3.googleusercontent.com/mfdjL6r1en6mWI3QVMnBbcSX-7QpgBE5EyXo0YbK6299QSJsi58GkfecyL0W7yYljK37vV6Mk7wD69QNdp8LiNw=s400)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == '+Crosshair') {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/JeJjZ9j.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-
-      } else if (changeCrosshair.value == "poopCss") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/3784ppG.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "bala") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://www.google.com/s2/favicons?sz=64&domain=bloxd.io)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-
-      } else if (changeCrosshair.value == "crosshair00") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/Y4Mxe1B.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "crosshair01") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/tbfd0eb.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "crosshair02") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/aFw5z9z.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "crosshair03") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/0M98QU7.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "crosshair04") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/96PGABg.pngg)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "crosshair05") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/lCutXr9.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "crosshair06") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/EHdo6Y9.png';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "crosshair07") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/6LFkbMH.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "crosshair08") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/IbSSS5T.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "crosshair09") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/NDpEANb.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "crosshair10") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/y9slq0w.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "crosshair11") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/Wp7FoBU.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "crosshair12") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/JC54ey0.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "crosshair13") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/B6NC0OG.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "rick") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://c.tenor.com/yheo1GGu3FwAAAAd/tenor.gif)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "P1") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/B29af1N.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "https://i.imgur.com/ggGTkhY.png") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/K1mBFTz.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "https://i.imgur.com/t0wxBxL.png") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/t0wxBxL.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "https://cdn.discordapp.com/attachments/1193362300745285713/1193362645571612762/crosshair.png?ex=65ac7092&is=6599fb92&hm=64ba4263fb1c1cfa3ea1e554d0a3acb9a67104ccc2a44f06a06fb2107daeb445&") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://cdn.discordapp.com/attachments/1193362300745285713/1193362645571612762/crosshair.png?ex=65ac7092&is=6599fb92&hm=64ba4263fb1c1cfa3ea1e554d0a3acb9a67104ccc2a44f06a06fb2107daeb445&)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "https://i.ibb.co/n8pFY3b/arYc1V6.png") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.ibb.co/n8pFY3b/arYc1V6.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "https://i.imgur.com/OwwsiPH.png") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/OwwsiPH.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else if (changeCrosshair.value == "https://i.imgur.com/J6BMKcj.png") {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/J6BMKcj.png)';
-        document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
-        document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-      } else {
-        document.getElementsByClassName("CrossHair")[0].innerHTML = changeCrosshair.value;
-        document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'none';
-      }
-
-
-      localStorage.setItem("Crosshair", changeCrosshair.value);
-    }
+      
   }
+}
   console.log("code up to line number 817 has no issues");
-
-
   function gamekeyup(eventis) {
-    console.log(document.getElementsByClassName("ChatInput")[0].value);
-    if (document.getElementsByClassName("ChatInput")[0].value == "") {
-      console.log("gkuac");
-      okeyup(eventis);
-      var kley = eventis;
-
-      if (kley == "t" || kley == "T") {
-        console.log("ASDFSADFASDGSDAGSDAFDSAGSDAFSDAsdlfkjsdlakhgsdlkagjsdljfsladkglksdhfslkdaghdkas;lfjdskalghfdskaljfgdskajgfkwejgsdfiudsgwudkf");
-        document.body.removeEventListener("keyup", gamekeyup);
-        console.log("chattingaleewrt");
-        if (kley == "Enter") {
-          console.log("chattingalgoawyosadifusadofhjsdklafjsadkljeweewrt");
-          document.body.addEventListener("keyup", gamekeyup);
-
-        }
-      }
-
-      if (kley == "b" || kley == "B") {
-        if (divra.style.display == "none") {
-          divra.style.display = "block";
-        } else if (divra.style.display == "block") {
-          divra.style.display = "none";
-        }
-      }
-
-      if (kley == "x" || kley == "X") {
-        if (dseb == 1) {
-          gbsw.click();
+    if (kley == "l" || kley == "L") {
+      if (dseb == 1) {
+        gbsw.click();
+        document.getElementById("root").dispatchEvent(new KeyboardEvent('keydown', { 'key': 'Tab' }));
+        document.getElementById("DivrraSettingsExitButton").click();
+        if (document.getElementById("aas1")) {
+          document.getElementById("aas1").remove();
+          gbs.remove();
+          customizeThumb.style.display = "block";
+          thumbnailwrap.remove();
+          dseb = 0;
+          bads.remove();
+          thumbnail1.remove();
+          abis.remove();
+          dseb = 0;
           document.getElementById("root").dispatchEvent(new KeyboardEvent('keydown', { 'key': 'Tab' }));
-          document.getElementById("DivrraSettingsExitButton").click();
-          if (document.getElementById("aas1")) {
-            document.getElementById("aas1").remove();
-            gbs.remove();
-            customizeThumb.style.display = "block";
-            thumbnailwrap.remove();
-            dseb = 0;
-            bads.remove();
-            thumbnail1.remove();
-            abis.remove();
-            dseb = 0;
-            document.getElementById("root").dispatchEvent(new KeyboardEvent('keydown', { 'key': 'Tab' }));
+        }
+      } else {
+        exitPointerLock();
+        console.log(dseb);
+        dseb = 1;
+        customizeThumb.click();
+        togglePointerLock: !1;
+      }
+      console.log(eventis);
+    }
+    if (localStorage.getItem("asmr") == "Y" && asmrkeyremove == eventis.key) {
+      audio1.play();
+      asmrkeyremove = "";
+    }
+    if (document.getElementsByClassName("CrossHair")[0]!=null&&document.getElementsByClassName("CrossHair")[0].textContent=="+") {
+     
+        ChangetheCrosshair();
+      
+    } else {
+    console.log("isthis not gaame ain agame");
+    }
+    if (document.getElementsByClassName("ChatInput")[0]) {
+      console.log(document.getElementsByClassName("ChatInput")[0].value);
+      if (document.getElementsByClassName("ChatInput")[0].value == "") {
+        console.log("gkuac");
+        okeyup(eventis);
+        var kley = eventis;
+        if (kley == "t" || kley == "T") {
+          console.log("ASDFSADFASDGSDAGSDAFDSAGSDAFSDAsdlfkjsdlakhgsdlkagjsdljfsladkglksdhfslkdaghdkas;lfjdskalghfdskaljfgdskajgfkwejgsdfiudsgwudkf");
+          document.body.removeEventListener("keyup", gamekeyup);
+          console.log("chattingaleewrt");
+          if (kley == "Enter") {
+            console.log("chattingalgoawyosadifusadofhjsdklafjsadkljeweewrt");
+            document.body.addEventListener("keyup", gamekeyup);
           }
-        } else {
-          exitPointerLock();
-          console.log(dseb);
-          dseb = 1;
-          customizeThumb.click();
-          togglePointerLock: !1;
+        }
+        if (kley == "b" || kley == "B") {
+          if (divra.style.display == "none") {
+            divra.style.display = "block";
+          } else if (divra.style.display == "block") {
+            divra.style.display = "none";
+          }
         }
 
-        console.log(eventis);
-
-
-
-      }
-
-      if (kley == "Enter") {
-        document.body.removeEventListener("keyup", gamekeyup);
         if (kley == "Enter") {
-          document.body.addEventListener("keyup", gamekeyup);
-
+          document.body.removeEventListener("keyup", gamekeyup);
+          if (kley == "Enter") {
+            document.body.addEventListener("keyup", gamekeyup);
+          }
         }
-      }
-      if (kley == "e" || kley == "E") {
-        WriteOnBoardTextArea();
+        if (kley == "e" || kley == "E") {
+          WriteOnBoardTextArea();
+        }
       }
     }
   }
-
-
-
-
 
   changeCrosshair.stabIndex = "-1";
   changeCrosshair.innerHTML = "Change Crosshair";
@@ -1016,17 +958,14 @@ function body() {
   option5CROSSHAIR.innerHTML = "+";
   option5CROSSHAIR.value = "+";
   changeCrosshair.appendChild(option5CROSSHAIR);
-
   var option6CROSSHAIR = document.createElement("option");
   option6CROSSHAIR.innerHTML = "⚹";
   option6CROSSHAIR.value = "⚹";
   changeCrosshair.appendChild(option6CROSSHAIR);
-
   var option7CROSSHAIR = document.createElement("option");
   option7CROSSHAIR.innerHTML = "×";
   option7CROSSHAIR.value = "×";
   changeCrosshair.appendChild(option7CROSSHAIR);
-
   var option8CROSSHAIR = document.createElement("option");
   option8CROSSHAIR.innerHTML = "🔥";
   option8CROSSHAIR.value = "🔥";
@@ -1049,13 +988,10 @@ function body() {
   Cross(suckmaegleeaazez, "🎃", "🎃");
   var suckemagleeazz = document.createElement("option");
   Cross(suckemagleeazz, "💿", "💿");
-
   var suckeemaglazz = document.createElement("option");
   Cross(suckeemaglazz, "🫥", "🫥");
-
   var suckeeemaglazz = document.createElement("option");
   Cross(suckeeemaglazz, "🍎", "🍎");
-
   var suckeeeemaglazz = document.createElement("option");
   Cross(suckeeeemaglazz, "🥔", "🥔");
   var suckeeeeemaglazz = document.createElement("option");
@@ -1066,13 +1002,11 @@ function body() {
   option9CROSSHAIR.innerHTML = "⛶";
   option9CROSSHAIR.value = "⛶";
   changeCrosshair.appendChild(option9CROSSHAIR);
-
   var option10CROSSHAIR = document.createElement("option");
   option10CROSSHAIR.innerHTML = "⚔";
   option10CROSSHAIR.value = "⚔";
   changeCrosshair.appendChild(option10CROSSHAIR);
   var sacrelabeu = document.createElement("option");
-  sacrelabeu.value = "MOM STINKS";
   sacrelabeu.value = "{⋅}";
   sacrelabeu.innerHTML = "{⋅}";
   changeCrosshair.appendChild(sacrelabeu);
@@ -1080,27 +1014,22 @@ function body() {
   option11CROSSHAIR.innerHTML = "▪";
   option11CROSSHAIR.value = "▪";
   changeCrosshair.appendChild(option11CROSSHAIR);
-
   var option12CROSSHAIR = document.createElement("option");
   option12CROSSHAIR.innerHTML = "💎";
   option12CROSSHAIR.value = "💎";
   changeCrosshair.appendChild(option12CROSSHAIR);
-
   var option13CROSSHAIR = document.createElement("option");
   option13CROSSHAIR.innerHTML = "�";
   option13CROSSHAIR.value = "�";
   changeCrosshair.appendChild(option13CROSSHAIR);
-
   var option14CROSSHAIR = document.createElement("option");
   option14CROSSHAIR.innerHTML = "🎮";
   option14CROSSHAIR.value = "🎮";
   changeCrosshair.appendChild(option14CROSSHAIR);
-
   var option15CROSSHAIR = document.createElement("option");
   option15CROSSHAIR.innerHTML = "(⋅)";
   option15CROSSHAIR.value = "(⋅)";
   changeCrosshair.appendChild(option15CROSSHAIR);
-
   var option16CROSSHAIR = document.createElement("option");
   option16CROSSHAIR.innerHTML = "🎯";
   option16CROSSHAIR.value = "🎯";
@@ -1118,7 +1047,6 @@ function body() {
   option19CROSSHAIR.innerHTML = "Terrible Crosshair";
   option19CROSSHAIR.value = "poopCss";
   changeCrosshair.appendChild(option19CROSSHAIR);
-
   var option20CROSSHAIR = document.createElement("option");
   option20CROSSHAIR.innerHTML = "No crosshair";
   option20CROSSHAIR.value = "";
@@ -1172,10 +1100,7 @@ function body() {
   var Blxm = document.createElement("option");
   //Cross(Blxm,"BloxdMaster's Crosshair" , "https://cdn.discordapp.com/attachments/1193362300745285713/1193362645571612762/crosshair.png?ex=65ac7092&is=6599fb92&hm=64ba4263fb1c1cfa3ea1e554d0a3acb9a67104ccc2a44f06a06fb2107daeb445&");
   Blxm.disabled = true;
-
-
   console.log("DivraClientisthebest");
-
   changeCrosshair.addEventListener("mouseover", () => {
     changeCrosshair.style.transform = "scale(1.1)";
   });
@@ -1187,7 +1112,6 @@ function body() {
   changeCrosshair.style.border = "none";
   changeCrosshair.style.padding = "5px";
   changeCrosshair.style.cursor = "pointer";
-
   var vuiewRulz = document.createElement("button");
   vuiewRulz.innerHTML = "View Bloxd Rules";
   divraButts.appendChild(vuiewRulz);
@@ -1208,24 +1132,19 @@ function body() {
   });
   vuiewRulz.style.zIndex = "-1";
   document.getElementsByClassName("DiscordButtonDiv").tabIndex = "-1";
-
   function hotbarG(abs) {
     document.getElementsByClassName("item ")[abs].style.borderRadius = "1000px";
     document.getElementsByClassName("item ")[abs].style.padding = "2.5px";
     document.getElementsByClassName("item ")[abs].style.backgroundColor = "gray";
     document.getElementsByClassName("item ")[abs].style.border = "none";
     //document.getElementsByClassName("item ")[abs].innerHTML=abs+1;
-
-
   }
   //  changeCrosshair.addEventListener("click",()=>{
   //     crosshairChange();
   //     console.log("changedCROSSHAIRRRRRR");
   //  });
   divraButts.style.opacity = "0.7";
-
   function makerespawn() {
-
     if (document.getElementsByClassName("RespawnButton")[0].innerHTML == "Auto Respawning in 2 Seconds") {
       document.getElementsByClassName("RespawnButton")[0].click();
       //console.log("autoRespawned");
@@ -1256,7 +1175,6 @@ function body() {
   var chHot = document.createElement("button");
   chHot.innerHTML = "Change Hotbar (Only works if you are in a game)";
   chHot.tabIndex = "-1";
-
   function ButtsG(chHote, tit, stu) {
     chHote.title = tit;
     chHote.innerHTML = stu;
@@ -1284,7 +1202,6 @@ function body() {
     hotbarG(7);
     hotbarG(8);
     hotbarG(9);
-
   });
   divraButts.appendChild(chHot);
   /* var setn;
@@ -1312,41 +1229,30 @@ function body() {
     }
   });
   document.body.appendChild(setn);
-   
   divraButts.appendChild(settingzSEL);
   */
-
-
-
-
   //google translate
-
   //function googleTranslateElementInit() {
   //new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
   //}
   //setTimeout(googleTranslateElementInit,100);
-
   var subz = document.createElement("img");
   subz.style.height = "80px";
   subz.style.width = "300px";
-
   subz.style.zIndex = "3";
   document.getElementById("root").appendChild(subz);
   subz.id = "subs 2";
-
   subz.style.position = "fixed";
   subz.style.bottom = "0";
   subz.style.right = "0";
   subz.style.border = "none";
   subz.draggable = false;
-
   subz.style.opacity = "0.99";
   //subz.style.cursor="pointer";
   subz.src = "https://i.imgur.com/YlEhqT1.png";
   var subs = document.createElement("iframe");
   var conyt = document.createElement("button");
   var subsHid = document.createElement("div");
-
   subz.style.zIndex = "-1";
   subs.id = "subs1";
   var channelID = document.createElement("input");
@@ -1361,7 +1267,6 @@ function body() {
   channelID.tabIndex = "-1";
   let year = d.getFullYear();
   let hour = d.getHours() + 3;
-
   function BloxdmasterSubs() {
     if (subs.style.zIndex == "-1") {
       subs.style.zIndex = "91";
@@ -1378,23 +1283,19 @@ function body() {
   Bigsmall.max = "3";
   Bigsmall.style.width = "35px";
   Bigsmall.min = "1";
-
   channelID.addEventListener("keyup", (kpoop) => {
     if (kpoop.key == "Enter") {
       if (channelID.value == "blxm") {
         name();
         //changeCrosshair.value = "https://cdn.discordapp.com/attachments/1164211645145419836/1200316119412637767/4procrossahairv1.png?ex=65c5bc7f&is=65b3477f&hm=7d20af03f0099c27cc35b3cb8f9a3352032c3b29df13c42f652f2abc3cfa92a1&";
         subs.style.zIndex = "4";
-
         subs.src = "https://livecounts.io/embed/youtube-live-subscriber-counter/UCwEbSFbb4e7-XbAlcgmuTVw";
-
         channelID.style.display = "none";
       } else {
         subs.style.zIndex = "4";
         subs.src = "https://livecounts.io/embed/youtube-live-subscriber-counter/" + channelID.value;
         channelID.style.display = "none";
       }
-
     }
   });
   subs.style.height = "80px";
@@ -1416,16 +1317,13 @@ function body() {
   subs.style.right = "0";
   subs.style.border = "none";
   subs.draggable = false;
-
   subs.style.opacity = "0.75";
   subs.style.cursor = "pointer";
   var brithtnez = document.createElement("input");
   brithtnez.type = "range";
   brithtnez.max = "200";
   brithtnez.min = "10";
-
   divraButts.appendChild(brithtnez);
-
   function brit() {
     document.getElementById("noa-canvas").style.filter = "brightness(0%)";
     if (brithtnez.value > 200) {
@@ -1455,10 +1353,6 @@ function body() {
     console.log(document.getElementById("noa-canvas").style.filter);
   }
   brithtnez.addEventListener("change", brit);
-
-
-
-
   var ebrithtnez = document.createElement("input");
   ebrithtnez.type = "range";
   ebrithtnez.max = "200";
@@ -1515,16 +1409,25 @@ function body() {
   butCheekz.addEventListener("click", () => {
     divraButts.style.display = "none";
     butCheekz.style.display = "block";
-
   });
   divraButts.appendChild(timerstart);
   timerstart.innerHTML = "Start Timer";
-
   timerend.innerHTML = "Pause Timer";
-
   divraButts.appendChild(timerend);
+
   var timer = document.createElement("p");
-  divra.appendChild(timer);
+  timer.style.zIndex = -1;
+  document.getElementById("root").appendChild(timer);
+  timer.style.position = "fixed";
+  timer.style.fontSize = "30px";
+  timer.style.top = "0px";
+
+  timer.style.margin = "0ds";
+  timer.style.padding = "10px";
+  timer.style.borderRadius = "10px";
+  timer.style.right = "0px";
+  timer.style.backgroundColor = "black";
+  timer.style.color = "rgb(50,255,50)";
   var hr = document.createElement("span");
   timer.appendChild(hr);
   var mr = document.createElement("span");
@@ -1535,9 +1438,7 @@ function body() {
   var thr = 0;
   var tmr = 0;
   var tsr = 0;
-
   function timrs() {
-
     tsr++;
     hr.innerHTML = String(thr) + ":";
     mr.innerHTML = String(tmr) + ":";
@@ -1560,13 +1461,8 @@ function body() {
       thr++;
       tmr = 0;
       hr.innerHTML = String(thr) + ":";
-
     }
-
-
-
     // console.log(tsr);
-
   }
   timerstart.addEventListener("click", () => {
     clearInterval(timr);
@@ -1575,7 +1471,6 @@ function body() {
   timerend.addEventListener("click", () => {
     clearInterval(timr);
   });
-
   timerstart.style.borderRadius = "10px";
   timerstart.style.backgroundColor = "rgb(222,222,222)";
   timerstart.style.border = "none";
@@ -1590,7 +1485,6 @@ function body() {
   function thdv1(Num, hrefx) {
     document.querySelector("#root > div.WholeAppWrapper > div > div:nth-child(3) > div > div.ChooseGameWrapper > div:nth-child(" + Num + ") > img").src = hrefx;
   }
-
   timerend.style.borderRadius = "10px";
   timerend.style.backgroundColor = "rgb(222,222,222)";
   timerend.style.border = "none";
@@ -1602,10 +1496,6 @@ function body() {
   timerend.addEventListener("mouseout", () => {
     timerend.style.transform = "scale(1.0)";
   });
-
-
-
-
   //Cursor Change
   var cursor = document.createElement("button");
   cursor.innerHTML = "Change Cursor";
@@ -1632,7 +1522,6 @@ function body() {
       divra.style.fontSize = "1em";
     }
   });
-
   cursor.addEventListener("mouseover", () => {
     cursor.style.transform = "scale(1.1)";
   });
@@ -1646,7 +1535,6 @@ function body() {
   reTimer.style.backgroundColor = "rgb(222,222,222)";
   reTimer.style.border = "none";
   reTimer.style.padding = "5px";
-
   reTimer.addEventListener("click", () => {
     thr = 0;
     tmr = 0;
@@ -1700,18 +1588,13 @@ function body() {
     record.style.transform = "scale(1.0)";
   });
   record.style.textDecoration = "none";
-
   customizeThumb.innerHTML = "Divra Settings"
   //document.querySelector("#root > div.WholeAppWrapper > div > div.HomeScreenBottomRight").appendChild(customizeThumb);
   // document.querySelector("#root > div.WholeAppWrapper > div > img").style.zIndex="0.9px";
-  document.querySelector("#root > div.WholeAppWrapper > div > div.HomeScreenBottomRight").insertBefore(customizeThumb, document.querySelector("#root > div.WholeAppWrapper > div > div.HomeScreenBottomRight > a:nth-child(1)"));
   customizeThumb.style.filter = "drop-shadow(233px 233px 29px gray)";
   customizeThumb.style.zIndex = "314159";
-
-
   customizeThumb.style.borderRadius = "5000px";
   customizeThumb.border = "none";
-
   // customizeThumb.style.backgroundColor = "#3392ff";
   customizeThumb.style.cursor = "pointer";
   customizeThumb.style.border = "none";
@@ -1720,8 +1603,6 @@ function body() {
   customizeThumb.className = "SmallTextLight BottomRightClickableBloxdInfo";
   divra.className = "SmallTextLight";
   console.log("code up to line number 1604 has no issues");
-
-
   var thumMenu = document.createElement("div");
   var wea;
   wea = setInterval(() => {
@@ -1757,19 +1638,44 @@ function body() {
     }
   }, 1000);
   console.log(wea);
+
+
+
+
+
+  if (localStorage.getItem("PBOF") == null || localStorage.getItem("PBOF") == undefined) {
+    localStorage.setItem("PBOF", "N");
+    console.log(localStorage.getItem("PBOF"));
+    console.log(localStorage.getItem("PBOF"));
+    document.body.style.fontFamily = 'var(--root-font-family)';
+    console.log(localStorage.getItem("PBOF"));
+    print(document.body.style.fontFamily);
+  }
+
+  if (localStorage.getItem("PBOF") == "Y") {
+
+    console.log(localStorage.getItem("PBOF"));
+    document.body.style.fontFamily = "Pixelify Sans, sans-serif";
+    console.log(localStorage.getItem("PBOF"));
+    document.body.style.setProperty("font-family", "Pixelify Sans, sans-serif", "important");
+    console.log(localStorage.getItem("PBOF"));
+  } else if (localStorage.getItem("PBOF") == "N") {
+    document.body.style.fontFamily = 'var(--root-font-family)';
+    console.log(localStorage.getItem("PBOF"));
+
+    print(document.body.style.fontFamily);
+    console.log(localStorage.getItem("PBOF"));
+    console.log(localStorage.getItem("PBOF"));
+  }
+
+
+
+
+
+
   var thumbnailwrap = document.createElement("div");
-
-
-
-
-
-
-
-
-
   //Divra Settings
   customizeThumb.addEventListener("click", () => {
-
     var gbs = document.createElement("div");
     dseb = 1;
     gbs.id = "aas1";
@@ -1792,6 +1698,7 @@ function body() {
       bads.remove();
       thumbnail1.remove();
       abis.remove();
+      CrosshairAndHTBSettings.remove();
     });
     var scriptcode = document.createElement("script");
     scriptcode.id = "scriptcodedivra";
@@ -1804,7 +1711,6 @@ function body() {
     thumMenu.style.fixed = true;
     thumMenu.style.width = "75%";
     thumMenu.style.height = "75%";
-
     var exitbutton = document.createElement("div");
     exitbutton.id = "DivrraSettingsExitButton"
     exitbutton.className = "NewButton RedButton SettingsResumeExitButton SettingsExitButton";
@@ -1822,43 +1728,32 @@ function body() {
     exitbutton.style.cursor = "pointer";
     thumMenu.appendChild(scl);
     var selection = document.createElement("select");
-
-
-
     selection.title = "i was 2 lazy to make a proper menu lol";
-    selection.className = "SmallTextLight NewButton BlueButton";
+    selection.className = "SmallTextLight NewButtton BlueButton";
     console.log(localStorage.getItem("DASFB") + " = " + selection.value);
     selection.value = localStorage.getItem("DASFB");
     var sel1 = document.createElement("option");
-
     function selo(id, text) {
       id.innerHTML = text;
       id.value = text;
       selection.appendChild(id);
     }
     selo(sel1, "Settings Section Selector");
-
     sel1.disabled = true;
     sel1.selected = true;
     sel1.value = "";
-    var sel2 = document.createElement("option");
-    selo(sel2, "Crosshair & Hotbar Settings ⚙");
+
     var sel3 = document.createElement("option");
-    selo(sel3, "Keystrokes & Youtuber Settings ⚙");
-    var sel4 = document.createElement("option");
-    selo(sel4, "Advanced Divra Settings ⚙");
+    selo(sel3, "Keystrokes, Hotbar, & Crosshair Settings ⚙");
     var sel5 = document.createElement("option");
     var devmode = document.createElement("option");
     var thumbnal = document.createElement("option");
     selo(thumbnal, "Gamemode Thumbnails 🖼");
     selo(devmode, 'Dev Mode 🧑‍💻<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>');
     selo(sel5, "Advanced Bloxd.io Settings ⚙");
-    sel4.hidden = true;
-
     var thumbnail1 = document.createElement("img");
     thumbnail1.src = "https://i.ibb.co/BsfGKYC/worlds.webp";
     thumbnail1.style.aspectRatio = "16/9";
-
     thumbnail1.style.cusor = "pointer";
     thumbnail1.addEventListener("mouseover", () => {
       thumbnail1.style.transform = "scale(1.1)";
@@ -1879,10 +1774,8 @@ function body() {
     bads.innerHTML = los;
     document.body.appendChild(bads);
     bads.zIndex = "-1";
-
     console.log("thumbnaills" + localStorage.getItem("thumbnail"));
     thumbnail1.style.top = "10%";
-
     thumbnail1.style.position = "fixed";
     thumbnail1.style.cursor = "pointer";
     thumbnail1.style.borderStyle = "solid";
@@ -1910,6 +1803,7 @@ function body() {
     thumMenu.style.display = "flex";
     var abis = document.createElement("div");
     thumMenu.appendChild(abis);
+
     function css4ds(ais) {
       ais.style.position = "relative";
       ais.style.left = "40%";
@@ -1930,6 +1824,41 @@ function body() {
     l4Crosshair_Width.innerHTML = "Crosshair Size";
     CrosshairAndHTBSettings.appendChild(l4Crosshair_Width);
     CrosshairAndHTBSettings.appendChild(Crosshair_Width);
+    Crosshair_Width.addEventListener("change", () => {
+      localStorage.setItem('crosswidth', Crosshair_Width.value);
+      if (document.getElementsByClassName("CrossHair")) {
+        var cb = String(Crosshair_Width.value)+ "px"
+        document.getElementsByClassName("CrossHair")[0].style.width =  cb;
+        document.getElementsByClassName("CrossHair")[0].style.height = cb;
+        console.log(document.getElementsByClassName("CrossHair")[0].style.height);
+      }
+    });
+    var br2 = document.createElement("br");
+    CrosshairAndHTBSettings.appendChild(br2);
+    var asmr = document.createElement("input");
+    asmr.type = "checkbox";
+    asmr.style.fontSize = "34px";
+    asmr.style.cursor = 'pointer'
+    asmr.style.transform = "scale(2)";
+    asmr.style.marginTop = "10px";
+    asmr.id = "asmr";
+    var asmrLab = document.createElement("label");
+    asmrLab.innerHTML = "Asmr stuff";
+    asmrLab.htmlFor = "asmr";
+    CrosshairAndHTBSettings.appendChild(asmr);
+    asmr.addEventListener("click", () => {
+      if (asmr.checked == true) {
+        localStorage.setItem("asmr", "Y");
+      } else {
+        localStorage.setItem("asmr", "F");
+      }
+    });
+    CrosshairAndHTBSettings.appendChild(asmrLab);
+    if (localStorage.getItem("asmr") == "Y") {
+      asmr.checked = true;
+    } else {
+      asmr.checked = false;
+    }
     var PixelatedBloxdOnOff = document.createElement("input");
     PixelatedBloxdOnOff.type = "checkbox";
     PixelatedBloxdOnOff.style.fontSize = "34px";
@@ -1949,11 +1878,30 @@ function body() {
     var s2l2 = document.createElement("label");
     s2b2.id = "s2b2";
     s2b2.htmlFor = "s2b2";
-
     s2l2.style.verticalAlign = "middle";
     s2l2.style.lineHeight = "1.75px";
     abis.appendChild(s2l2);
     abis.appendChild(s2b2);
+    var br1 = document.createElement("br");
+    abis.appendChild(br1);
+    var abisS1l1 = document.createElement("label");
+    var abisS1B1 = document.createElement("input");
+    abisS1B1.type="range";
+    abisS1B1.min = 2;
+    abisS1B1.max=12500;
+    abisS1B1.id="as1b1";
+    abisS1l1.htmlFor="as1b1";
+    abisS1l1.style.verticalAlign = "middle";
+    abisS1l1.style.lineHeight = "1.75px";
+    abisS1l1.textContent="Advanced Horizontal Chunkload from 0 Chunks to 12500 Chunks *Refresh Required";
+    abis.appendChild(abisS1l1);
+    var br1 = document.createElement("br");
+    abis.appendChild(br1);
+    abis.appendChild(abisS1B1);    
+    abisS1B1.addEventListener("change",()=>{
+      abisS1l1.textContent="Advanced Horizontal Chunkload: "+abisS1B1.value+" Chunks after refresh";
+      localStorage.setItem("bloxd-chunkHorizAddDist", abisS1B1.value);
+    });
     function afdgmn(Numbericks, laughtext) {
       document.querySelector("#root > div.WholeAppWrapper > div > div:nth-child(3) > div > div.ChooseGameWrapper > div:nth-child(" + String(Numbericks) + ") > div > div").innerHTML = laughtext;
     }
@@ -1969,91 +1917,138 @@ function body() {
     s2b2.addEventListener("click", () => {
       //something
       if (s2b2.checked == true) {
-
         localStorage.setItem("s2b2", "Y");
       } else if (s2b2.checked == false) {
         localStorage.getItem("s2b2", "N");
       }
-
     });
     s2b2.style.transform = "scale(2)";
-
     s2l2.innerHTML = "aPrIl &#129315; FoOlS &#129315; mOdE &#129315; ";
     s2b2.style.cursor = "pointer";
     PixelatedBloxdOnOff.style.verticalAlign = "middle";
     PixelatedBloxdOnOff.style.lineHeight = "1.75px";
-    s2l2.style.lineHeight = "1.75px";
-    console.log(localStorage.getItem("PBOF"));
-    console.log(localStorage.getItem("PBOF"));
+    function setting(elementB, elementL, text, wrapper, id) {
+      let brsa = document.createElement("br");
+      wrapper.appendChild(brsa);
+      elementB = document.createElement("input");
+      elementL = document.createElement("label");
+      elementB.type = "checkbox";
+      elementB.style.fontSize = "34px";
+      elementB.style.cursor = "pointer";
+      elementB.style.transform = "scale(2)";
+      elementB.style.marginTop = "10px";
+      elementB.id = id;
+      wrapper.appendChild(elementB);
+      elementL.textContent = text;
+      elementL.htmlFor = id;
+      wrapper.appendChild(elementL);
+    }
+    var s3b3 = document.createElement("input");
+    var s3l3 = document.createElement("label");
+    //setting(s3b3, s3l3, "Disable show email", abis, "asfasd");
+    if (localStorage.getItem("s3b3") == null || localStorage.getItem("s3b3") == undefined) {
+      localStorage.setItem("s3b3", "Y");
+    } else {
+      if (localStorage.getItem("s3b3") == "Y") {
+        s3b3.checked = true;
+      } else if (localStorage.getItem("s3b3") == "N") {
+        s3b3.checked = false;
+      }
+    }
+    s3b3.addEventListener("click", () => {
+      //something
+      if (s3b3.checked == true) {
+        if (document.getElementsByClassName("PlayerNameInfoHeader")) {
+          document.getElementsByClassName("PlayerNameInfoHeader").textContent = "Playing As:"
+        }
+        localStorage.setItem("sebe", "Y");
+      } else if (s3b3.checked == false) {
+        localStorage.getItem("s3b3", "N");
+      }
+    });
+    s3l3.style.lineHeight = "1.75px";
 
+    var s4l4 = document.createElement("label");
+    var s4b4 = document.createElement("input");
+    setting(s4b4, s4l4, "Show all keys", CrosshairAndHTBSettings, "ess");
+
+s4b4.addEventListener("change",()=>{
+if(s4b4.checked==true){
+  localStorage.setItem("sak","Y");
+  // TODO: Add some kind of show via display none and display whatever
+}else if(s4b4.checked==false){
+  localStorage.setItem("sak","N");
+  // TODO: Add some kind hide via display none and display whatever
+}
+});
+
+
+
+
+    console.log(localStorage.getItem("PBOF"));
+    console.log(localStorage.getItem("PBOF"));
     if (localStorage.getItem("PBOF") == null || localStorage.getItem("PBOF") == undefined) {
       localStorage.setItem("PBOF", "N");
       console.log(localStorage.getItem("PBOF"));
       console.log(localStorage.getItem("PBOF"));
+      document.body.style.fontFamily = 'var(--root-font-family)';
       console.log(localStorage.getItem("PBOF"));
+      print(document.body.style.fontFamily);
     }
+
     if (localStorage.getItem("PBOF") == "Y") {
       PixelatedBloxdOnOff.checked = true;
       console.log(localStorage.getItem("PBOF"));
+      document.body.style.fontFamily = "Pixelify Sans, sans-serif";
       console.log(localStorage.getItem("PBOF"));
+      document.body.style.setProperty("font-family", "Pixelify Sans, sans-serif", "important");
       console.log(localStorage.getItem("PBOF"));
     } else if (localStorage.getItem("PBOF") == "N") {
+      document.body.style.fontFamily = 'var(--root-font-family)';
       console.log(localStorage.getItem("PBOF"));
       PixelatedBloxdOnOff.checked = false;
+      print(document.body.style.fontFamily);
       console.log(localStorage.getItem("PBOF"));
       console.log(localStorage.getItem("PBOF"));
     }
-
-
-
     PixelatedBloxdOnOff.addEventListener("click", () => {
       console.log(localStorage.getItem("PBOF"));
       console.log(localStorage.getItem("PBOF"));
       console.log(localStorage.getItem("PBOF"));
-
+      print(document.body.style.fontFamily)
       console.log(localStorage.getItem("PBOF"));
-
       console.log(localStorage.getItem("PBOF"));
       if (PixelatedBloxdOnOff.checked == false) {
         console.log(document.getElementById("noa-canvas"));
+        document.body.style.fontFamily = 'var(--root-font-family)';
         if (document.getElementById("noa-canvas") != null) {
           document.getElementById("noa-canvas").style.imageRendering = "auto";
           console.log(document.getElementById("noa-canvas").style.imageRendering + " Image rendering of the noa");
         }
         localStorage.setItem("PBOF", "N");
-
-
       } else {
         localStorage.setItem("PBOF", "Y");
+        document.body.style.setProperty("font-family", "Pixelify Sans, sans-serif", "important");
         console.log("PBOF LS = " + localStorage.getItem("PBOF"));
         if (document.getElementById("noa-canvas") != null) {
           console.log(document.getElementById("noa-canvas").style.imageRendering + " Image rendering of the noa");
+          document.body.style.fontFamily = "Pixelify Sans, sans-serif";
+          document.body.style.setProperty("font-family", "Pixelify Sans, sans-serif", "important");
+          print(document.body.style.fontFamily);
           document.getElementById("noa-canvas").style.imageRendering = "pixelated";
-
         }
-
-
       }
     });
-
-
     PBOF.style.marginRight = "10px";
     PBOF.style.marginLeft = "10px";
     PBOF.style.lineHeight = "1.75px";
     PBOF.style.verticalAlign = "middle";
-
     selection.addEventListener("change", () => {
       localStorage.setItem("DASFB", selection.value);
-
       thumbnailwrap.hidden;
-
-
-
-
-
+      Crosshair_Width.hidden;
+      CrosshairAndHTBSettings.hidden;
       thumbnail1.hidden;
-
-
       //Add/Remove Settings
       if (selection.value == "Gamemode Thumbnails 🖼") {
         thumbnailwrap.style.display = "block";
@@ -2063,7 +2058,7 @@ function body() {
         abis.style.display = "block";
         thumbnailwrap.style.display = "none";
         CrosshairAndHTBSettings.style.display = "none";
-      } else if (selection.value == "Crosshair & Hotbar Settings ⚙") {
+      } else if (selection.value == "Keystrokes, Hotbar, & Crosshair Settings ⚙") {
         abis.style.display = "none";
         thumbnailwrap.style.display = "none";
         CrosshairAndHTBSettings.style.display = "block";
@@ -2074,17 +2069,13 @@ function body() {
     selection.style.margin = "0.5em,0.5em,0.5em,0.5em";
     selection.style.position = "fixed";
     selection.tabIndex = "-1";
-
     scl.appendChild(selection);
     thumMenu.style.position = "fixed";
     exitbutton.addEventListener("click", () => {
       gbsw.click();
     });
   });
-
-
   console.log("code up to line number 1812 has no issues");
-
   //  divraButts.innerHTML='<div class="start-screen-recording"><div><div class="rec-dot"></div><span>Start</span></div></div><script src="https://api.apowersoft.com/screen-recorder?lang=en" defer></script>'
   //  divraButts.appendChild(record);
   /* var rdiv1 = document.createElement("div");
@@ -2097,45 +2088,28 @@ function body() {
   var rspan1 = document.createElement("span");
   rspan1.innerHTML="Start";
   rdiv2.appendChild(rspan1);
-   
   var rscript = document.createElement("script");
   rscript.src="https://api.apowersoft.com/screen-recorder?lang=en";
   rscript.defer=true;
   */
-
-
-
   /*
   <div class="start-screen-recording"><div><div class="rec-dot"></div><span>Start</span></div></div><script src="https://api.apowersoft.com/screen-recorder?lang=en" defer></script>
   */
-
-
   //testing
-
-
-
-
   function autoRESPAWN() {
     document.getElementsByClassName("RespawnButton")[0].innerHTML = "Auto Respawning in 2 Seconds";
-
-
     setTimeout(makerespawn, 1000);
   }
   // setInterval(autoRESPAWN,6001);
-
-  mch = setInterval(makeCh, 1500);
-
+ 
   function attheendofthecodeyouwillalwaysmakeafunctionsnamethatissolongucantcomprehendandobviouslyyouneednospacesanduhav2spelletwromg() {
     changeCrosshair.value = String(localStorage.getItem("Crosshair"));
-
     console.log("Divra done loading. Entering Bloxd.io.");
     console.log(changeCrosshair.value);
   }
-
-
   divraButts.appendChild(Bigsmall);
   setTimeout(attheendofthecodeyouwillalwaysmakeafunctionsnamethatissolongucantcomprehendandobviouslyyouneednospacesanduhav2spelletwromg, 1000);
   console.log("All code has no issues");
 }
-setTimeout(body, 200);
-upper();
+setTimeout(body, 800);
+setTimeout(upper, 400);

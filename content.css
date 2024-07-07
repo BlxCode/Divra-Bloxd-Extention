@@ -1,12 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+.GameBadgeBottomInner{
+    display:none !important;
+
+}
+.EffectInfo{
+    z-index:442 !important;
+}
+
+.item{
+    opacity:0.825 !important;
+    border-radius:10px !important;
+    background-color:rgb(189, 114, 39) !important;
+    border-color:rgb(144, 43, 43) !important;
+    padding:1px !important;
+}
+.CrossHair{
+    opacity:0.95 !important;
+    border-radius:0px !important;
+}
+div{
+    border-radius:10px !important;
+}
+.BlockItem,.BlockItem2,.BlockItem3,.BlockItem3Inner{
+    border-radius:0px !important;
+}
 .BlueButton, .NewButton{
     background-color:red;
 }
 .NewButton{
     background-color:red;
 }
-.SettingsMenu{
-    z-index:10px;
+.SettingsMenu,.SettingsMenuLeft,.SettingsMenuRight{
+    z-index:10px !important;
+    border-radius:10px !important;
+}
+.CraftingStationHeader{
+    margin:0;
+}
+.SettingsMenuRight{
+    padding:1em !important;
+}
+.SettingsSectionTitle{
+    padding:.1rem .1rem !important;
+}
+.Dropdown-menu{
+    border-radius:10px !important;
 }
 .PartnersAndCreditsWrapper{
     z-index:10px;
+}
+.AvailableGame{
+    margin-left:1rem;
+    border-radius:10px !important;
+    border:none;
+
+    box-shadow:0 !important;
+}
+.cell{
+    border-radius:0px !important; 
+}
+.HomeBackground{
+    filter: blur(3px) brightness(0.75);
+}
+.AvailableGameImg{
+    border-radius:10px !important;
+    filter: contrast(105%) hue-rotate(5deg) saturate(1.5) !important;
+    aspect-ratio:16/9 !important;
+    height:auto !important;
+    width:15.4444444444rem !important;
+}
+.AvailableGameText{
+    font-size:15px;
+    color:aqua;
+    background:none;
+}
+.AvailableGameTextWrapperBackground{
+    background:none !important;
+}
+.PlayerNameInfoHeader{
+   display:none;
+}
+.SelectLobbyOuterWrapper{
+    border-radius:10px !important;
+}
+.BloxdDropdownControl{
+    border-radius:10px !important;
+}
+.rangeslider{
+    border-radius:10px !important;
+}
+.ChatInputChannel{
+    color:white;
+}
+.ChattingWrapper, ChatInput{
+    background-color:rgb(235, 235, 215,0.42) !important;
+    color:black !important;
+    border-radius:10px !important;
+}
+.FpsWrapperDiv, .CoordinateUI,.LobbyNameWrapper{
+    padding:2.5px;
+    background-color:rgb(235, 235, 215,0.42) !important;
+    color:black !important;
+    border-radius:10px !important;
+}
+.MiddleScreenPopup{
+    background-color:rgba(28, 28, 77, 0.423);
+    border-radius:10px !important;
+}
+
+.SelectLobbyWrapper{
+    border-radius:10px !important;
+
+    text-stroke-width:0px !important;
+    -webkit-text-stroke-width:none !important;
+    background-color:rgb(0, 93, 124) !important;
+}
+.RecentlyPlayedLobbiesWrapper{
+    background-color:rgb(5, 148, 101) !important;
+  border-radius:0px 0px 10px 10px !important;
+    text-stroke-width:0px !important;
+    -webkit-text-stroke-width:0px !important;
+}
+.RecentlyPlayedLobby:hover{
+    background-color:rgba(0, 255, 255, 0.778) !important;
+}
+.CreateLobbyHeaderText{
+    color:black;
+}
+.NewButton{
+    border-radius:10px !important;
+}
+.TextInput{
+    border-radius:10px !important;
+    background-color:powderblue !important;
+}
+.tooltip-container, .tooltip-arrow{
+    background-color:rgba(134, 176, 226, 0.785) !important;
+    border-radius:10px !important;
+}
+#noa-container{
+    border-radius:0px !important;
 }
