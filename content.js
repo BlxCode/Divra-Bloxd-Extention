@@ -214,6 +214,7 @@ function body() {
   DAKWAP.appendChild(DAKKeys);
   document.getElementById("root").appendChild(DAKKeys);
   DAKWAP.style.zIndex = "45";
+
   document.getElementsByClassName("Title")[0].title = "Divra btw the name was chosen because of randomosy and my knowlage of code.";
   // document.getElementsByClassName("Background")[0].src = "https://cdn.discordapp.com/attachments/1200293652258377759/1200293652719734784/20240126_094706_0000.png?ex=65c5a793&is=65b33293&hm=ba5bca862b9222a2651defc771449024d52fdf2a045b4bfb2f66b17390f5e432&";
   console.log("Loading Divra Client...");
@@ -222,6 +223,7 @@ function body() {
     divra.style.display = "block";
   } else if (localStorage.getItem('sak') == "Y") {
     divra.style.display = "none";
+    DAKWAP.style.display="block";
   }
   var divraRMB = document.createElement("p");
   var divraLMB = document.createElement("p");
