@@ -207,12 +207,24 @@ function body() {
   divraButts.innerHTML = "Divra Quick Setup";
   divraButts.id = "divraButtons";
   divraButts.title = "Divra Buttons";
+// * * Divra All keys
+var DAKWAP = document.createElement("div");
+var DAKKeys = document.createElement("p");
+function dakkey (DakWHO){
 
+DakWHO.style.borderRadius="10px";
+
+}
   document.getElementsByClassName("Title")[0].title = "Divra btw the name was chosen because of randomosy and my knowlage of code.";
   // document.getElementsByClassName("Background")[0].src = "https://cdn.discordapp.com/attachments/1200293652258377759/1200293652719734784/20240126_094706_0000.png?ex=65c5a793&is=65b33293&hm=ba5bca862b9222a2651defc771449024d52fdf2a045b4bfb2f66b17390f5e432&";
   console.log("Loading Divra Client...");
   var divra = document.createElement("div");
+  if(localStorage.getItem("sak")=="N"){
   divra.style.display = "block";
+  }else if(localStorage.getItem('sak')=="Y"){
+    divra.style.display="none";
+  }
+  
   var divraRMB = document.createElement("p");
   var divraLMB = document.createElement("p");
   divra.innerHTML = "";
@@ -1956,7 +1968,15 @@ mch = setInterval(makeCh, 8000);
     var s4b4 = document.createElement("input");
     setting(s4b4, s4l4, "Show all keys", CrosshairAndHTBSettings, "ess");
 
-
+s4b4.addEventListener("change",()=>{
+if(s4b4.checked==true){
+  localStorage.setItem("sak","Y");
+  // TODO: Add some kind of show via display none and display whatever
+}else if(s4b4.checked==false){
+  localStorage.setItem("sak","N");
+  // TODO: Add some kind hide via display none and display whatever
+}
+});
 
 
 
