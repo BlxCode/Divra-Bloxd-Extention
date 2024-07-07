@@ -7,14 +7,13 @@ function upper() {
   var style = document.createElement("style");
   style.textContent = "@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');";
   document.querySelector("head").appendChild(style);
-
   var opening = document.createElement("div");
   opening.style.position = "fixed";
   opening.style.width = "100%";
   opening.style.height = "100%";
   opening.style.opacity = "0.99999999999999";
   opening.style.zIndex = "6000000000";
-  opening.style.backgroundImage="url(https://divra.vercel.app/assets/BG.png)"
+  opening.style.backgroundImage = "url(https://divra.vercel.app/assets/BG.png)"
   opening.className = "FullyFancyText";
   document.body.appendChild(opening);
   var Name = document.createElement("div");
@@ -31,14 +30,13 @@ function upper() {
   o2b.style.width = "150px";
   o2b.style.left = "50%";
   o2b.style.top = "50px";
-  o2b.style.fontSize="25px";
- 
+  o2b.style.fontSize = "25px";
   o2b.style.transform = "translate(-50%, -50%)";
   o2b.innerHTML = "Play";
-  o2b.style.padding="5px";
+  o2b.style.padding = "5px";
   o2b.className = "NewButton GoldButton ForceRotateEnterFullscreenButton";
   o2b.style.color = "white";
- o2b.style.backgroundColor="rgba(181, 176, 176,0.95)";
+  o2b.style.backgroundColor = "rgba(181, 176, 176,0.95)";
   var o3b = document.createElement("div");
   o3b.innerHTML = "Worlds";
   o3b.className = "FullyFancyText NewButton BlueButton";
@@ -147,7 +145,6 @@ function upper() {
     o2b.style.transform = 'scale(1) translate(-50%, -50%)';
   });
   o2b.addEventListener("click", () => {
-    
     function adsfs() {
       opening.style.display = "none"
     }
@@ -207,24 +204,25 @@ function body() {
   divraButts.innerHTML = "Divra Quick Setup";
   divraButts.id = "divraButtons";
   divraButts.title = "Divra Buttons";
-// * * Divra All keys
-var DAKWAP = document.createElement("div");
-var DAKKeys = document.createElement("p");
-function dakkey (DakWHO){
-
-DakWHO.style.borderRadius="10px";
-
-}
+  // * * Divra All keys
+  var DAKWAP = document.createElement("div");
+  var DAKKeys = document.createElement("p");
+  DAKKeys.style.borderRadius = "10px";
+  DAKKeys.style.width = "13px";
+  DAKKeys.style.borderColor = "white";
+  DAKKeys.style.borderStyle = "solid";
+  DAKWAP.appendChild(DAKKeys);
+  document.getElementById("root").appendChild(DAKKeys);
+  DAKWAP.style.zIndex = "45";
   document.getElementsByClassName("Title")[0].title = "Divra btw the name was chosen because of randomosy and my knowlage of code.";
   // document.getElementsByClassName("Background")[0].src = "https://cdn.discordapp.com/attachments/1200293652258377759/1200293652719734784/20240126_094706_0000.png?ex=65c5a793&is=65b33293&hm=ba5bca862b9222a2651defc771449024d52fdf2a045b4bfb2f66b17390f5e432&";
   console.log("Loading Divra Client...");
   var divra = document.createElement("div");
-  if(localStorage.getItem("sak")=="N"){
-  divra.style.display = "block";
-  }else if(localStorage.getItem('sak')=="Y"){
-    divra.style.display="none";
+  if (localStorage.getItem("sak") == "N") {
+    divra.style.display = "block";
+  } else if (localStorage.getItem('sak') == "Y") {
+    divra.style.display = "none";
   }
-  
   var divraRMB = document.createElement("p");
   var divraLMB = document.createElement("p");
   divra.innerHTML = "";
@@ -242,7 +240,6 @@ DakWHO.style.borderRadius="10px";
   imgofme.alt = "BloxdMaster Logo";
   var brick = document.createElement("br");
   divra.appendChild(brick);
-
   divraRMB.style.padding = "2px";
   divraRMB.innerHTML = "RMB ";
   divra.appendChild(divraLMB);
@@ -340,9 +337,7 @@ DakWHO.style.borderRadius="10px";
     divraButts.style.display = "none";
     document.getElementsByClassName("Title")[0].innerHTML = "Bloxd.io";
   });
-  
-    divra.style.cursor = "auto";
-
+  divra.style.cursor = "auto";
   document.getElementById("root").appendChild(divra);
   var divraSB;
   var keysElement = document.createElement("div");
@@ -446,7 +441,6 @@ DakWHO.style.borderRadius="10px";
     }
     if (key == "j" || key == "J") {
       timerend.click();
-
     }
     if (key == "a" || key == "A") {
       divraA.style.background = "none";
@@ -491,7 +485,6 @@ DakWHO.style.borderRadius="10px";
         document.querySelector("#root > div.WholeAppWrapper > div > div.GameBackgroundScreen > div > div.SettingsMenuLeft.SmallTextBold > div.SettingsCategoriesList > div.SettingsSectionTitle.ActiveSettingsSectionTitle").addEventListener("click", () => {
           document.getElementsByClassName("SettingsTextInputCircleInfo")[0].addEventListener("mouseover", () => {
             var texurl = document.getElementsByClassName("CircleInfoTooltip")[0].textContent.slice(66, 89);
-
             console.log(texurl);
             document.getElementsByClassName("CircleInfoTooltip")[0].innerHTML = "Clear for default. Requires page refresh to take effect. Example: <a href='" + texurl + "'>" + texurl + "</a>";
           });
@@ -663,7 +656,7 @@ DakWHO.style.borderRadius="10px";
     console.log(localStorage.getItem("Crosshair") + " lcchvalue");
   });
   console.log("code up to line number 653 has no issues");
-  function ChangetheCrosshair(){
+  function ChangetheCrosshair() {
     if (changeCrosshair.value == 'sudiCrosshair') {
       document.getElementsByClassName("CrossHair")[0].innerHTML = "";
       document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://lh3.googleusercontent.com/mfdjL6r1en6mWI3QVMnBbcSX-7QpgBE5EyXo0YbK6299QSJsi58GkfecyL0W7yYljK37vV6Mk7wD69QNdp8LiNw=s400)';
@@ -800,11 +793,7 @@ DakWHO.style.borderRadius="10px";
     }
     localStorage.setItem("Crosshair", changeCrosshair.value);
   }
-
-
-
-
-mch = setInterval(makeCh, 8000);
+  mch = setInterval(makeCh, 8000);
   function makeCh() {
     if (document.getElementsByClassName("CrossHair")[0] != null) {
       ChangetheCrosshair();
@@ -812,7 +801,6 @@ mch = setInterval(makeCh, 8000);
       poweredbydivra.innerHTML = "Powered by Divra Client";
       poweredbydivra.style.fontSize = "10px";
       poweredbydivra.className = "SmallTextLight";
-      
       poweredbydivra.style.position = "fixed";
       poweredbydivra.style.textAlign = "center";
       poweredbydivra.style.zIndex = "10";
@@ -849,9 +837,8 @@ mch = setInterval(makeCh, 8000);
         console.log(document.querySelector(".CrossHair").style.height);
         console.log(document.querySelector(".CrossHair").style.widtth);
       }
-      
+    }
   }
-}
   console.log("code up to line number 817 has no issues");
   function gamekeyup(eventis) {
     if (kley == "l" || kley == "L") {
@@ -884,12 +871,10 @@ mch = setInterval(makeCh, 8000);
       audio1.play();
       asmrkeyremove = "";
     }
-    if (document.getElementsByClassName("CrossHair")[0]!=null&&document.getElementsByClassName("CrossHair")[0].textContent=="+") {
-     
-        ChangetheCrosshair();
-      
+    if (document.getElementsByClassName("CrossHair")[0] != null && document.getElementsByClassName("CrossHair")[0].textContent == "+") {
+      ChangetheCrosshair();
     } else {
-    console.log("isthis not gaame ain agame");
+      console.log("isthis not gaame ain agame");
     }
     if (document.getElementsByClassName("ChatInput")[0]) {
       console.log(document.getElementsByClassName("ChatInput")[0].value);
@@ -913,7 +898,6 @@ mch = setInterval(makeCh, 8000);
             divra.style.display = "none";
           }
         }
-
         if (kley == "Enter") {
           document.body.removeEventListener("keyup", gamekeyup);
           if (kley == "Enter") {
@@ -926,7 +910,6 @@ mch = setInterval(makeCh, 8000);
       }
     }
   }
-
   changeCrosshair.stabIndex = "-1";
   changeCrosshair.innerHTML = "Change Crosshair";
   divraButts.appendChild(changeCrosshair);
@@ -1410,14 +1393,12 @@ mch = setInterval(makeCh, 8000);
   timerstart.innerHTML = "Start Timer";
   timerend.innerHTML = "Pause Timer";
   divraButts.appendChild(timerend);
-
   var timer = document.createElement("p");
   timer.style.zIndex = -1;
   document.getElementById("root").appendChild(timer);
   timer.style.position = "fixed";
   timer.style.fontSize = "30px";
   timer.style.top = "0px";
-
   timer.style.margin = "0ds";
   timer.style.padding = "10px";
   timer.style.borderRadius = "10px";
@@ -1634,11 +1615,6 @@ mch = setInterval(makeCh, 8000);
     }
   }, 1000);
   console.log(wea);
-
-
-
-
-
   if (localStorage.getItem("PBOF") == null || localStorage.getItem("PBOF") == undefined) {
     localStorage.setItem("PBOF", "N");
     console.log(localStorage.getItem("PBOF"));
@@ -1647,9 +1623,7 @@ mch = setInterval(makeCh, 8000);
     console.log(localStorage.getItem("PBOF"));
     print(document.body.style.fontFamily);
   }
-
   if (localStorage.getItem("PBOF") == "Y") {
-
     console.log(localStorage.getItem("PBOF"));
     document.body.style.fontFamily = "Pixelify Sans, sans-serif";
     console.log(localStorage.getItem("PBOF"));
@@ -1658,17 +1632,10 @@ mch = setInterval(makeCh, 8000);
   } else if (localStorage.getItem("PBOF") == "N") {
     document.body.style.fontFamily = 'var(--root-font-family)';
     console.log(localStorage.getItem("PBOF"));
-
     print(document.body.style.fontFamily);
     console.log(localStorage.getItem("PBOF"));
     console.log(localStorage.getItem("PBOF"));
   }
-
-
-
-
-
-
   var thumbnailwrap = document.createElement("div");
   //Divra Settings
   customizeThumb.addEventListener("click", () => {
@@ -1738,7 +1705,6 @@ mch = setInterval(makeCh, 8000);
     sel1.disabled = true;
     sel1.selected = true;
     sel1.value = "";
-
     var sel3 = document.createElement("option");
     selo(sel3, "Keystrokes, Hotbar, & Crosshair Settings ⚙");
     var sel5 = document.createElement("option");
@@ -1799,7 +1765,6 @@ mch = setInterval(makeCh, 8000);
     thumMenu.style.display = "flex";
     var abis = document.createElement("div");
     thumMenu.appendChild(abis);
-
     function css4ds(ais) {
       ais.style.position = "relative";
       ais.style.left = "40%";
@@ -1823,8 +1788,8 @@ mch = setInterval(makeCh, 8000);
     Crosshair_Width.addEventListener("change", () => {
       localStorage.setItem('crosswidth', Crosshair_Width.value);
       if (document.getElementsByClassName("CrossHair")) {
-        var cb = String(Crosshair_Width.value)+ "px"
-        document.getElementsByClassName("CrossHair")[0].style.width =  cb;
+        var cb = String(Crosshair_Width.value) + "px"
+        document.getElementsByClassName("CrossHair")[0].style.width = cb;
         document.getElementsByClassName("CrossHair")[0].style.height = cb;
         console.log(document.getElementsByClassName("CrossHair")[0].style.height);
       }
@@ -1882,20 +1847,20 @@ mch = setInterval(makeCh, 8000);
     abis.appendChild(br1);
     var abisS1l1 = document.createElement("label");
     var abisS1B1 = document.createElement("input");
-    abisS1B1.type="range";
+    abisS1B1.type = "range";
     abisS1B1.min = 2;
-    abisS1B1.max=12500;
-    abisS1B1.id="as1b1";
-    abisS1l1.htmlFor="as1b1";
+    abisS1B1.max = 12500;
+    abisS1B1.id = "as1b1";
+    abisS1l1.htmlFor = "as1b1";
     abisS1l1.style.verticalAlign = "middle";
     abisS1l1.style.lineHeight = "1.75px";
-    abisS1l1.textContent="Advanced Horizontal Chunkload from 0 Chunks to 12500 Chunks *Refresh Required";
+    abisS1l1.textContent = "Advanced Horizontal Chunkload from 0 Chunks to 12500 Chunks *Refresh Required";
     abis.appendChild(abisS1l1);
     var br1 = document.createElement("br");
     abis.appendChild(br1);
-    abis.appendChild(abisS1B1);    
-    abisS1B1.addEventListener("change",()=>{
-      abisS1l1.textContent="Advanced Horizontal Chunkload: "+abisS1B1.value+" Chunks after refresh";
+    abis.appendChild(abisS1B1);
+    abisS1B1.addEventListener("change", () => {
+      abisS1l1.textContent = "Advanced Horizontal Chunkload: " + abisS1B1.value + " Chunks after refresh";
       localStorage.setItem("bloxd-chunkHorizAddDist", abisS1B1.value);
     });
     function afdgmn(Numbericks, laughtext) {
@@ -1963,24 +1928,18 @@ mch = setInterval(makeCh, 8000);
       }
     });
     s3l3.style.lineHeight = "1.75px";
-
     var s4l4 = document.createElement("label");
     var s4b4 = document.createElement("input");
     setting(s4b4, s4l4, "Show all keys", CrosshairAndHTBSettings, "ess");
-
-s4b4.addEventListener("change",()=>{
-if(s4b4.checked==true){
-  localStorage.setItem("sak","Y");
-  // TODO: Add some kind of show via display none and display whatever
-}else if(s4b4.checked==false){
-  localStorage.setItem("sak","N");
-  // TODO: Add some kind hide via display none and display whatever
-}
-});
-
-
-
-
+    s4b4.addEventListener("change", () => {
+      if (s4b4.checked == true) {
+        localStorage.setItem("sak", "Y");
+        // TODO: Add some kind of show via display none and display whatever
+      } else if (s4b4.checked == false) {
+        localStorage.setItem("sak", "N");
+        // TODO: Add some kind hide via display none and display whatever
+      }
+    });
     console.log(localStorage.getItem("PBOF"));
     console.log(localStorage.getItem("PBOF"));
     if (localStorage.getItem("PBOF") == null || localStorage.getItem("PBOF") == undefined) {
@@ -1991,7 +1950,6 @@ if(s4b4.checked==true){
       console.log(localStorage.getItem("PBOF"));
       print(document.body.style.fontFamily);
     }
-
     if (localStorage.getItem("PBOF") == "Y") {
       PixelatedBloxdOnOff.checked = true;
       console.log(localStorage.getItem("PBOF"));
@@ -2097,7 +2055,6 @@ if(s4b4.checked==true){
     setTimeout(makerespawn, 1000);
   }
   // setInterval(autoRESPAWN,6001);
- 
   function attheendofthecodeyouwillalwaysmakeafunctionsnamethatissolongucantcomprehendandobviouslyyouneednospacesanduhav2spelletwromg() {
     changeCrosshair.value = String(localStorage.getItem("Crosshair"));
     console.log("Divra done loading. Entering Bloxd.io.");
