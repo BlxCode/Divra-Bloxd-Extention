@@ -18,10 +18,12 @@ function upper() {
   opening.className = "FullyFancyText";
   document.body.appendChild(opening);
   var Name = document.createElement("div");
+
   opening.appendChild(Name);
   Name.style.position = "fixed";
   Name.style.right = "5px";
   Name.style.top = "5px";
+
   opening.style.backgroundColor = "#3d4b79";
   var o1 = document.createElement("h1");
   o1.innerHTML = "Bloxd.io";
@@ -829,10 +831,12 @@ mch = setInterval(makeCh, 8000);
       } else if (localStorage.getItem("PBOF") == "N") {
         document.getElementById("noa-canvas").style.imageRendering = "auto";
       }
+
       if (document.querySelector(".CrossHair")) {
         if (localStorage.getItem("crosswidth") == null || localStorage.getItem("crosswidth") == undefined) {
           console.log("crosshairwidth=undefinedawcrapnotagainihatewhenthishappens");
           localStorage.setItem("crosswidth", "16");
+
         } else if (localStorage.getItem("crosswidth") < 10 || localStorage.getItem("crosswidth") > 30) {
           localStorage.setItem("crosswidth", "16");
         }
