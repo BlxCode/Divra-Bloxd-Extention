@@ -6,6 +6,9 @@
 .EffectInfo{
     z-index:442 !important;
 }
+.GameBadgeBottom{
+    display:none !important;
+}
 
 .item{
     opacity:0.825 !important;

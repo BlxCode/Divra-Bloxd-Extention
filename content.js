@@ -1,3 +1,4 @@
+// * Thank you bluify 🥹 goodbye for and forever
 function print(helloworld) {
   "use strict";
   console.log(helloworld);
@@ -209,13 +210,23 @@ function body() {
   // * * Divra All keys
   var DAKWAP = document.createElement("div");
   var DAKKeys = document.createElement("p");
-  DAKKeys.style.borderRadius = "10px";
-  DAKKeys.style.width = "13px";
+  DAKKeys.style.borderRadius = "5px";
+  DAKKeys.style.width = "65px";
+  DAKKeys.textContent = "W";
+  DAKKeys.style.color = "white";
+  DAKKeys.style.backgroundColor = "rgba(0,0,0,0.7)";
+  DAKKeys.style.padding = "5px";
   DAKKeys.style.borderColor = "white";
   DAKKeys.style.borderStyle = "solid";
+  DAKKeys.style.borderWidth = "1px";
   DAKWAP.appendChild(DAKKeys);
   document.getElementById("root").appendChild(DAKWAP);
   DAKWAP.style.zIndex = "45";
+  DAKWAP.style.position = "fixed";
+  DAKWAP.style.bottom = "25px";
+  DAKWAP.style.left = "5px";
+  DAKWAP.style.margin = "0px";
+
   DAKWAP.appendChild(DAKKeys);
   document.getElementsByClassName("Title")[0].title = "Divra btw the name was chosen because of randomosy and my knowlage of code.";
   // document.getElementsByClassName("Background")[0].src = "https://cdn.discordapp.com/attachments/1200293652258377759/1200293652719734784/20240126_094706_0000.png?ex=65c5a793&is=65b33293&hm=ba5bca862b9222a2651defc771449024d52fdf2a045b4bfb2f66b17390f5e432&";
@@ -223,9 +234,13 @@ function body() {
   var divra = document.createElement("div");
   if (localStorage.getItem("sak") == "N") {
     divra.style.display = "block";
+    DAKWAP.style.display = "none";
   } else if (localStorage.getItem('sak') == "Y") {
     divra.style.display = "none";
-    DAKWAP.style.display="block";
+    DAKWAP.style.display = "block";
+  } else if (localStorage.getItem("sak") == null) {
+    localStorage.setItem("sak", "N");
+    DAKWAP.style.display = "none";
   }
   var divraRMB = document.createElement("p");
   var divraLMB = document.createElement("p");
@@ -365,6 +380,8 @@ function body() {
     let ksey = eventis.key;
     //bluify = pro coder and copy cat rookie lvl
     //bloxdmaster= noob coder copy cat insaign lvl (and bluify has no idea abt that)
+
+    if(localStorage.getItem("sak")=="N"){
     if (ksey == "a" || ksey == "A") {
       console.log(eventis);
       divraA.style.backgroundColor = "green";
@@ -401,6 +418,7 @@ function body() {
       console.log(eventis);
       divraSpace.style.backgroundColor = "green";
     }
+  }
   }
   var dseb = 0;
   var gbsw;
@@ -446,65 +464,69 @@ function body() {
     if (key == "j" || key == "J") {
       timerend.click();
     }
-    if (key == "a" || key == "A") {
-      divraA.style.background = "none";
-    }
-    if (key == "s" || key == "S") {
-      divraS.style.background = "none";
-    }
-    if (key == "d" || key == "D") {
-      divraD.style.background = "none";
-    }
-    if (key == "w" || key == "W") {
-      divraW.style.background = "none";
-    }
-    if (key == "Shift") {
-      divraShift.style.background = "none";
-    }
-    if (key == "c" || key == "C") {
-      divraC.style.background = "none";
-    }
-    if (key.ctrlKey || key == "CapsLock") {
-      divraC.style.background = "none";
-    }
-    if (key == " " || key == "space") {
-      divraSpace.style.background = "none";
-    }
-    if (key == "z" || key == "Z") {
-      divraC.style.background = "none";
-    }
-    if (key == "<" || key == "Control") {
-      divraC.style.background = "none";
-    }
-    if (key == "o" || key == "Escape") {
-      //<div class="SettingsSectionTitle">&nbsp;Graphics</div>
-      /*  divraSB = document.createElement("div");
-          divraSB.className="SettingsSectionTitle";
-          divraSB.innerHTML="&nbsp;Divra Settings";
-          divraSB.style.display="none";
-          document.getElementsByClassName("SettingsCategoriesList")[0].appendChild(divraSB);
-         */
-      if (document.querySelector("#root > div.WholeAppWrapper > div > div.GameBackgroundScreen > div > div.SettingsMenuLeft.SmallTextBold > div.SettingsCategoriesList > div.SettingsSectionTitle.ActiveSettingsSectionTitle") != null) {
-        console.log("take to get the current tpack url");
-        document.querySelector("#root > div.WholeAppWrapper > div > div.GameBackgroundScreen > div > div.SettingsMenuLeft.SmallTextBold > div.SettingsCategoriesList > div.SettingsSectionTitle.ActiveSettingsSectionTitle").addEventListener("click", () => {
-          document.getElementsByClassName("SettingsTextInputCircleInfo")[0].addEventListener("mouseover", () => {
-            var texurl = document.getElementsByClassName("CircleInfoTooltip")[0].textContent.slice(66, 89);
-            console.log(texurl);
-            document.getElementsByClassName("CircleInfoTooltip")[0].innerHTML = "Clear for default. Requires page refresh to take effect. Example: <a href='" + texurl + "'>" + texurl + "</a>";
-          });
-        });
+    if (localStorage.getItem("sak") == "N") {
+      if (key == "a" || key == "A") {
+        divraA.style.background = "none";
       }
-      /* divraSB.addEventListener("click",()=>{
-                  //dostuff
-                  document.getElementsByClassName("SettingsSectionTitle")[0].classList.remove("ActiveSettingsSectionTitle");
-                  document.getElementsByClassName("SettingsSectionTitle")[1].classList.remove("ActiveSettingsSectionTitle");
-                  document.getElementsByClassName("SettingsSectionTitle")[2].classList.remove("ActiveSettingsSectionTitle");
-                  document.getElementsByClassName("SettingsMenuRight")[0].innerHTML="";
-                  divraSB.classList.add("ActiveSettingsSectionTitle");
-                  var divraSB1_1 = document.createElement("div");
-                  divraSB1_1.innerHTML=' <div class="CheckboxContainer"> <div class="CheckboxInputAndText"> <label class="CheckboxClickableLabel"> <span class="rc-checkbox rc-checkbox-checked"><input type="checkbox" class="rc-checkbox-input" value="" checked=""><span class="rc-checkbox-inner"></span></span></label><div class="CheckboxText">Show Coordinates</div></div></div>';
-              });
-  */
+      if (key == "s" || key == "S") {
+        divraS.style.background = "none";
+      }
+      if (key == "d" || key == "D") {
+        divraD.style.background = "none";
+      }
+      if (key == "w" || key == "W") {
+        divraW.style.background = "none";
+      }
+      if (key == "Shift") {
+        divraShift.style.background = "none";
+      }
+      if (key == "c" || key == "C") {
+        divraC.style.background = "none";
+      }
+      if (key.ctrlKey || key == "CapsLock") {
+        divraC.style.background = "none";
+      }
+      if (key == " " || key == "space") {
+        divraSpace.style.background = "none";
+      }
+      if (key == "z" || key == "Z") {
+        divraC.style.background = "none";
+      }
+      if (key == "<" || key == "Control") {
+        divraC.style.background = "none";
+      }
+      if (key == "o" || key == "Escape") {
+        //<div class="SettingsSectionTitle">&nbsp;Graphics</div>
+        /*  divraSB = document.createElement("div");
+            divraSB.className="SettingsSectionTitle";
+            divraSB.innerHTML="&nbsp;Divra Settings";
+            divraSB.style.display="none";
+            document.getElementsByClassName("SettingsCategoriesList")[0].appendChild(divraSB);
+           */
+        if (document.querySelector("#root > div.WholeAppWrapper > div > div.GameBackgroundScreen > div > div.SettingsMenuLeft.SmallTextBold > div.SettingsCategoriesList > div.SettingsSectionTitle.ActiveSettingsSectionTitle") != null) {
+          console.log("take to get the current tpack url");
+          document.querySelector("#root > div.WholeAppWrapper > div > div.GameBackgroundScreen > div > div.SettingsMenuLeft.SmallTextBold > div.SettingsCategoriesList > div.SettingsSectionTitle.ActiveSettingsSectionTitle").addEventListener("click", () => {
+            document.getElementsByClassName("SettingsTextInputCircleInfo")[0].addEventListener("mouseover", () => {
+              var texurl = document.getElementsByClassName("CircleInfoTooltip")[0].textContent.slice(66, 89);
+              console.log(texurl);
+              document.getElementsByClassName("CircleInfoTooltip")[0].innerHTML = "Clear for default. Requires page refresh to take effect. Example: <a href='" + texurl + "'>" + texurl + "</a>";
+            });
+          });
+        }
+        /* divraSB.addEventListener("click",()=>{
+                    //dostuff
+                    document.getElementsByClassName("SettingsSectionTitle")[0].classList.remove("ActiveSettingsSectionTitle");
+                    document.getElementsByClassName("SettingsSectionTitle")[1].classList.remove("ActiveSettingsSectionTitle");
+                    document.getElementsByClassName("SettingsSectionTitle")[2].classList.remove("ActiveSettingsSectionTitle");
+                    document.getElementsByClassName("SettingsMenuRight")[0].innerHTML="";
+                    divraSB.classList.add("ActiveSettingsSectionTitle");
+                    var divraSB1_1 = document.createElement("div");
+                    divraSB1_1.innerHTML=' <div class="CheckboxContainer"> <div class="CheckboxInputAndText"> <label class="CheckboxClickableLabel"> <span class="rc-checkbox rc-checkbox-checked"><input type="checkbox" class="rc-checkbox-input" value="" checked=""><span class="rc-checkbox-inner"></span></span></label><div class="CheckboxText">Show Coordinates</div></div></div>';
+                });
+    */
+      }
+    } else {
+DAKKeys
     }
   }
   document.body.addEventListener("keydown", keydown);
@@ -847,73 +869,78 @@ function body() {
   }
   console.log("code up to line number 817 has no issues");
   function gamekeyup(eventis) {
-    if (kley == "l" || kley == "L") {
-      if (dseb == 1) {
-        gbsw.click();
-        document.getElementById("root").dispatchEvent(new KeyboardEvent('keydown', { 'key': 'Tab' }));
-        document.getElementById("DivrraSettingsExitButton").click();
-        if (document.getElementById("aas1")) {
-          document.getElementById("aas1").remove();
-          gbs.remove();
-          customizeThumb.style.display = "block";
-          thumbnailwrap.remove();
-          dseb = 0;
-          bads.remove();
-          thumbnail1.remove();
-          abis.remove();
-          dseb = 0;
+    if (document.getElementById("noa-container").style.display != "none") {
+      if (kley == "l" || kley == "L") {
+        if (dseb == 1) {
+          gbsw.click();
           document.getElementById("root").dispatchEvent(new KeyboardEvent('keydown', { 'key': 'Tab' }));
+          document.getElementById("DivrraSettingsExitButton").click();
+          if (document.getElementById("aas1")) {
+            document.getElementById("aas1").remove();
+            gbs.remove();
+            customizeThumb.style.display = "block";
+            thumbnailwrap.remove();
+            dseb = 0;
+            bads.remove();
+            thumbnail1.remove();
+            abis.remove();
+            dseb = 0;
+            document.getElementById("root").dispatchEvent(new KeyboardEvent('keydown', { 'key': 'Tab' }));
+          }
+        } else {
+          exitPointerLock();
+          console.log(dseb);
+          dseb = 1;
+          customizeThumb.click();
+          togglePointerLock: !1;
         }
+        console.log(eventis);
+      }
+      if (localStorage.getItem("asmr") == "Y" && asmrkeyremove == eventis.key) {
+        audio1.play();
+        asmrkeyremove = "";
+      }
+      if (document.getElementsByClassName("CrossHair")[0] != null && document.getElementsByClassName("CrossHair")[0].textContent == "+") {
+        ChangetheCrosshair();
       } else {
-        exitPointerLock();
-        console.log(dseb);
-        dseb = 1;
-        customizeThumb.click();
-        togglePointerLock: !1;
+
       }
-      console.log(eventis);
-    }
-    if (localStorage.getItem("asmr") == "Y" && asmrkeyremove == eventis.key) {
-      audio1.play();
-      asmrkeyremove = "";
-    }
-    if (document.getElementsByClassName("CrossHair")[0] != null && document.getElementsByClassName("CrossHair")[0].textContent == "+") {
-      ChangetheCrosshair();
+      if (document.getElementsByClassName("ChatInput")[0]) {
+        console.log(document.getElementsByClassName("ChatInput")[0].value);
+        if (document.getElementsByClassName("ChatInput")[0].value == "") {
+          console.log("gkuac");
+          okeyup(eventis);
+          var kley = eventis;
+          if (kley == "t" || kley == "T") {
+            console.log("ASDFSADFASDGSDAGSDAFDSAGSDAFSDAsdlfkjsdlakhgsdlkagjsdljfsladkglksdhfslkdaghdkas;lfjdskalghfdskaljfgdskajgfkwejgsdfiudsgwudkf");
+            document.body.removeEventListener("keyup", gamekeyup);
+            console.log("chattingaleewrt");
+            if (kley == "Enter") {
+              console.log("chattingalgoawyosadifusadofhjsdklafjsadkljeweewrt");
+              document.body.addEventListener("keyup", gamekeyup);
+            }
+          }
+          if (kley == "b" || kley == "B") {
+            if (divra.style.display == "none") {
+              divra.style.display = "block";
+            } else if (divra.style.display == "block") {
+              divra.style.display = "none";
+            }
+          }
+          if (kley == "Enter") {
+            document.body.removeEventListener("keyup", gamekeyup);
+            if (kley == "Enter") {
+              document.body.addEventListener("keyup", gamekeyup);
+            }
+          }
+          if (kley == "e" || kley == "E") {
+            WriteOnBoardTextArea();
+          }
+        }
+      }
     } else {
-      console.log("isthis not gaame ain agame");
-    }
-    if (document.getElementsByClassName("ChatInput")[0]) {
-      console.log(document.getElementsByClassName("ChatInput")[0].value);
-      if (document.getElementsByClassName("ChatInput")[0].value == "") {
-        console.log("gkuac");
-        okeyup(eventis);
-        var kley = eventis;
-        if (kley == "t" || kley == "T") {
-          console.log("ASDFSADFASDGSDAGSDAFDSAGSDAFSDAsdlfkjsdlakhgsdlkagjsdljfsladkglksdhfslkdaghdkas;lfjdskalghfdskaljfgdskajgfkwejgsdfiudsgwudkf");
-          document.body.removeEventListener("keyup", gamekeyup);
-          console.log("chattingaleewrt");
-          if (kley == "Enter") {
-            console.log("chattingalgoawyosadifusadofhjsdklafjsadkljeweewrt");
-            document.body.addEventListener("keyup", gamekeyup);
-          }
-        }
-        if (kley == "b" || kley == "B") {
-          if (divra.style.display == "none") {
-            divra.style.display = "block";
-          } else if (divra.style.display == "block") {
-            divra.style.display = "none";
-          }
-        }
-        if (kley == "Enter") {
-          document.body.removeEventListener("keyup", gamekeyup);
-          if (kley == "Enter") {
-            document.body.addEventListener("keyup", gamekeyup);
-          }
-        }
-        if (kley == "e" || kley == "E") {
-          WriteOnBoardTextArea();
-        }
-      }
+      document.body.removeEventListener("keyup", gamekeyup);
+      document.body.addEventListener("keyup", okeyup);
     }
   }
   changeCrosshair.stabIndex = "-1";
@@ -1454,6 +1481,8 @@ function body() {
   timerend.addEventListener("click", () => {
     clearInterval(timr);
   });
+  print(localStorage.getItem("sak"));
+  print(localStorage.getItem("sak"));
   timerstart.style.borderRadius = "10px";
   timerstart.style.backgroundColor = "rgb(222,222,222)";
   timerstart.style.border = "none";
@@ -1669,10 +1698,9 @@ function body() {
       abis.remove();
       CrosshairAndHTBSettings.remove();
     });
-    var scriptcode = document.createElement("script");
-    scriptcode.id = "scriptcodedivra";
-    document.body.appendChild(scriptcode);
-    document.body.appendChild(scriptcode);
+    var scriptcode = document.createElement("style");
+    scriptcode.id = "Whoops";
+    document.getElementsByTagName("head")[0].appendChild(scriptcode);
     document.getElementById("root").appendChild(gbs);
     gbs.appendChild(thumMenu);
     thumMenu.className = "SettingsMenu SmallTextLight";
@@ -1936,14 +1964,38 @@ function body() {
     s3l3.style.lineHeight = "1.75px";
     var s4l4 = document.createElement("label");
     var s4b4 = document.createElement("input");
-    setting(s4b4, s4l4, "Show all keys", CrosshairAndHTBSettings, "ess");
-    s4b4.addEventListener("change", () => {
+    var brsa = document.createElement("br");
+    CrosshairAndHTBSettings.appendChild(brsa);
+    s4b4.type = "checkbox";
+    s4b4.style.fontSize = "34px";
+    s4b4.style.cursor = "pointer";
+    s4b4.style.transform = "scale(2)";
+    s4b4.style.marginTop = "10px";
+    s4b4.id = "this is hking pain";
+    CrosshairAndHTBSettings.appendChild(s4b4);
+    s4l4.textContent = "Show all keys";
+    s4l4.htmlFor = "this is hking pain";
+    CrosshairAndHTBSettings.appendChild(s4l4);
+
+    if (localStorage.getItem("sak") == "N") {
+      s4b4.checked = 'false';
+      print(localStorage.getItem("sak"));
+    } else if (localStorage.getItem('sak') == "Y") {
+      s4b4.checked = 'true';
+      print(localStorage.getItem("sak"));
+    }
+    s4b4.addEventListener("click", () => {
       if (s4b4.checked == true) {
         localStorage.setItem("sak", "Y");
-        // TODO: Add some kind of show via display none and display whatever
+        console.log(localStorage.getItem("sak"));
+        divra.style.display = "none";
+        DAKWAP.style.display = "block";
       } else if (s4b4.checked == false) {
         localStorage.setItem("sak", "N");
-        // TODO: Add some kind hide via display none and display whatever
+        console.log(localStorage.getItem("sak"));
+        divra.style.display = "block";
+        DAKWAP.style.display = "none";
+
       }
     });
     console.log(localStorage.getItem("PBOF"));
