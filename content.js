@@ -211,8 +211,8 @@ function body() {
   var DAKWAP = document.createElement("div");
   var DAKKeys = document.createElement("p");
   DAKKeys.style.borderRadius = "5px";
-  DAKKeys.style.width = "65px";
-  DAKKeys.textContent = "W";
+  DAKKeys.style.width = "105px";
+
   DAKKeys.style.color = "white";
   DAKKeys.style.backgroundColor = "rgba(0,0,0,0.7)";
   DAKKeys.style.padding = "5px";
@@ -370,55 +370,81 @@ function body() {
   var isChatTyping = false;
   document.getElementById("root").appendChild(keysElement);
   var asmrkeyremove;
+  var whatisdown = "";
   function keydown(eventis) {
     if (localStorage.getItem("asmr") == "Y" && asmrkeyremove != eventis.key) {
       asmrkeyremove = eventis.key;
       audio12.play();
       console.log(asmrkeyremove + "asmrkeyremove");
     }
-    console.log(eventis);
+
+
     let ksey = eventis.key;
     //bluify = pro coder and copy cat rookie lvl
     //bloxdmaster= noob coder copy cat insaign lvl (and bluify has no idea abt that)
 
-    if(localStorage.getItem("sak")=="N"){
-    if (ksey == "a" || ksey == "A") {
-      console.log(eventis);
-      divraA.style.backgroundColor = "green";
+    if (document.getElementsByClassName("ChatInput")[0] && document.getElementsByClassName("ChatInput")[0].value == "") {
+      console.log("gkuac");
+      okeyup(eventis);
+      var kley = eventis;
+      if (kley == "t" || kley == "T") {
+        console.log("ASDFSADFASDGSDAGSDAFDSAGSDAFSDAsdlfkjsdlakhgsdlkagjsdljfsladkglksdhfslkdaghdkas;lfjdskalghfdskaljfgdskajgfkwejgsdfiudsgwudkf");
+        document.body.removeEventListener("keyup", keydown);
+        console.log("chattingaleewrt");
+        if (kley == "Enter") {
+          console.log("chattingalgoawyosadifusadofhjsdklafjsadkljeweewrt");
+          document.body.addEventListener("keyup", keydown);
+        }
+      } else {
+
+        if (localStorage.getItem("sak") == "N") {
+          if (ksey == "a" || ksey == "A") {
+            //   console.log(eventis);
+            divraA.style.backgroundColor = "green";
+          }
+          if (ksey == "s" || ksey == "s") {
+            //  console.log(eventis);
+            divraS.style.backgroundColor = "green";
+          }
+          if (ksey == "d" || ksey == "D") {
+            //   console.log(eventis);
+            divraD.style.backgroundColor = "green";
+          }
+          if (ksey == "w" || ksey == "W") {
+            console.log(eventis);
+            divraW.style.backgroundColor = "green";
+          }
+          if (ksey == "Shift") {
+            console.log(eventis);
+            divraShift.style.backgroundColor = "green";
+          }
+          if (ksey == "c" || ksey == "C") {
+            console.log(eventis);
+            divraC.style.backgroundColor = "green";
+          }
+          if (ksey == "z" || ksey == "Z") {
+            console.log(eventis);
+            divraC.style.backgroundColor = "green";
+          }
+          if (ksey == "<" || ksey == "Control") {
+            console.log(eventis);
+            divraC.style.backgroundColor = "green";
+          }
+          if (ksey == " " || ksey == "space") {
+            console.log(eventis);
+            divraSpace.style.backgroundColor = "green";
+          }
+        } else {
+
+          if (whatisdown.includes(String(ksey.toUpperCase())) == false) {
+
+            whatisdown = whatisdown + " " + ksey.toUpperCase();
+            DAKKeys.textContent = whatisdown;
+            console.log(whatisdown + ":whatisdownishtisthisthishtis");
+          }
+        }
+      }
     }
-    if (ksey == "s" || ksey == "s") {
-      console.log(eventis);
-      divraS.style.backgroundColor = "green";
-    }
-    if (ksey == "d" || ksey == "D") {
-      console.log(eventis);
-      divraD.style.backgroundColor = "green";
-    }
-    if (ksey == "w" || ksey == "W") {
-      console.log(eventis);
-      divraW.style.backgroundColor = "green";
-    }
-    if (ksey == "Shift") {
-      console.log(eventis);
-      divraShift.style.backgroundColor = "green";
-    }
-    if (ksey == "c" || ksey == "C") {
-      console.log(eventis);
-      divraC.style.backgroundColor = "green";
-    }
-    if (ksey == "z" || ksey == "Z") {
-      console.log(eventis);
-      divraC.style.backgroundColor = "green";
-    }
-    if (ksey == "<" || ksey == "Control") {
-      console.log(eventis);
-      divraC.style.backgroundColor = "green";
-    }
-    if (ksey == " " || ksey == "space") {
-      console.log(eventis);
-      divraSpace.style.backgroundColor = "green";
-    }
-  }
   }
   var dseb = 0;
   var gbsw;
@@ -526,7 +552,19 @@ function body() {
     */
       }
     } else {
-DAKKeys
+      console.log(String(key.toUpperCase()) + "ERMMAMAMAMAMAMAMAM");
+      console.log(whatisdown + ":whatais")
+      console.log(String(key.toUpperCase()) + "ermwahtthesigma");
+      if (whatisdown.includes(" " + String(key.toUpperCase()))) {
+        console.log(String(key.toUpperCase()));
+
+        console.log(whatisdown + ":whattheheckis");
+
+        whatisdown = whatisdown.replace(" " + String(key.toUpperCase()), "");
+        DAKKeys.textContent = whatisdown;
+        console.log(whatisdown + ":whatisnowdown :)")
+
+      }
     }
   }
   document.body.addEventListener("keydown", keydown);
@@ -646,7 +684,7 @@ DAKKeys
   //  function getVoices() {aa
   //    let voices = .getVoscaices();
   // if (!voices.length) {aaaacsspeechSynthesis
-  //     let utterance = new SpeechSynthesisUtterance("");
+
   //      speechSynthesis.speak(utterance);
   //      voices = speechSynthesis.getVoices();
   //  }
@@ -657,8 +695,7 @@ DAKKeys
     wth.value = val;
     changeCrosshair.appendChild(wth);
   }
-  //let utterance = new SpeechSynthesisUtterance("Welcome to divra client for bloxd.io!");
-  //let speakData = new SpeechSynthesisUtterance();
+
   //speakData.voice = getVoices()[0];
   document.getElementById("root").appendChild(divraButts);
   var person;
@@ -811,6 +848,21 @@ DAKKeys
     } else if (changeCrosshair.value == "https://i.imgur.com/J6BMKcj.png") {
       document.getElementsByClassName("CrossHair")[0].innerHTML = "";
       document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.imgur.com/J6BMKcj.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "https://i.ibb.co/r7QTT90/Pickaxe-Crosshair.png") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.ibb.co/r7QTT90/Pickaxe-Crosshair.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "hhttps://i.ibb.co/K7F739c/Crosshair.png") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(hhttps://i.ibb.co/K7F739c/Crosshair.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    } else if (changeCrosshair.value == "https://i.ibb.co/drKMqCP/doughnutcrosshair.png") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.ibb.co/drKMqCP/doughnutcrosshair.png)';
       document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
       document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
     } else {
@@ -1109,7 +1161,15 @@ DAKKeys
   Cross(p5, "Pro Crosshair 5", "https://i.ibb.co/n8pFY3b/arYc1V6.png");
   var p6 = document.createElement("option");
   Cross(p6, "Pro Crosshair 6", "https://i.imgur.com/J6BMKcj.png");
+  var p7 = document.createElement("option");
+  Cross(p7, "Pro Crosshair 7", "https://i.ibb.co/K7F739c/Crosshair.png");
+  var DoughnutCrosshair = document.createElement("option");
+  Cross(DoughnutCrosshair, "Dounut Crosshair", "https://i.ibb.co/drKMqCP/doughnutcrosshair.png");
+  var Pick = document.createElement("option");
+  Cross(Pick, "Pickaxe Crosshair", "https://i.ibb.co/r7QTT90/Pickaxe-Crosshair.png");
+
   var Blxm = document.createElement("option");
+
   //Cross(Blxm,"BloxdMaster's Crosshair" , "https://cdn.discordapp.com/attachments/1193362300745285713/1193362645571612762/crosshair.png?ex=65ac7092&is=6599fb92&hm=64ba4263fb1c1cfa3ea1e554d0a3acb9a67104ccc2a44f06a06fb2107daeb445&");
   Blxm.disabled = true;
   console.log("DivraClientisthebest");
