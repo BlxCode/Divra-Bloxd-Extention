@@ -436,7 +436,7 @@ function body() {
           }
         } else {
 
-          if (whatisdown.includes(String(ksey.toUpperCase())) == false) {
+          if (whatisdown.includes(" "+String(ksey.toUpperCase())) == false) {
 
             whatisdown = whatisdown + " " + ksey.toUpperCase();
             DAKKeys.textContent = whatisdown;
@@ -855,14 +855,19 @@ function body() {
       document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.ibb.co/r7QTT90/Pickaxe-Crosshair.png)';
       document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
       document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
-    } else if (changeCrosshair.value == "hhttps://i.ibb.co/K7F739c/Crosshair.png") {
+    } else if (changeCrosshair.value == "https://i.ibb.co/K7F739c/Crosshair.png") {
       document.getElementsByClassName("CrossHair")[0].innerHTML = "";
-      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(hhttps://i.ibb.co/K7F739c/Crosshair.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.ibb.co/K7F739c/Crosshair.png)';
       document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
       document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
     } else if (changeCrosshair.value == "https://i.ibb.co/drKMqCP/doughnutcrosshair.png") {
       document.getElementsByClassName("CrossHair")[0].innerHTML = "";
       document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://i.ibb.co/drKMqCP/doughnutcrosshair.png)';
+      document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
+    }else if (changeCrosshair.value == "https://divra.vercel.app/assets/Crosshairs/+.png") {
+      document.getElementsByClassName("CrossHair")[0].innerHTML = "";
+      document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://divra.vercel.app/assets/Crosshairs/+.png)';
       document.getElementsByClassName("CrossHair")[0].style.backgroundRepeat = "no-repeat";
       document.getElementsByClassName("CrossHair")[0].style.backgroundSize = "contain";
     } else {
@@ -871,7 +876,7 @@ function body() {
     }
     localStorage.setItem("Crosshair", changeCrosshair.value);
   }
-  mch = setInterval(makeCh, 8000);
+  mch = setInterval(makeCh, 2500);
   function makeCh() {
     if (document.getElementsByClassName("CrossHair")[0] != null) {
       ChangetheCrosshair();
@@ -1167,7 +1172,8 @@ function body() {
   Cross(DoughnutCrosshair, "Dounut Crosshair", "https://i.ibb.co/drKMqCP/doughnutcrosshair.png");
   var Pick = document.createElement("option");
   Cross(Pick, "Pickaxe Crosshair", "https://i.ibb.co/r7QTT90/Pickaxe-Crosshair.png");
-
+var bc = document.createElement("option");
+Cross(bc,"Better Original Crosshair","https://divra.vercel.app/assets/Crosshairs/+.png")
   var Blxm = document.createElement("option");
 
   //Cross(Blxm,"BloxdMaster's Crosshair" , "https://cdn.discordapp.com/attachments/1193362300745285713/1193362645571612762/crosshair.png?ex=65ac7092&is=6599fb92&hm=64ba4263fb1c1cfa3ea1e554d0a3acb9a67104ccc2a44f06a06fb2107daeb445&");
@@ -1982,6 +1988,20 @@ function body() {
     s2b2.style.cursor = "pointer";
     PixelatedBloxdOnOff.style.verticalAlign = "middle";
     PixelatedBloxdOnOff.style.lineHeight = "1.75px";
+    var br1 = document.createElement("br");
+    abis.appendChild(br1);
+    var noshowurpersonallobbyButton = document.createElement("input");
+    noshowurpersonallobbyButton.type="checkbox"
+    noshowurpersonallobbyButton.id="nsuplb";
+    noshowurpersonallobbyButton.style.transform="scale(2)";
+    var nonshowurpersonallobbyLabel = document.createElement("label");
+nonshowurpersonallobbyLabel.htmlFor="nsuplb";
+nonshowurpersonallobbyLabel.textContent="No Show Your Private SMP Lobby Name / Number";
+noshowurpersonallobbyButton.addEventListener("change",()=>{
+if(noshowurpersonallobbyButton.checked=false){
+  localStorage.setItem("nsupln")
+}
+});
     function setting(elementB, elementL, text, wrapper, id) {
       let brsa = document.createElement("br");
       wrapper.appendChild(brsa);
