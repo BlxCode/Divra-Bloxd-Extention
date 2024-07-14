@@ -10,7 +10,7 @@
     display:none !important;
 }
 
-.item{
+.item {
     opacity:0.825 !important;
     border-radius:10px !important;
     background-color:rgb(189, 114, 39) !important;
@@ -18,7 +18,8 @@
     padding:1px !important;
 }
 .CrossHair{
-    opacity:0.95 !important;
+    opacity:0.65 !important;
+ 
     border-radius:0px !important;
 }
 div{

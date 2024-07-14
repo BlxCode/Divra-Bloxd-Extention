@@ -371,11 +371,14 @@ function body() {
     console.log("Keydown:");
     let ksey = eventis.key;
     function sakF() {
-      console.log(whatisdown.includes(String(ksey.toUpperCase())) + " " + ": What is down");
-      if (whatisdown.includes(String(ksey.toUpperCase())) + " " == false) {
+      if(ksey==" "){
+        ksey="space";
+      }
+      console.log(whatisdown.includes(String(ksey.toUpperCase()+" "))+ ": What is down");
+      if (whatisdown.includes(String(ksey.toUpperCase()+" ")) == false) {
         console.log(whatisdown.includes(String(ksey.toUpperCase())) + " ");
         whatisdown = whatisdown + ksey.toUpperCase() + " ";
-        console.log(whatisdown = ",whatisodown")
+        console.log(whatisdown + ",whatisodown");
         DAKKeys.textContent = whatisdown;
         console.log(DAKKeys.textContent);
         console.log(whatisdown + ":whatisdownishtisthisthishtis");
@@ -391,15 +394,15 @@ function body() {
       //bloxdmaster= noob coder copy cat insaign lvl (and bluify has no idea abt that)
       if (document.getElementsByClassName("ChatInput")[0].value == "") {
         console.log("gkuac");
-        okeyup(eventis);
+       
         var kley = eventis;
         if (kley == "t" || kley == "T") {
           console.log("ASDFSADFASDGSDAGSDAFDSAGSDAFSDAsdlfkjsdlakhgsdlkagjsdljfsladkglksdhfslkdaghdkas;lfjdskalghfdskaljfgdskajgfkwejgsdfiudsgwudkf");
-          document.body.removeEventListener("keyup", keydown);
+          document.body.removeEventListener("keydown", keydown);
           console.log("chattingaleewrt");
           if (kley == "Enter") {
             console.log("chattingalgoawyosadifusadofhjsdklafjsadkljeweewrt");
-            document.body.addEventListener("keyup", keydown);
+            document.body.addEventListener("keydown", keydown);
           }
         } else {
           if (localStorage.getItem("sak") == "N") {
@@ -444,9 +447,51 @@ function body() {
           }
         }
       }
+    }else{
+      if (localStorage.getItem("sak") == "N") {
+        if (ksey == "a" || ksey == "A") {
+          //   console.log(eventis);
+          divraA.style.backgroundColor = "green";
+        }
+        if (ksey == "s" || ksey == "s") {
+          //  console.log(eventis);
+          divraS.style.backgroundColor = "green";
+        }
+        if (ksey == "d" || ksey == "D") {
+          //   console.log(eventis);
+          divraD.style.backgroundColor = "green";
+        }
+        if (ksey == "w" || ksey == "W") {
+          console.log(eventis);
+          divraW.style.backgroundColor = "green";
+        }
+        if (ksey == "Shift") {
+          console.log(eventis);
+          divraShift.style.backgroundColor = "green";
+        }
+        if (ksey == "c" || ksey == "C") {
+          console.log(eventis);
+          divraC.style.backgroundColor = "green";
+        }
+        if (ksey == "z" || ksey == "Z") {
+          console.log(eventis);
+          divraC.style.backgroundColor = "green";
+        }
+        if (ksey == "<" || ksey == "Control") {
+          console.log(eventis);
+          divraC.style.backgroundColor = "green";
+        }
+        if (ksey == " " || ksey == "space") {
+          console.log(eventis);
+          divraSpace.style.backgroundColor = "green";
+        }
+      } else {
+        sakF();
+      }
     }
+    console.log(":Keydown");
   }
-        console.log(":Keydown");
+       
         var dseb = 0;
         document.body.addEventListener("keydown", keydown);
         var gbsw;
@@ -554,15 +599,20 @@ function body() {
           */
             }
           } else {
-            if (whatisdown.includes(String(key.toUpperCase())) + " " == false) {
+            console.log("whatisup :");
+            if(key ==" "){
+              key="space";
+            }
+            console.log(whatisdown.includes(String(key.toUpperCase())+" "))
+            if (whatisdown.includes(String(key.toUpperCase())+" ") == true) {
               console.log(String(key.toUpperCase()));
               console.log(whatisdown + ":whattheheckis");
-              var removedt = String(key.toUpperCase()) + " ";
+              var removedt = String(key.toUpperCase()+ " ") ;
               whatisdown = whatisdown.replace(removedt, "");
               DAKKeys.textContent = whatisdown;
               console.log(whatisdown + ":whatisnowdown :)")
             }
-          }
+            console.log(":whatisup"); }
         }
         document.body.addEventListener("keydown", keydown);
         document.body.addEventListener("keyup", okeyup);
@@ -618,9 +668,9 @@ function body() {
         }
         function WriteOnBoardTextArea() {
           if (document.getElementsByClassName("WriteOnBoardBg")[0] != null) {
-            document.getElementById("root").removeEventListener("keyup", gamekeyup);
+            document.body.removeEventListener("keyup", gamekeyup);
             document.getElementsByClassName("WriteOnBoardBg")[0].addEventListener("click", () => {
-              document.getElementById("root").addEventListener("keyup", gamekeyup);
+           document.body.addEventListener("keyup", gamekeyup);
             });
           }
         }
@@ -919,6 +969,7 @@ function body() {
         }
         console.log("code up to line number 817 has no issues");
         function gamekeyup(eventis) {
+          console.log("<Keyup>");
           if (document.getElementById("noa-container").style.display != "none") {
             if (kley == "l" || kley == "L") {
               if (dseb == 1) {
@@ -991,6 +1042,7 @@ function body() {
             document.body.removeEventListener("keyup", gamekeyup);
             document.body.addEventListener("keyup", okeyup);
           }
+          console.log("</keyup>")
         }
         changeCrosshair.stabIndex = "-1";
         changeCrosshair.innerHTML = "Change Crosshair";
@@ -1675,11 +1727,11 @@ function body() {
         var thumMenu = document.createElement("div");
         var wea;
         wea = setInterval(() => {
-          console.log("TumbnailSaving machine started.");
+         
           if (localStorage.getItem("thumbnail") == null || localStorage.getItem("thumbnail") == undefined) {
             localStorage.setItem("thumbnail", "unrecognizednevergonnagiveyouupnevergonnaletyoudownnevergonnarunaroundanddesertyou");
           } else if (localStorage.getItem("thumbnail") == "t1") {
-            console.log("t1-thumb");
+         
             if (document.querySelector("#root > div.WholeAppWrapper > div > div:nth-child(3) > div > div.ChooseGameWrapper > div:nth-child(1) > img") != null) {
               console.log("NOt yet saving");
               document.querySelector("#root > div.WholeAppWrapper > div > div:nth-child(3) > div > div.ChooseGameWrapper > div:nth-child(1) > img").src = "https://i.imgur.com/midF8Qc.png";
