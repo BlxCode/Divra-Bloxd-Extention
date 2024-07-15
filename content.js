@@ -373,11 +373,11 @@ function body() {
     function sakF() {
       if (ksey == " ") {
         ksey = "SPACE";
-      } else if (key == "alt") {
+      } else if (ksey == "alt") {
         ksey = "ALТ"
-      } else if (key == "control") {
+      } else if (ksey == "control") {
         ksey = "CТRᒪ"
-      } else if (key == "shift") {
+      } else if (ksey == "shift") {
         ksey = "SHIFТ";
       }
       console.log(whatisdown.includes(String(ksey.toUpperCase() + " ")) + ": What is down");
