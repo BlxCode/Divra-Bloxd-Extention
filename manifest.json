@@ -7,7 +7,9 @@
     "storage"
     
   ],
-
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; script-src-elem 'self' 'unsafe-inline' https://music.yandex.ru/;"
+},
   "action": {
     "default_popup": "popup.html",
     "default_icon": "Images/Divra-Client-Perfect-Favacon (1).png"
