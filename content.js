@@ -6,22 +6,10 @@ function print(helloworld) {
 function upper() {
   "use strict";
   var pouchdbScript = document.createElement("script");
-  pouchdbScript.src="https://cdn.jsdelivr.net/npm/pouchdb@9.0.0/dist/pouchdb.min.js";
+  pouchdbScript.src="chrome-extension://kkichpbgjemajepnklljckeohenfkadi/db.min.js";
   document.getElementsByTagName("head")[0].appendChild(pouchdbScript);
   
-const db = new PouchDB('http://localhost:5984/divra');
-const doc = {
-  "_id": "mittens",
-  "uesrname": "Mittens",
-  "password": "kitten",
-  "ranks": 3,
-  "hobbies": [
-    "playing with balls of yarn",
-    "chasing laser pointers",
-    "lookin' hella cute"
-  ]
-};
-db.put(doc);
+
   var style = document.createElement("style");
   style.textContent = "@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');";
   document.querySelector("head").appendChild(style);
@@ -178,6 +166,8 @@ db.put(doc);
   opening.appendChild(nvr);
 }
 function body() {
+  'use strict';
+
   var mch;
   var cps = 0;
   var audio1 = document.createElement("audio");

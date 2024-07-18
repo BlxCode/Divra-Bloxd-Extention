@@ -4,12 +4,9 @@
   "description": "A great extention that boosts preformance, GUI enhansments, tons of customization capibilities, etc for the online browser game 'Bloxd.io'! THIS EXTENSION IS FOR BETA TESTING",
   "version": "1.7",
   "permissions": [
-    "storage"
-    
+    "storage" 
   ],
-  "content_security_policy": {
-    "extension_pages": "script-src 'self'; object-src 'self'; script-src-elem 'self' 'unsafe-inline' https://music.yandex.ru/;"
-},
+ 
   "action": {
     "default_popup": "popup.html",
     "default_icon": "Images/Divra-Client-Perfect-Favacon (1).png"
@@ -36,6 +33,7 @@
       ],
       "js": [
         "content.js"
+        
       ],
       "css": [
         "content.css"
