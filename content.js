@@ -1,10 +1,27 @@
-// * Thank you bluify 🥹 goodbye for and forever
+// * Thank you bluify 🥹 goodbye forever
 function print(helloworld) {
   "use strict";
   console.log(helloworld);
 }
 function upper() {
   "use strict";
+  var pouchdbScript = document.createElement("script");
+  pouchdbScript.src="https://cdn.jsdelivr.net/npm/pouchdb@9.0.0/dist/pouchdb.min.js";
+  document.getElementsByTagName("head")[0].appendChild(pouchdbScript);
+  
+const db = new PouchDB('http://localhost:5984/divra');
+const doc = {
+  "_id": "mittens",
+  "uesrname": "Mittens",
+  "password": "kitten",
+  "ranks": 3,
+  "hobbies": [
+    "playing with balls of yarn",
+    "chasing laser pointers",
+    "lookin' hella cute"
+  ]
+};
+db.put(doc);
   var style = document.createElement("style");
   style.textContent = "@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');";
   document.querySelector("head").appendChild(style);
@@ -366,24 +383,26 @@ function body() {
   var isChatTyping = false;
   document.getElementById("root").appendChild(keysElement);
   var asmrkeyremove;
-  var whatisdown = "";
+  var whatisdown = " ";
   function keydown(eventis) {
     console.log("Keydown:");
     let ksey = eventis.key;
     function sakF() {
       if (ksey == " ") {
-        ksey = "SPACE";
+        ksey = "Space";
       } else if (ksey == "alt") {
-        ksey = "ALТ"
+        ksey = "Alt"
       } else if (ksey == "control") {
-        ksey = "CТRᒪ"
+        ksey = "Ctrl"
       } else if (ksey == "shift") {
-        ksey = "SHIFТ";
+        ksey = "Shift";
+      } else if (ksey == "meta") {
+        ksey = "";
       }
-      console.log(whatisdown.includes(String(ksey.toUpperCase() + " ")) + ": What is down");
-      if (whatisdown.includes(String(ksey.toUpperCase() + " ")) == false) {
-        console.log(whatisdown.includes(String(ksey.toUpperCase())) + " ");
-        whatisdown = whatisdown + ksey.toUpperCase() + " ";
+      console.log(whatisdown.includes(String(ksey + " ")) + ": What is down");
+      if (whatisdown.includes(String(" " + ksey + " ")) == false) {
+        console.log(whatisdown.includes(String(ksey)) + " ");
+        whatisdown = whatisdown + ksey + " ";
         console.log(whatisdown + ",whatisodown");
         DAKKeys.textContent = whatisdown;
         console.log(DAKKeys.textContent);
@@ -503,128 +522,158 @@ function body() {
   var gbsw;
   console.log("code up to line number 375 has no issues");
   function okeyup(eventis) {
+    let yn = "Y";
     let ksey = eventis.key;
     if (localStorage.getItem("asmr") == "Y") {
       audio1.play();
       asmrkeyremove = "";
       console.log(asmrkeyremove)
     }
+    if (document.getElementsByClassName("CrossHair")[0] != null && document.getElementsByClassName("CrossHair")[0].textContent == "+") {
+      ChangetheCrosshair();
+    }
+    if (document.getElementsByTagName("input")[0]) {
+      document.getElementsByTagName("input")[0].addEventListener("focus", () => {
+        yn = "N";
+      });
+
+      document.getElementsByTagName("input")[0].addEventListener("blur", () => {
+        yn = "Y";
+      });
+      
+      
+    }else if (document.getElementsByTagName("textarea")[0]) {
+
+        document.getElementsByTagName("textarea")[0].addEventListener("focus", () => {
+          yn = "N";
+        });
+        
+        document.getElementsByTagName("textarea")[0].addEventListener("blur", () => {
+          yn = "Y";
+        });
+        
+      
+    }
     console.log(eventis + "okeyup");
-    if (ksey == "l" || ksey == "L") {
-      if (dseb == 1) {
-        gbsw.click();
-        if (document.getElementById("aas1")) {
-          document.getElementById("aas1").remove();
-          gbs.remove();
-          customizeThumb.style.display = "block";
-          thumbnailwrap.remove();
-          dseb = 0;
-          bads.remove();
-          thumbnail1.remove();
-          abis.remove();
-          dseb = 0;
+    if (yn == "Y") {
+      if (ksey == "l" || ksey == "L") {
+        if (dseb == 1) {
+          gbsw.click();
+          if (document.getElementById("aas1")) {
+            document.getElementById("aas1").remove();
+            gbs.remove();
+            customizeThumb.style.display = "block";
+            thumbnailwrap.remove();
+            dseb = 0;
+            bads.remove();
+            thumbnail1.remove();
+            abis.remove();
+            dseb = 0;
+          }
+        } else {
+          console.log(dseb);
+          dseb = 1;
+          customizeThumb.click();
+          togglePointerLock: !1;
+        }
+        console.log(eventis);
+      }
+      let key = eventis.key;
+      if (key == "k") {
+        timer.style.zIndex = "100032";
+        timerstart.click();
+      }
+      if (key == "`") {
+        bloxSS.click();
+      }
+      if (key == "j" || key == "J") {
+        timerend.click();
+      }
+      if (localStorage.getItem("sak") == "N") {
+        if (key == "a" || key == "A") {
+          divraA.style.background = "none";
+        }
+        if (key == "s" || key == "S") {
+          divraS.style.background = "none";
+        }
+        if (key == "d" || key == "D") {
+          divraD.style.background = "none";
+        }
+        if (key == "w" || key == "W") {
+          divraW.style.background = "none";
+        }
+        if (key == "Shift") {
+          divraShift.style.background = "none";
+        }
+        if (key == "c" || key == "C") {
+          divraC.style.background = "none";
+        }
+        if (key.ctrlKey || key == "CapsLock") {
+          divraC.style.background = "none";
+        }
+        if (key == " " || key == "space") {
+          divraSpace.style.background = "none";
+        }
+        if (key == "z" || key == "Z") {
+          divraC.style.background = "none";
+        }
+        if (key == "<" || key == "Control") {
+          divraC.style.background = "none";
+        }
+        if (key == "o" || key == "Escape") {
+          //<div class="SettingsSectionTitle">&nbsp;Graphics</div>
+          /*  divraSB = document.createElement("div");
+              divraSB.className="SettingsSectionTitle";
+              divraSB.innerHTML="&nbsp;Divra Settings";
+              divraSB.style.display="none";
+              document.getElementsByClassName("SettingsCategoriesList")[0].appendChild(divraSB);
+             */
+          if (document.querySelector("#root > div.WholeAppWrapper > div > div.GameBackgroundScreen > div > div.SettingsMenuLeft.SmallTextBold > div.SettingsCategoriesList > div.SettingsSectionTitle.ActiveSettingsSectionTitle") != null) {
+            console.log("take to get the current tpack url");
+            document.querySelector("#root > div.WholeAppWrapper > div > div.GameBackgroundScreen > div > div.SettingsMenuLeft.SmallTextBold > div.SettingsCategoriesList > div.SettingsSectionTitle.ActiveSettingsSectionTitle").addEventListener("click", () => {
+              document.getElementsByClassName("SettingsTextInputCircleInfo")[0].addEventListener("mouseover", () => {
+                var texurl = document.getElementsByClassName("CircleInfoTooltip")[0].textContent.slice(66, 89);
+                console.log(texurl);
+                document.getElementsByClassName("CircleInfoTooltip")[0].innerHTML = "Clear for default. Requires page refresh to take effect. Example: <a href='" + texurl + "'>" + texurl + "</a>";
+              });
+            });
+          }
+          /* divraSB.addEventListener("click",()=>{
+                      //dostuff
+                      document.getElementsByClassName("SettingsSectionTitle")[0].classList.remove("ActiveSettingsSectionTitle");
+                      document.getElementsByClassName("SettingsSectionTitle")[1].classList.remove("ActiveSettingsSectionTitle");
+                      document.getElementsByClassName("SettingsSectionTitle")[2].classList.remove("ActiveSettingsSectionTitle");
+                      document.getElementsByClassName("SettingsMenuRight")[0].innerHTML="";
+                      divraSB.classList.add("ActiveSettingsSectionTitle");
+                      var divraSB1_1 = document.createElement("div");
+                      divraSB1_1.innerHTML=' <div class="CheckboxContainer"> <div class="CheckboxInputAndText"> <label class="CheckboxClickableLabel"> <span class="rc-checkbox rc-checkbox-checked"><input type="checkbox" class="rc-checkbox-input" value="" checked=""><span class="rc-checkbox-inner"></span></span></label><div class="CheckboxText">Show Coordinates</div></div></div>';
+                  });
+      */
         }
       } else {
-        console.log(dseb);
-        dseb = 1;
-        customizeThumb.click();
-        togglePointerLock: !1;
-      }
-      console.log(eventis);
-    }
-    let key = eventis.key;
-    if (key == "k") {
-      timer.style.zIndex = "100032";
-      timerstart.click();
-    }
-    if (key == "`") {
-      bloxSS.click();
-    }
-    if (key == "j" || key == "J") {
-      timerend.click();
-    }
-    if (localStorage.getItem("sak") == "N") {
-      if (key == "a" || key == "A") {
-        divraA.style.background = "none";
-      }
-      if (key == "s" || key == "S") {
-        divraS.style.background = "none";
-      }
-      if (key == "d" || key == "D") {
-        divraD.style.background = "none";
-      }
-      if (key == "w" || key == "W") {
-        divraW.style.background = "none";
-      }
-      if (key == "Shift") {
-        divraShift.style.background = "none";
-      }
-      if (key == "c" || key == "C") {
-        divraC.style.background = "none";
-      }
-      if (key.ctrlKey || key == "CapsLock") {
-        divraC.style.background = "none";
-      }
-      if (key == " " || key == "space") {
-        divraSpace.style.background = "none";
-      }
-      if (key == "z" || key == "Z") {
-        divraC.style.background = "none";
-      }
-      if (key == "<" || key == "Control") {
-        divraC.style.background = "none";
-      }
-      if (key == "o" || key == "Escape") {
-        //<div class="SettingsSectionTitle">&nbsp;Graphics</div>
-        /*  divraSB = document.createElement("div");
-            divraSB.className="SettingsSectionTitle";
-            divraSB.innerHTML="&nbsp;Divra Settings";
-            divraSB.style.display="none";
-            document.getElementsByClassName("SettingsCategoriesList")[0].appendChild(divraSB);
-           */
-        if (document.querySelector("#root > div.WholeAppWrapper > div > div.GameBackgroundScreen > div > div.SettingsMenuLeft.SmallTextBold > div.SettingsCategoriesList > div.SettingsSectionTitle.ActiveSettingsSectionTitle") != null) {
-          console.log("take to get the current tpack url");
-          document.querySelector("#root > div.WholeAppWrapper > div > div.GameBackgroundScreen > div > div.SettingsMenuLeft.SmallTextBold > div.SettingsCategoriesList > div.SettingsSectionTitle.ActiveSettingsSectionTitle").addEventListener("click", () => {
-            document.getElementsByClassName("SettingsTextInputCircleInfo")[0].addEventListener("mouseover", () => {
-              var texurl = document.getElementsByClassName("CircleInfoTooltip")[0].textContent.slice(66, 89);
-              console.log(texurl);
-              document.getElementsByClassName("CircleInfoTooltip")[0].innerHTML = "Clear for default. Requires page refresh to take effect. Example: <a href='" + texurl + "'>" + texurl + "</a>";
-            });
-          });
+        console.log("whatisup :");
+        if (key == " ") {
+          key = "Space";
+        } else if (key == "alt") {
+          key = "Alt"
+        } else if (key == "control") {
+          key = "Ctrl"
+        } else if (key == "shift") {
+          key = "Shift";
+        } else if (key == "meta") {
+          key = "";
         }
-        /* divraSB.addEventListener("click",()=>{
-                    //dostuff
-                    document.getElementsByClassName("SettingsSectionTitle")[0].classList.remove("ActiveSettingsSectionTitle");
-                    document.getElementsByClassName("SettingsSectionTitle")[1].classList.remove("ActiveSettingsSectionTitle");
-                    document.getElementsByClassName("SettingsSectionTitle")[2].classList.remove("ActiveSettingsSectionTitle");
-                    document.getElementsByClassName("SettingsMenuRight")[0].innerHTML="";
-                    divraSB.classList.add("ActiveSettingsSectionTitle");
-                    var divraSB1_1 = document.createElement("div");
-                    divraSB1_1.innerHTML=' <div class="CheckboxContainer"> <div class="CheckboxInputAndText"> <label class="CheckboxClickableLabel"> <span class="rc-checkbox rc-checkbox-checked"><input type="checkbox" class="rc-checkbox-input" value="" checked=""><span class="rc-checkbox-inner"></span></span></label><div class="CheckboxText">Show Coordinates</div></div></div>';
-                });
-    */
+        console.log(whatisdown.includes(String(key) + " "))
+        if (whatisdown.includes(" " + String(key) + " ") == true) {
+          console.log(String(key));
+          console.log(whatisdown + ":whattheheckis");
+          var removedt = String(key + " ");
+          whatisdown = whatisdown.replace(removedt, "");
+          DAKKeys.textContent = whatisdown;
+          console.log(whatisdown + ":whatisnowdown :)")
+        }
+        console.log(":whatisup");
       }
-    } else {
-      console.log("whatisup :");
-      if (key == " ") {
-        key = "SPACＥ";
-      } else if (key == "alt") {
-        key = "ALТ"
-      } else if (key == "control") {
-        key = "CТRᒪ"
-      } else if (key == "shift") {
-        key = "SHIFТ";
-      }
-      console.log(whatisdown.includes(String(key.toUpperCase()) + " "))
-      if (whatisdown.includes(String(key.toUpperCase()) + " ") == true) {
-        console.log(String(key.toUpperCase()));
-        console.log(whatisdown + ":whattheheckis");
-        var removedt = String(key.toUpperCase() + " ");
-        whatisdown = whatisdown.replace(removedt, "");
-        DAKKeys.textContent = whatisdown;
-        console.log(whatisdown + ":whatisnowdown :)")
-      }
-      console.log(":whatisup");
     }
   }
   document.body.addEventListener("keydown", keydown);
@@ -1584,12 +1633,12 @@ function body() {
     if (thr < 10) {
       hr.innerHTML = "0" + thr + ":";
     }
-    if (tsr > 59) {
+    if (tsr > 58) {
       tmr++;
       tsr = 0;
       hr.innerHTML = String(thr) + ":";
       mr.innerHTML = String(tmr) + ":";
-    } else if (tmr == 60) {
+    } else if (tmr > 58) {
       thr++;
       tmr = 0;
       hr.innerHTML = String(thr) + ":";
