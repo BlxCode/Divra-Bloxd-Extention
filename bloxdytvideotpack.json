@@ -1,0 +1,50 @@
+{
+	"blockAtlas": "https://i.imgur.com/E25ogx6.png",
+    	"skyBoxes": {
+		"default": {
+			"type": "custom",
+            "nx": "textures/skyBoxes/interstellar/_nx.jpg",
+			"ny": "textures/skyBoxes/interstellar/_ny.jpg",
+			"nz": "textures/skyBoxes/interstellar/_nz.jpg",
+			"px": "https://i.imgur.com/PAstZSQ.png",
+			"py": "textures/skyBoxes/interstellar/_py.jpg",
+			"pz": "textures/skyBoxes/interstellar/_pz.jpg"
+		},
+		"interstellar": {
+			"type": "custom",
+			"nx": "textures/skyBoxes/interstellar/_nx.jpg",
+			"ny": "textures/skyBoxes/interstellar/_ny.jpg",
+			"nz": "textures/skyBoxes/interstellar/_nz.jpg",
+			"px": "https://i.imgur.com/PAstZSQ.png",
+			"py": "textures/skyBoxes/interstellar/_py.jpg",
+			"pz": "textures/skyBoxes/interstellar/_pz.jpg"
+		},
+		"space_blue": {
+			"type": "custom",
+			"nx": "textures/skyBoxes/interstellar/_nx.jpg",
+			"ny": "textures/skyBoxes/interstellar/_ny.jpg",
+			"nz": "textures/skyBoxes/interstellar/_nz.jpg",
+			"px": "https://i.imgur.com/PAstZSQ.png",
+			"py": "textures/skyBoxes/interstellar/_py.jpg",
+			"pz": "textures/skyBoxes/interstellar/_pz.jpg"
+		},
+		"space_lightblue": {
+			"type": "custom",
+			"nx": "textures/skyBoxes/interstellar/_nx.jpg",
+			"ny": "textures/skyBoxes/interstellar/_ny.jpg",
+			"nz": "textures/skyBoxes/interstellar/_nz.jpg",
+			"px": "https://i.imgur.com/PAstZSQ.png",
+			"py": "textures/skyBoxes/interstellar/_py.jpg",
+			"pz": "textures/skyBoxes/interstellar/_pz.jpg"
+		},
+		"space_red": {
+			"type": "custom",
+			"nx": "textures/skyBoxes/interstellar/_nx.jpg",
+			"ny": "textures/skyBoxes/interstellar/_ny.jpg",
+			"nz": "textures/skyBoxes/interstellar/_nz.jpg",
+			"px": "https://i.imgur.com/PAstZSQ.png",
+			"py": "textures/skyBoxes/interstellar/_py.jpg",
+			"pz": "textures/skyBoxes/interstellar/_pz.jpg"
+		}
+	}
+}

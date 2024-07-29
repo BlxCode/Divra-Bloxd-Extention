@@ -392,7 +392,7 @@ function body() {
       console.log(whatisdown.includes(String(ksey + " ")) + ": What is down");
       if (whatisdown.includes(String(" " + ksey + " ")) == false) {
         console.log(whatisdown.includes(String(ksey)) + " ");
-        whatisdown = whatisdown + ksey + " ";
+        whatisdown = whatisdown + " "+ksey + " ";
         console.log(whatisdown + ",whatisodown");
         DAKKeys.textContent = whatisdown;
         console.log(DAKKeys.textContent);
@@ -512,7 +512,7 @@ function body() {
   var gbsw;
   console.log("code up to line number 375 has no issues");
   function okeyup(eventis) {
-    let yn = "Y";
+    var yn = "Y";
     let ksey = eventis.key;
     if (localStorage.getItem("asmr") == "Y") {
       audio1.play();
@@ -523,13 +523,21 @@ function body() {
       ChangetheCrosshair();
     }
     if (document.getElementsByTagName("input")[0]) {
-      document.getElementsByTagName("input")[0].addEventListener("focus", () => {
-        yn = "N";
+      const inputs = document.querySelectorAll('input');
+            
+      // Add focus and blur event listeners to each input element
+      inputs.forEach(input => {
+        document.getElementsByTagName("input")[0].addEventListener("focus", () => {
+          yn = "N";
+          console.log("i am in text box");
+        });
+        document.getElementsByTagName("input")[0].addEventListener("blur", () => {
+          yn = "Y";
+          console.log("i am not in text box");
+        });
       });
-
-      document.getElementsByTagName("input")[0].addEventListener("blur", () => {
-        yn = "Y";
-      });
+     
+     
       
       
     }else if (document.getElementsByTagName("textarea")[0]) {
@@ -544,6 +552,7 @@ function body() {
         
       
     }
+    console.log(yn +" YN");
     console.log(eventis + "okeyup");
     if (yn == "Y") {
       if (ksey == "l" || ksey == "L") {
@@ -653,17 +662,19 @@ function body() {
         } else if (key == "meta") {
           key = "";
         }
-        console.log(whatisdown.includes(String(key) + " "))
+        console.log(whatisdown.includes(" "+String(key)+ " "))
         if (whatisdown.includes(" " + String(key) + " ") == true) {
           console.log(String(key));
           console.log(whatisdown + ":whattheheckis");
-          var removedt = String(key + " ");
+          var removedt = String(" "+key + " ");
           whatisdown = whatisdown.replace(removedt, "");
           DAKKeys.textContent = whatisdown;
           console.log(whatisdown + ":whatisnowdown :)")
         }
         console.log(":whatisup");
       }
+    }else{
+      console.log(yn+" Am i in text box")
     }
   }
   document.body.addEventListener("keydown", keydown);
@@ -677,22 +688,7 @@ function body() {
       console.log("wheiowhoisdi");
         //um
   }*/
-  function makecpslower() {
-    cps -= 1;
-    if (cps == "-1" || cps == "-1.5") {
-      cps = 0;
-    }
-    cpsSee.innerHTML = " Cts: " + cps;
-    //console.log(cps);
-  }
-  var whatwascps = 1;
-  function stopCps() {
-    setTimeout(makecpslower, 250);
-    //  console.log("lol");
-    cps = 0;
-    //  console.log("whatwascps"+whatwascps);
-  }
-  setInterval(stopCps, 1000);
+
   function moosedown(mouse) {
     if (localStorage.getItem("asmr") == "Y") {
       audio22.play();
@@ -715,9 +711,27 @@ function body() {
       WriteOnBoardTextArea();
       divraRMB.style.background = "none";
     }
-    cps += 1;
-    cpsSee.innerHTML = " Cts: " + cps;
+   registerClick();
   }
+ 
+  let startTime = null;
+  let cpsInterval = null;
+  
+  function registerClick() {
+    if (startTime === null) {
+        startTime = new Date().getTime();
+        cpsInterval = setInterval(calculateCPS, 100);
+    }
+    cps++;
+  }
+  
+  function calculateCPS() {
+    let currentTime = new Date().getTime();
+    let elapsedTime = (currentTime - startTime) / 1000; // Convert milliseconds to seconds
+    let cpss = (cps / elapsedTime).toFixed(2); // Calculate clicks per second and round to 2 decimal places
+    cpsSee.innerText = `CPS: ${cpss}`;
+  }
+
   function WriteOnBoardTextArea() {
     if (document.getElementsByClassName("WriteOnBoardBg")[0] != null) {
       document.body.removeEventListener("keyup", gamekeyup);
@@ -2042,6 +2056,7 @@ function body() {
     abis.appendChild(br1);
     var abisS1l1 = document.createElement("label");
     var abisS1B1 = document.createElement("input");
+
     abisS1B1.type = "range";
     abisS1B1.min = 2;
     abisS1B1.max = 12500;
@@ -2058,6 +2073,13 @@ function body() {
       abisS1l1.textContent = "Advanced Horizontal Chunkload: " + abisS1B1.value + " Chunks after refresh";
       localStorage.setItem("bloxd-chunkHorizAddDist", abisS1B1.value);
     });
+    var br1 = document.createElement("br");
+    abis.appendChild(br1);
+    var contrast = document.createElement("input");
+    contrast.type="range";
+    contrast.min="10";
+    contrast.max="210";
+    contrast.value="100";
     function afdgmn(Numbericks, laughtext) {
       document.querySelector("#root > div.WholeAppWrapper > div > div:nth-child(3) > div > div.ChooseGameWrapper > div:nth-child(" + String(Numbericks) + ") > div > div").innerHTML = laughtext;
     }
