@@ -662,7 +662,7 @@ function body() {
         } else if (key == "meta") {
           key = "";
         }
-        console.log(whatisdown.includes(" "+String(key)+ " "))
+     
         if (whatisdown.includes(" " + String(key) + " ") == true) {
           console.log(String(key));
           console.log(whatisdown + ":whattheheckis");
@@ -717,20 +717,32 @@ function body() {
   let startTime = null;
   let cpsInterval = null;
   
+  let clickTimes = [];
+  const updateInterval = 100; // Update every 100ms
+
   function registerClick() {
-    if (startTime === null) {
-        startTime = new Date().getTime();
-        cpsInterval = setInterval(calculateCPS, 100);
-    }
-    cps++;
+      const currentTime = new Date().getTime();
+      clickTimes.push(currentTime);
+      calculateCPS();
   }
   
   function calculateCPS() {
-    let currentTime = new Date().getTime();
-    let elapsedTime = (currentTime - startTime) / 1000; // Convert milliseconds to seconds
-    let cpss = (cps / elapsedTime).toFixed(2); // Calculate clicks per second and round to 2 decimal places
-    cpsSee.innerText = `CPS: ${cpss}`;
+      const currentTime = new Date().getTime();
+      // Remove clicks that are more than 1 second old
+      clickTimes = clickTimes.filter(time => currentTime - time <= 1000);
+      const cps = clickTimes.length; // Number of clicks in the last second
+      cpsSee.innerText = `CPS: ${cps}`;
   }
+  
+  function startCPSCounter() {
+      setInterval(calculateCPS, updateInterval);
+  }
+  
+  // Attach event listener to the relevant element
+
+  // Start the CPS counter
+  startCPSCounter();
+  
 
   function WriteOnBoardTextArea() {
     if (document.getElementsByClassName("WriteOnBoardBg")[0] != null) {
