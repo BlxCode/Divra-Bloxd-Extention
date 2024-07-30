@@ -5,9 +5,6 @@ function print(helloworld) {
 }
 function upper() {
   "use strict";
-  var pouchdbScript = document.createElement("script");
-  pouchdbScript.src="chrome-extension://kkichpbgjemajepnklljckeohenfkadi/db.min.js";
-  document.getElementsByTagName("head")[0].appendChild(pouchdbScript);
   
 
   var style = document.createElement("style");
@@ -694,9 +691,9 @@ function body() {
       audio22.play();
     }
     if (mouse.button == 0) {
-      divraLMB.style.backgroundColor = "black";
+      divraLMB.style.backgroundColor = "green";
     } else if (mouse.button == 2) {
-      divraRMB.style.backgroundColor = "black";
+      divraRMB.style.backgroundColor = "green";
     }
   }
   document.body.addEventListener("mouseup", mooseup);
@@ -1916,6 +1913,7 @@ function body() {
     selection.className = "SmallTextLight NewButtton BlueButton";
     console.log(localStorage.getItem("DASFB") + " = " + selection.value);
     selection.value = localStorage.getItem("DASFB");
+    console.log(localStorage.getItem("DASFB") + " = " + selection.value);
     var sel1 = document.createElement("option");
     function selo(id, text) {
       id.innerHTML = text;
@@ -1985,6 +1983,7 @@ function body() {
     });
     thumMenu.style.display = "flex";
     var abis = document.createElement("div");
+    var devs = document.createElement("div");
     thumMenu.appendChild(abis);
     function css4ds(ais) {
       ais.style.position = "relative";
@@ -2258,10 +2257,23 @@ function body() {
         }
       }
     });
+
     PBOF.style.marginRight = "10px";
     PBOF.style.marginLeft = "10px";
     PBOF.style.lineHeight = "1.75px";
     PBOF.style.verticalAlign = "middle";
+var br = document.createElement("br");
+CrosshairAndHTBSettings.appendChild(br);
+    var hotbarBGcolor = document.createElement("input");
+    hotbarBGcolor.type="color";
+    hotbarBGcolor.width="20ppx";
+    hotbarBGcolor.id="hotbarBGcolor";
+    CrosshairAndHTBSettings.appendChild(hotbarBGcolor);
+    var hotbarBGcolorLabel = document.createElement("label")
+hotbarBGcolorLabel.textContent="Hotbar Background Color:";
+hotbarBGcolorLabel.htmlFor="hotbarBGcolor";
+CrosshairAndHTBSettings.appendChild(hotbarBGcolorLabel);
+    //When thye selection changes
     selection.addEventListener("change", () => {
       localStorage.setItem("DASFB", selection.value);
       thumbnailwrap.hidden;
@@ -2269,18 +2281,27 @@ function body() {
       CrosshairAndHTBSettings.hidden;
       thumbnail1.hidden;
       //Add/Remove Settings
+      devs.hidden;
       if (selection.value == "Gamemode Thumbnails 🖼") {
         thumbnailwrap.style.display = "block";
         abis.style.display = "none";
+        devs.style.display="none";
         CrosshairAndHTBSettings.style.display = "none";
       } else if (selection.value == "Advanced Bloxd.io Settings ⚙") {
         abis.style.display = "block";
         thumbnailwrap.style.display = "none";
+        devs.style.display="none";
         CrosshairAndHTBSettings.style.display = "none";
       } else if (selection.value == "Keystrokes, Hotbar, & Crosshair Settings ⚙") {
         abis.style.display = "none";
         thumbnailwrap.style.display = "none";
+        devs.style.display="none";
         CrosshairAndHTBSettings.style.display = "block";
+      }else if(selection.value=='Dev Mode 🧑‍💻<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>'){
+        abis.style.display = "none";
+        thumbnailwrap.style.display = "none";
+        CrosshairAndHTBSettings.style.display = "none";
+        devs.style.display="block";
       }
     });
     selection.style.color = "white";
@@ -2295,25 +2316,6 @@ function body() {
     });
   });
   console.log("code up to line number 1812 has no issues");
-  //  divraButts.innerHTML='<div class="start-screen-recording"><div><div class="rec-dot"></div><span>Start</span></div></div><script src="https://api.apowersoft.com/screen-recorder?lang=en" defer></script>'
-  //  divraButts.appendChild(record);
-  /* var rdiv1 = document.createElement("div");
-  rdiv1.class="start-screen-recording";
-  var rdivu = document.createElement("div");
-  rdiv1.appendChild(rdivu);
-  rdivu.appendChild(rdiv2);
-  var rdiv2 = document.createElement("div");
-  rdiv2.class="rec-dot";
-  var rspan1 = document.createElement("span");
-  rspan1.innerHTML="Start";
-  rdiv2.appendChild(rspan1);
-  var rscript = document.createElement("script");
-  rscript.src="https://api.apowersoft.com/screen-recorder?lang=en";
-  rscript.defer=true;
-  */
-  /*
-  <div class="start-screen-recording"><div><div class="rec-dot"></div><span>Start</span></div></div><script src="https://api.apowersoft.com/screen-recorder?lang=en" defer></script>
-  */
   //testing
   function autoRESPAWN() {
     document.getElementsByClassName("RespawnButton")[0].innerHTML = "Auto Respawning in 2 Seconds";
