@@ -1985,12 +1985,14 @@ function body() {
     var abis = document.createElement("div");
     var devs = document.createElement("div");
     thumMenu.appendChild(abis);
+  thumMenu.appendChild(devs);
     function css4ds(ais) {
       ais.style.position = "relative";
       ais.style.left = "40%";
       ais.style.display = "none";
     }
     css4ds(abis);
+    css4ds(devs);
     var CrosshairAndHTBSettings = document.createElement("div");
     thumMenu.appendChild(CrosshairAndHTBSettings);
     css4ds(CrosshairAndHTBSettings);
@@ -2308,6 +2310,9 @@ CrosshairAndHTBSettings.appendChild(hotbarBGcolorLabel);
     selection.style.height = "1.5em";
     selection.style.margin = "0.5em,0.5em,0.5em,0.5em";
     selection.style.position = "fixed";
+    var lolwthdoyouwant = document.createElement("p");
+    lolwthdoyouwant.innerHTML="Lol bro litterly thought he could destroy the whole divra client not today 💀";
+    devs.appendChild(lolwthdoyouwant)
     selection.tabIndex = "-1";
     scl.appendChild(selection);
     thumMenu.style.position = "fixed";
