@@ -4,9 +4,8 @@
   "description": "A great extention that boosts preformance, GUI enhansments, tons of customization capibilities, etc for the online browser game 'Bloxd.io'! THIS EXTENSION IS FOR BETA TESTING",
   "version": "1.7",
   "permissions": [
-    "storage" 
+    "storage"
   ],
- 
   "action": {
     "default_popup": "popup.html",
     "default_icon": "Images/Divra-Client-Perfect-Favacon (1).png"
@@ -24,7 +23,6 @@
   },
   "content_scripts": [
     {
-    
       "matches": [
         "https://bloxd.io/",
         "https://www.bloxd.io/",
@@ -32,13 +30,11 @@
         "https://bloxd.io/index.html"
       ],
       "js": [
-        "content.js.obfuscated.js"
-        
+        "content.js"
       ],
       "css": [
         "content.css"
       ]
-      
     }
   ]
 }

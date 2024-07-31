@@ -2274,7 +2274,19 @@ CrosshairAndHTBSettings.appendChild(br);
     var hotbarBGcolorLabel = document.createElement("label")
 hotbarBGcolorLabel.textContent="Hotbar Background Color:";
 hotbarBGcolorLabel.htmlFor="hotbarBGcolor";
+function localSet (who,what){
+localStorage.setItem(String(who),String(what));
+}
+function localGet(who){
+localStorage.getItem(String(who))
+}
 CrosshairAndHTBSettings.appendChild(hotbarBGcolorLabel);
+if(localGet("hotBgColor")==null||localGet("hotBgColor")==undefined){
+  localSet("hotBgColor","#FFFFFF");
+  hotbarBGcolor.value=String(localGet("hotBgColor"));
+}else{
+  hotbarBGcolor.value=String(localGet("hotBgColor"));
+}
     //When thye selection changes
     selection.addEventListener("change", () => {
       localStorage.setItem("DASFB", selection.value);
