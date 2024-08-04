@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Divra Client BETA",
   "description": "A great extention that boosts preformance, GUI enhansments, tons of customization capibilities, etc for the online browser game 'Bloxd.io'! THIS EXTENSION IS FOR BETA TESTING",
-  "version": "1.7",
+  "version": "1.6.1",
   "permissions": [
     "storage"
   ],
