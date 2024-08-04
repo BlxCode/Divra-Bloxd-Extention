@@ -5,7 +5,7 @@ function print(helloworld) {
 }
 function upper() {
   "use strict";
-  
+
 
   var style = document.createElement("style");
   style.textContent = "@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');";
@@ -164,19 +164,18 @@ function upper() {
 }
 function body() {
   'use strict';
-
   var mch;
   var cps = 0;
   var audio1 = document.createElement("audio");
   var audio1info = document.createElement("source");
   audio1info.src = "https://divra.vercel.app/assets/keyUp.mp3";
-  audio1.volume = 0.1; // volume should be a number
+  audio1.volume = 0.75; // volume should be a number
   audio1.appendChild(audio1info);
   document.body.appendChild(audio1); // append audio1 to the document body
   var audio12 = document.createElement("audio");
   var audio12info = document.createElement("source");
   audio12info.src = "https://divra.vercel.app/assets/keydown.mp3";
-  audio12.volume = 0.1; // volume should be a number
+  audio12.volume = 0.75; // volume should be a number
   audio12.appendChild(audio12info);
   document.body.appendChild(audio12);
   var audio2 = document.createElement("audio");
@@ -389,7 +388,7 @@ function body() {
       console.log(whatisdown.includes(String(ksey + " ")) + ": What is down");
       if (whatisdown.includes(String(" " + ksey + " ")) == false) {
         console.log(whatisdown.includes(String(ksey)) + " ");
-        whatisdown = whatisdown + " "+ksey + " ";
+        whatisdown = whatisdown + " " + ksey + " ";
         console.log(whatisdown + ",whatisodown");
         DAKKeys.textContent = whatisdown;
         console.log(DAKKeys.textContent);
@@ -507,9 +506,23 @@ function body() {
   var dseb = 0;
   document.body.addEventListener("keydown", keydown);
   var gbsw;
+  var yn = "Y";
+  document.addEventListener('focusin', (event) => {
+    if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') {
+        console.log('Input is focused:', event.target);
+        yn = "N";
+    }
+});
+
+document.addEventListener('focusout', (event) => {
+    if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') {
+        console.log('Input lost focus:', event.target);
+        yn = "N"
+    }
+});
   console.log("code up to line number 375 has no issues");
   function okeyup(eventis) {
-    var yn = "Y";
+   
     let ksey = eventis.key;
     if (localStorage.getItem("asmr") == "Y") {
       audio1.play();
@@ -519,38 +532,11 @@ function body() {
     if (document.getElementsByClassName("CrossHair")[0] != null && document.getElementsByClassName("CrossHair")[0].textContent == "+") {
       ChangetheCrosshair();
     }
-    if (document.getElementsByTagName("input")[0]) {
-      const inputs = document.querySelectorAll('input');
-            
-      // Add focus and blur event listeners to each input element
-      inputs.forEach(input => {
-        document.getElementsByTagName("input")[0].addEventListener("focus", () => {
-          yn = "N";
-          console.log("i am in text box");
-        });
-        document.getElementsByTagName("input")[0].addEventListener("blur", () => {
-          yn = "Y";
-          console.log("i am not in text box");
-        });
-      });
-     
-     
-      
-      
-    }else if (document.getElementsByTagName("textarea")[0]) {
-
-        document.getElementsByTagName("textarea")[0].addEventListener("focus", () => {
-          yn = "N";
-        });
-        
-        document.getElementsByTagName("textarea")[0].addEventListener("blur", () => {
-          yn = "Y";
-        });
-        
-      
-    }
-    console.log(yn +" YN");
+   
+  
     console.log(eventis + "okeyup");
+
+  console.log(yn + " YN");
     if (yn == "Y") {
       if (ksey == "l" || ksey == "L") {
         if (dseb == 1) {
@@ -659,19 +645,19 @@ function body() {
         } else if (key == "meta") {
           key = "";
         }
-     
+
         if (whatisdown.includes(" " + String(key) + " ") == true) {
           console.log(String(key));
           console.log(whatisdown + ":whattheheckis");
-          var removedt = String(" "+key + " ");
+          var removedt = String(" " + key + " ");
           whatisdown = whatisdown.replace(removedt, "");
           DAKKeys.textContent = whatisdown;
           console.log(whatisdown + ":whatisnowdown :)")
         }
         console.log(":whatisup");
       }
-    }else{
-      console.log(yn+" Am i in text box")
+    } else {
+      console.log(yn + " Am i in text box");
     }
   }
   document.body.addEventListener("keydown", keydown);
@@ -708,38 +694,38 @@ function body() {
       WriteOnBoardTextArea();
       divraRMB.style.background = "none";
     }
-   registerClick();
+    registerClick();
   }
- 
+
   let startTime = null;
   let cpsInterval = null;
-  
+
   let clickTimes = [];
   const updateInterval = 100; // Update every 100ms
 
   function registerClick() {
-      const currentTime = new Date().getTime();
-      clickTimes.push(currentTime);
-      calculateCPS();
+    const currentTime = new Date().getTime();
+    clickTimes.push(currentTime);
+    calculateCPS();
   }
-  
+
   function calculateCPS() {
-      const currentTime = new Date().getTime();
-      // Remove clicks that are more than 1 second old
-      clickTimes = clickTimes.filter(time => currentTime - time <= 1000);
-      const cps = clickTimes.length; // Number of clicks in the last second
-      cpsSee.innerText = `CPS: ${cps}`;
+    const currentTime = new Date().getTime();
+    // Remove clicks that are more than 1 second old
+    clickTimes = clickTimes.filter(time => currentTime - time <= 1000);
+    const cps = clickTimes.length; // Number of clicks in the last second
+    cpsSee.innerText = `CPS: ${cps}`;
   }
-  
+
   function startCPSCounter() {
-      setInterval(calculateCPS, updateInterval);
+    setInterval(calculateCPS, updateInterval);
   }
-  
+
   // Attach event listener to the relevant element
 
   // Start the CPS counter
   startCPSCounter();
-  
+
 
   function WriteOnBoardTextArea() {
     if (document.getElementsByClassName("WriteOnBoardBg")[0] != null) {
@@ -1186,6 +1172,8 @@ function body() {
   Cross(suckeeeeemaglazz, "🫐", "🫐");
   var suckeeeeeemaglazz = document.createElement("option");
   Cross(suckeeeeeemaglazz, "🥕", "🥕");
+  var birbcross = document.createElement("option");
+  Cross(birbcross,"Birb Crosshair","🐦");
   var option9CROSSHAIR = document.createElement("option");
   option9CROSSHAIR.innerHTML = "⛶";
   option9CROSSHAIR.value = "⛶";
@@ -1214,6 +1202,7 @@ function body() {
   option14CROSSHAIR.innerHTML = "🎮";
   option14CROSSHAIR.value = "🎮";
   changeCrosshair.appendChild(option14CROSSHAIR);
+
   var option15CROSSHAIR = document.createElement("option");
   option15CROSSHAIR.innerHTML = "(⋅)";
   option15CROSSHAIR.value = "(⋅)";
@@ -1481,18 +1470,19 @@ function body() {
   Bigsmall.min = "1";
   channelID.addEventListener("keyup", (kpoop) => {
     if (kpoop.key == "Enter") {
-      if (channelID.value == "blxm") {
-        name();
-        //changeCrosshair.value = "https://cdn.discordapp.com/attachments/1164211645145419836/1200316119412637767/4procrossahairv1.png?ex=65c5bc7f&is=65b3477f&hm=7d20af03f0099c27cc35b3cb8f9a3352032c3b29df13c42f652f2abc3cfa92a1&";
-        subs.style.zIndex = "4";
-        subs.src = "https://livecounts.io/embed/youtube-live-subscriber-counter/UCwEbSFbb4e7-XbAlcgmuTVw";
-        channelID.style.display = "none";
-      } else {
+     
         subs.style.zIndex = "4";
         subs.src = "https://livecounts.io/embed/youtube-live-subscriber-counter/" + channelID.value;
         channelID.style.display = "none";
-      }
+      
+    }else if(kpoop.key == "b") {
+      name();
+      //changeCrosshair.value = "https://cdn.discordapp.com/attachments/1164211645145419836/1200316119412637767/4procrossahairv1.png?ex=65c5bc7f&is=65b3477f&hm=7d20af03f0099c27cc35b3cb8f9a3352032c3b29df13c42f652f2abc3cfa92a1&";
+      subs.style.zIndex = "4";
+      subs.src = "https://livecounts.io/embed/youtube-live-subscriber-counter/UCwEbSFbb4e7-XbAlcgmuTVw";
+      channelID.style.display = "none";
     }
+
   });
   subs.style.height = "80px";
   subsHid.style.height = "80px";
@@ -1985,7 +1975,7 @@ function body() {
     var abis = document.createElement("div");
     var devs = document.createElement("div");
     thumMenu.appendChild(abis);
-  thumMenu.appendChild(devs);
+    thumMenu.appendChild(devs);
     function css4ds(ais) {
       ais.style.position = "relative";
       ais.style.left = "40%";
@@ -2089,10 +2079,10 @@ function body() {
     var br1 = document.createElement("br");
     abis.appendChild(br1);
     var contrast = document.createElement("input");
-    contrast.type="range";
-    contrast.min="10";
-    contrast.max="210";
-    contrast.value="100";
+    contrast.type = "range";
+    contrast.min = "10";
+    contrast.max = "210";
+    contrast.value = "100";
     function afdgmn(Numbericks, laughtext) {
       document.querySelector("#root > div.WholeAppWrapper > div > div:nth-child(3) > div > div.ChooseGameWrapper > div:nth-child(" + String(Numbericks) + ") > div > div").innerHTML = laughtext;
     }
@@ -2264,29 +2254,29 @@ function body() {
     PBOF.style.marginLeft = "10px";
     PBOF.style.lineHeight = "1.75px";
     PBOF.style.verticalAlign = "middle";
-var br = document.createElement("br");
-CrosshairAndHTBSettings.appendChild(br);
+    var br = document.createElement("br");
+    CrosshairAndHTBSettings.appendChild(br);
     var hotbarBGcolor = document.createElement("input");
-    hotbarBGcolor.type="color";
-    hotbarBGcolor.width="20ppx";
-    hotbarBGcolor.id="hotbarBGcolor";
+    hotbarBGcolor.type = "color";
+    hotbarBGcolor.width = "20ppx";
+    hotbarBGcolor.id = "hotbarBGcolor";
     CrosshairAndHTBSettings.appendChild(hotbarBGcolor);
     var hotbarBGcolorLabel = document.createElement("label")
-hotbarBGcolorLabel.textContent="Hotbar Background Color:";
-hotbarBGcolorLabel.htmlFor="hotbarBGcolor";
-function localSet (who,what){
-localStorage.setItem(String(who),String(what));
-}
-function localGet(who){
-localStorage.getItem(String(who))
-}
-CrosshairAndHTBSettings.appendChild(hotbarBGcolorLabel);
-if(localGet("hotBgColor")==null||localGet("hotBgColor")==undefined){
-  localSet("hotBgColor","#FFFFFF");
-  hotbarBGcolor.value=String(localGet("hotBgColor"));
-}else{
-  hotbarBGcolor.value=String(localGet("hotBgColor"));
-}
+    hotbarBGcolorLabel.textContent = "Hotbar Background Color:";
+    hotbarBGcolorLabel.htmlFor = "hotbarBGcolor";
+    function localSet(who, what) {
+      localStorage.setItem(String(who), String(what));
+    }
+    function localGet(who) {
+      localStorage.getItem(String(who))
+    }
+    CrosshairAndHTBSettings.appendChild(hotbarBGcolorLabel);
+    if (localGet("hotBgColor") == null || localGet("hotBgColor") == undefined) {
+      localSet("hotBgColor", "#FFFFFF");
+      hotbarBGcolor.value = String(localGet("hotBgColor"));
+    } else {
+      hotbarBGcolor.value = String(localGet("hotBgColor"));
+    }
     //When thye selection changes
     selection.addEventListener("change", () => {
       localStorage.setItem("DASFB", selection.value);
@@ -2299,23 +2289,23 @@ if(localGet("hotBgColor")==null||localGet("hotBgColor")==undefined){
       if (selection.value == "Gamemode Thumbnails 🖼") {
         thumbnailwrap.style.display = "block";
         abis.style.display = "none";
-        devs.style.display="none";
+        devs.style.display = "none";
         CrosshairAndHTBSettings.style.display = "none";
       } else if (selection.value == "Advanced Bloxd.io Settings ⚙") {
         abis.style.display = "block";
         thumbnailwrap.style.display = "none";
-        devs.style.display="none";
+        devs.style.display = "none";
         CrosshairAndHTBSettings.style.display = "none";
       } else if (selection.value == "Keystrokes, Hotbar, & Crosshair Settings ⚙") {
         abis.style.display = "none";
         thumbnailwrap.style.display = "none";
-        devs.style.display="none";
+        devs.style.display = "none";
         CrosshairAndHTBSettings.style.display = "block";
-      }else if(selection.value=='Dev Mode 🧑‍💻<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>'){
+      } else if (selection.value == 'Dev Mode 🧑‍💻<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>') {
         abis.style.display = "none";
         thumbnailwrap.style.display = "none";
         CrosshairAndHTBSettings.style.display = "none";
-        devs.style.display="block";
+        devs.style.display = "block";
       }
     });
     selection.style.color = "white";
@@ -2323,7 +2313,7 @@ if(localGet("hotBgColor")==null||localGet("hotBgColor")==undefined){
     selection.style.margin = "0.5em,0.5em,0.5em,0.5em";
     selection.style.position = "fixed";
     var lolwthdoyouwant = document.createElement("p");
-    lolwthdoyouwant.innerHTML="Lol bro litterly thought he could destroy the whole divra client not today 💀";
+    lolwthdoyouwant.innerHTML = "Lol bro litterly thought he could destroy the whole divra client not today 💀";
     devs.appendChild(lolwthdoyouwant)
     selection.tabIndex = "-1";
     scl.appendChild(selection);

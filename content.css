@@ -101,7 +101,7 @@ div{
 }
 .ChattingWrapper, ChatInput{
     background-color:rgb(235, 235, 215,0.42) !important;
-    color:rgb(214, 245, 236) !important;
+
     border-radius:10px !important;
 }
 .FpsWrapperDiv, .CoordinateUI,.LobbyNameWrapper{
