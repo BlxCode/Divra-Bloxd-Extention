@@ -509,20 +509,20 @@ function body() {
   var yn = "Y";
   document.addEventListener('focusin', (event) => {
     if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') {
-        console.log('Input is focused:', event.target);
-        yn = "N";
+      console.log('Input is focused:', event.target);
+      yn = "N";
     }
-});
+  });
 
-document.addEventListener('focusout', (event) => {
+  document.addEventListener('focusout', (event) => {
     if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') {
-        console.log('Input lost focus:', event.target);
-        yn = "N"
+      console.log('Input lost focus:', event.target);
+      yn = "Y"
     }
-});
+  });
   console.log("code up to line number 375 has no issues");
   function okeyup(eventis) {
-   
+
     let ksey = eventis.key;
     if (localStorage.getItem("asmr") == "Y") {
       audio1.play();
@@ -532,11 +532,11 @@ document.addEventListener('focusout', (event) => {
     if (document.getElementsByClassName("CrossHair")[0] != null && document.getElementsByClassName("CrossHair")[0].textContent == "+") {
       ChangetheCrosshair();
     }
-   
-  
+
+
     console.log(eventis + "okeyup");
 
-  console.log(yn + " YN");
+    console.log(yn + " YN");
     if (yn == "Y") {
       if (ksey == "l" || ksey == "L") {
         if (dseb == 1) {
@@ -826,6 +826,21 @@ document.addEventListener('focusout', (event) => {
   });
   console.log("code up to line number 653 has no issues");
   function ChangetheCrosshair() {
+    if (document.getElementsByClassName("item ")[9]!=null) {
+      var htbr = document.getElementsByClassName("item ");
+      document.getElementsByClassName("item ")[0].style.backgroundColor=hotbarBGcolor.value;
+      document.getElementsByClassName("item ")[1].style.backgroundColor=hotbarBGcolor.value;
+      document.getElementsByClassName("item ")[2].style.backgroundColor=hotbarBGcolor.value;
+      document.getElementsByClassName("item ")[3].style.backgroundColor=hotbarBGcolor.value;
+      document.getElementsByClassName("item ")[4].style.backgroundColor=hotbarBGcolor.value;
+      document.getElementsByClassName("item ")[5].style.backgroundColor=hotbarBGcolor.value;
+      document.getElementsByClassName("item ")[6].style.backgroundColor=hotbarBGcolor.value;
+      document.getElementsByClassName("item ")[7].style.backgroundColor=hotbarBGcolor.value;
+      document.getElementsByClassName("item ")[9].style.backgroundColor=hotbarBGcolor.value;
+      document.getElementsByClassName("item ")[8].style.backgroundColor=hotbarBGcolor.value;
+      document.getElementsByClassName("item ")[10].style.backgroundColor=hotbarBGcolor.value;
+  
+    }
     if (changeCrosshair.value == 'sudiCrosshair') {
       document.getElementsByClassName("CrossHair")[0].innerHTML = "";
       document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://lh3.googleusercontent.com/mfdjL6r1en6mWI3QVMnBbcSX-7QpgBE5EyXo0YbK6299QSJsi58GkfecyL0W7yYljK37vV6Mk7wD69QNdp8LiNw=s400)';
@@ -982,8 +997,9 @@ document.addEventListener('focusout', (event) => {
     }
     localStorage.setItem("Crosshair", changeCrosshair.value);
   }
-  mch = setInterval(makeCh, 2500);
+  mch = setInterval(makeCh, 75);
   function makeCh() {
+    console.error("ur fps will be 10 if you see this");
     if (document.getElementsByClassName("CrossHair")[0] != null) {
       ChangetheCrosshair();
       var poweredbydivra = document.createElement("p");
@@ -1012,6 +1028,34 @@ document.addEventListener('focusout', (event) => {
           localStorage.setItem("crosswidth", "16");
         } else if (localStorage.getItem("crosswidth") < 10 || localStorage.getItem("crosswidth") > 30) {
           localStorage.setItem("crosswidth", "16");
+        }
+        if (localStorage.getItem("hotBgColor") == null || localStorage.getItem("hotBgColor") == undefined) {
+          localStorage.setItem("hotBgColor", "#FFFFFF");
+          document.getElementsByClassName("item ")[0].style.backgroundColor = localStorage.getItem("hotBgColor");
+          document.getElementsByClassName("item ")[1].style.backgroundColor = localStorage.getItem("hotBgColor");
+          document.getElementsByClassName("item ")[2].style.backgroundColor = localStorage.getItem("hotBgColor");
+          document.getElementsByClassName("item ")[3].style.backgroundColor = localStorage.getItem("hotBgColor");
+          document.getElementsByClassName("item ")[4].style.backgroundColor = localStorage.getItem("hotBgColor");
+          document.getElementsByClassName("item ")[5].style.backgroundColor = localStorage.getItem("hotBgColor");
+          document.getElementsByClassName("item ")[6].style.backgroundColor = localStorage.getItem("hotBgColor");
+          document.getElementsByClassName("item ")[7].style.backgroundColor = localStorage.getItem("hotBgColor");
+          document.getElementsByClassName("item ")[8].style.backgroundColor = localStorage.getItem("hotBgColor");
+          document.getElementsByClassName("item ")[9].style.backgroundColor = localStorage.getItem("hotBgColor");
+          document.getElementsByClassName("item ")[10].style.backgroundColor = localStorage.getItem("hotBgColor");
+        } else {
+          document.getElementsByClassName("item ")[0].style.backgroundColor = localStorage.getItem("hotBgColor");
+          document.getElementsByClassName("item ")[1].style.backgroundColor = localStorage.getItem("hotBgColor");
+          document.getElementsByClassName("item ")[2].style.backgroundColor = localStorage.getItem("hotBgColor");
+          document.getElementsByClassName("item ")[3].style.backgroundColor = localStorage.getItem("hotBgColor");
+          document.getElementsByClassName("item ")[4].style.backgroundColor = localStorage.getItem("hotBgColor");
+          document.getElementsByClassName("item ")[5].style.backgroundColor = localStorage.getItem("hotBgColor");
+          document.getElementsByClassName("item ")[6].style.backgroundColor = localStorage.getItem("hotBgColor");
+          document.getElementsByClassName("item ")[7].style.backgroundColor = localStorage.getItem("hotBgColor");
+          document.getElementsByClassName("item ")[8].style.backgroundColor = localStorage.getItem("hotBgColor");
+          document.getElementsByClassName("item ")[9].style.backgroundColor = localStorage.getItem("hotBgColor");
+          document.getElementsByClassName("item ")[10].style.backgroundColor = localStorage.getItem("hotBgColor");
+
+
         }
         document.body.addEventListener("keyup", gamekeyup);
         clearInterval(mch);
@@ -1173,7 +1217,7 @@ document.addEventListener('focusout', (event) => {
   var suckeeeeeemaglazz = document.createElement("option");
   Cross(suckeeeeeemaglazz, "🥕", "🥕");
   var birbcross = document.createElement("option");
-  Cross(birbcross,"Birb Crosshair","🐦");
+  Cross(birbcross, "Birb Crosshair", "🐦");
   var option9CROSSHAIR = document.createElement("option");
   option9CROSSHAIR.innerHTML = "⛶";
   option9CROSSHAIR.value = "⛶";
@@ -1375,6 +1419,7 @@ document.addEventListener('focusout', (event) => {
       chHote.style.transform = "scale(1.0)";
     });
   }
+
   ButtsG(chHot, "Change Your Hotbar to something more interesting", "Change Hotbar (Only works if you are in a game)");
   chHot.addEventListener("click", () => {
     hotbarG(0);
@@ -1470,12 +1515,12 @@ document.addEventListener('focusout', (event) => {
   Bigsmall.min = "1";
   channelID.addEventListener("keyup", (kpoop) => {
     if (kpoop.key == "Enter") {
-     
-        subs.style.zIndex = "4";
-        subs.src = "https://livecounts.io/embed/youtube-live-subscriber-counter/" + channelID.value;
-        channelID.style.display = "none";
-      
-    }else if(kpoop.key == "b") {
+
+      subs.style.zIndex = "4";
+      subs.src = "https://livecounts.io/embed/youtube-live-subscriber-counter/" + channelID.value;
+      channelID.style.display = "none";
+
+    } else if (kpoop.key == "b") {
       name();
       //changeCrosshair.value = "https://cdn.discordapp.com/attachments/1164211645145419836/1200316119412637767/4procrossahairv1.png?ex=65c5bc7f&is=65b3477f&hm=7d20af03f0099c27cc35b3cb8f9a3352032c3b29df13c42f652f2abc3cfa92a1&";
       subs.style.zIndex = "4";
@@ -2262,20 +2307,35 @@ document.addEventListener('focusout', (event) => {
     hotbarBGcolor.id = "hotbarBGcolor";
     CrosshairAndHTBSettings.appendChild(hotbarBGcolor);
     var hotbarBGcolorLabel = document.createElement("label")
-    hotbarBGcolorLabel.textContent = "Hotbar Background Color:";
+    hotbarBGcolorLabel.textContent = "Hotbar Background Color";
     hotbarBGcolorLabel.htmlFor = "hotbarBGcolor";
-    function localSet(who, what) {
-      localStorage.setItem(String(who), String(what));
-    }
-    function localGet(who) {
-      localStorage.getItem(String(who))
-    }
+    hotbarBGcolor.addEventListener("change", () => {
+      console.log(hotbarBGcolor.value + "= Hotbar bg value")
+      localStorage.setItem("hotBgColor", hotbarBGcolor.value);
+      console.log("Changed hotbar bg color to " + localStorage.getItem("hotBgColor"));
+      if (document.getElementsByClassName("item ")[9]!=null) {
+        var htbr = document.getElementsByClassName("item ");
+        document.getElementsByClassName("item ")[0].style.backgroundColor=hotbarBGcolor.value;
+        document.getElementsByClassName("item ")[1].style.backgroundColor=hotbarBGcolor.value;
+        document.getElementsByClassName("item ")[2].style.backgroundColor=hotbarBGcolor.value;
+        document.getElementsByClassName("item ")[3].style.backgroundColor=hotbarBGcolor.value;
+        document.getElementsByClassName("item ")[4].style.backgroundColor=hotbarBGcolor.value;
+        document.getElementsByClassName("item ")[5].style.backgroundColor=hotbarBGcolor.value;
+        document.getElementsByClassName("item ")[6].style.backgroundColor=hotbarBGcolor.value;
+        document.getElementsByClassName("item ")[7].style.backgroundColor=hotbarBGcolor.value;
+        document.getElementsByClassName("item ")[9].style.backgroundColor=hotbarBGcolor.value;
+        document.getElementsByClassName("item ")[8].style.backgroundColor=hotbarBGcolor.value;
+        document.getElementsByClassName("item ")[10].style.backgroundColor=hotbarBGcolor.value;
+    
+      }
+    });
+
     CrosshairAndHTBSettings.appendChild(hotbarBGcolorLabel);
-    if (localGet("hotBgColor") == null || localGet("hotBgColor") == undefined) {
-      localSet("hotBgColor", "#FFFFFF");
-      hotbarBGcolor.value = String(localGet("hotBgColor"));
+    if (localStorage.getItem("hotBgColor") == null || localStorage.getItem("hotBgColor") == undefined) {
+      localStorage.setItem("hotBgColor", "#FFFFFF");
+      hotbarBGcolor.value = String(localStorage.getItem("hotBgColor"));
     } else {
-      hotbarBGcolor.value = String(localGet("hotBgColor"));
+      hotbarBGcolor.value = String(localStorage.getItem("hotBgColor"));
     }
     //When thye selection changes
     selection.addEventListener("change", () => {
