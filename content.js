@@ -5,8 +5,6 @@ function print(helloworld) {
 }
 function upper() {
   "use strict";
-
-
   var style = document.createElement("style");
   style.textContent = "@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');";
   document.querySelector("head").appendChild(style);
@@ -405,7 +403,6 @@ function body() {
       //bloxdmaster= noob coder copy cat insaign lvl (and bluify has no idea abt that)
       if (document.getElementsByClassName("ChatInput")[0].value == "") {
         console.log("gkuac");
-
         var kley = eventis;
         if (kley == "t" || kley == "T") {
           console.log("ASDFSADFASDGSDAGSDAFDSAGSDAFSDAsdlfkjsdlakhgsdlkagjsdljfsladkglksdhfslkdaghdkas;lfjdskalghfdskaljfgdskajgfkwejgsdfiudsgwudkf");
@@ -502,7 +499,6 @@ function body() {
     }
     console.log(":Keydown");
   }
-
   var dseb = 0;
   document.body.addEventListener("keydown", keydown);
   var gbsw;
@@ -513,7 +509,6 @@ function body() {
       yn = "N";
     }
   });
-
   document.addEventListener('focusout', (event) => {
     if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') {
       console.log('Input lost focus:', event.target);
@@ -522,7 +517,6 @@ function body() {
   });
   console.log("code up to line number 375 has no issues");
   function okeyup(eventis) {
-
     let ksey = eventis.key;
     if (localStorage.getItem("asmr") == "Y") {
       audio1.play();
@@ -532,10 +526,7 @@ function body() {
     if (document.getElementsByClassName("CrossHair")[0] != null && document.getElementsByClassName("CrossHair")[0].textContent == "+") {
       ChangetheCrosshair();
     }
-
-
     console.log(eventis + "okeyup");
-
     console.log(yn + " YN");
     if (yn == "Y") {
       if (ksey == "l" || ksey == "L") {
@@ -645,7 +636,6 @@ function body() {
         } else if (key == "meta") {
           key = "";
         }
-
         if (whatisdown.includes(" " + String(key) + " ") == true) {
           console.log(String(key));
           console.log(whatisdown + ":whattheheckis");
@@ -671,7 +661,6 @@ function body() {
       console.log("wheiowhoisdi");
         //um
   }*/
-
   function moosedown(mouse) {
     if (localStorage.getItem("asmr") == "Y") {
       audio22.play();
@@ -696,19 +685,15 @@ function body() {
     }
     registerClick();
   }
-
   let startTime = null;
   let cpsInterval = null;
-
   let clickTimes = [];
   const updateInterval = 100; // Update every 100ms
-
   function registerClick() {
     const currentTime = new Date().getTime();
     clickTimes.push(currentTime);
     calculateCPS();
   }
-
   function calculateCPS() {
     const currentTime = new Date().getTime();
     // Remove clicks that are more than 1 second old
@@ -716,17 +701,12 @@ function body() {
     const cps = clickTimes.length; // Number of clicks in the last second
     cpsSee.innerText = `CPS: ${cps}`;
   }
-
   function startCPSCounter() {
     setInterval(calculateCPS, updateInterval);
   }
-
   // Attach event listener to the relevant element
-
   // Start the CPS counter
   startCPSCounter();
-
-
   function WriteOnBoardTextArea() {
     if (document.getElementsByClassName("WriteOnBoardBg")[0] != null) {
       document.body.removeEventListener("keyup", gamekeyup);
@@ -810,6 +790,7 @@ function body() {
   console.log(localStorage.getItem("Crosshair") + " localstoragecrosshairvalue");
   if (lS == null || lS == undefined) {
     localStorage.setItem("Crosshair", "https://i.ibb.co/n8pFY3b/arYc1V6.png");
+    changeCrosshair.value = String(lS);
   } else {
     changeCrosshair.value = String(lS);
   }
@@ -826,21 +807,32 @@ function body() {
   });
   console.log("code up to line number 653 has no issues");
   function ChangetheCrosshair() {
-    if (document.getElementsByClassName("item ")[9]!=null) {
+    if (document.getElementsByClassName("item ")[9] != null) {
       var htbr = document.getElementsByClassName("item ");
-      document.getElementsByClassName("item ")[0].style.backgroundColor=hotbarBGcolor.value;
-      document.getElementsByClassName("item ")[1].style.backgroundColor=hotbarBGcolor.value;
-      document.getElementsByClassName("item ")[2].style.backgroundColor=hotbarBGcolor.value;
-      document.getElementsByClassName("item ")[3].style.backgroundColor=hotbarBGcolor.value;
-      document.getElementsByClassName("item ")[4].style.backgroundColor=hotbarBGcolor.value;
-      document.getElementsByClassName("item ")[5].style.backgroundColor=hotbarBGcolor.value;
-      document.getElementsByClassName("item ")[6].style.backgroundColor=hotbarBGcolor.value;
-      document.getElementsByClassName("item ")[7].style.backgroundColor=hotbarBGcolor.value;
-      document.getElementsByClassName("item ")[9].style.backgroundColor=hotbarBGcolor.value;
-      document.getElementsByClassName("item ")[8].style.backgroundColor=hotbarBGcolor.value;
-      document.getElementsByClassName("item ")[10].style.backgroundColor=hotbarBGcolor.value;
-  
+      document.getElementsByClassName("item ")[0].style.backgroundColor = localStorage.getItem("hotBgColor");
+      document.getElementsByClassName("item ")[1].style.backgroundColor = localStorage.getItem("hotBgColor");
+      document.getElementsByClassName("item ")[2].style.backgroundColor = localStorage.getItem("hotBgColor");
+      document.getElementsByClassName("item ")[3].style.backgroundColor = localStorage.getItem("hotBgColor");
+      document.getElementsByClassName("item ")[4].style.backgroundColor = localStorage.getItem("hotBgColor");
+      document.getElementsByClassName("item ")[5].style.backgroundColor = localStorage.getItem("hotBgColor");
+      document.getElementsByClassName("item ")[6].style.backgroundColor = localStorage.getItem("hotBgColor");
+      document.getElementsByClassName("item ")[7].style.backgroundColor = localStorage.getItem("hotBgColor");
+      document.getElementsByClassName("item ")[8].style.backgroundColor = localStorage.getItem("hotBgColor");
+      document.getElementsByClassName("item ")[9].style.backgroundColor = localStorage.getItem("hotBgColor");
+      document.getElementsByClassName("item ")[10].style.backgroundColor = localStorage.getItem("hotBgColor");
+      document.getElementsByClassName("item ")[0].style.borderColor = localStorage.getItem("hotBogColor");
+      document.getElementsByClassName("item ")[1].style.borderColor = localStorage.getItem("hotBogColor");
+      document.getElementsByClassName("item ")[2].style.borderColor = localStorage.getItem("hotBogColor");
+      document.getElementsByClassName("item ")[3].style.borderColor = localStorage.getItem("hotBogColor");
+      document.getElementsByClassName("item ")[4].style.borderColor = localStorage.getItem("hotBogColor");
+      document.getElementsByClassName("item ")[5].style.borderColor = localStorage.getItem("hotBogColor");
+      document.getElementsByClassName("item ")[6].style.borderColor = localStorage.getItem("hotBogColor");
+      document.getElementsByClassName("item ")[7].style.borderColor = localStorage.getItem("hotBogColor");
+      document.getElementsByClassName("item ")[8].style.borderColor = localStorage.getItem("hotBogColor");
+      document.getElementsByClassName("item ")[9].style.borderColor = localStorage.getItem("hotBogColor");
+      document.getElementsByClassName("item ")[10].style.borderColor = localStorage.getItem("hotBogColor");
     }
+
     if (changeCrosshair.value == 'sudiCrosshair') {
       document.getElementsByClassName("CrossHair")[0].innerHTML = "";
       document.getElementsByClassName("CrossHair")[0].style.backgroundImage = 'url(https://lh3.googleusercontent.com/mfdjL6r1en6mWI3QVMnBbcSX-7QpgBE5EyXo0YbK6299QSJsi58GkfecyL0W7yYljK37vV6Mk7wD69QNdp8LiNw=s400)';
@@ -1054,8 +1046,32 @@ function body() {
           document.getElementsByClassName("item ")[8].style.backgroundColor = localStorage.getItem("hotBgColor");
           document.getElementsByClassName("item ")[9].style.backgroundColor = localStorage.getItem("hotBgColor");
           document.getElementsByClassName("item ")[10].style.backgroundColor = localStorage.getItem("hotBgColor");
-
-
+        }
+        if (localStorage.getItem("hotBogColor") == null || localStorage.getItem("hotBogColor") == undefined) {
+          localStorage.setItem("hotBogColor", "#000000");
+          document.getElementsByClassName("item ")[0].style.borderColor = localStorage.getItem("hotBogColor");
+          document.getElementsByClassName("item ")[1].style.borderColor = localStorage.getItem("hotBogColor");
+          document.getElementsByClassName("item ")[2].style.borderColor = localStorage.getItem("hotBogColor");
+          document.getElementsByClassName("item ")[3].style.borderColor = localStorage.getItem("hotBogColor");
+          document.getElementsByClassName("item ")[4].style.borderColor = localStorage.getItem("hotBogColor");
+          document.getElementsByClassName("item ")[5].style.borderColor = localStorage.getItem("hotBogColor");
+          document.getElementsByClassName("item ")[6].style.borderColor = localStorage.getItem("hotBogColor");
+          document.getElementsByClassName("item ")[7].style.borderColor = localStorage.getItem("hotBogColor");
+          document.getElementsByClassName("item ")[8].style.borderColor = localStorage.getItem("hotBogColor");
+          document.getElementsByClassName("item ")[9].style.borderColor = localStorage.getItem("hotBogColor");
+          document.getElementsByClassName("item ")[10].style.borderColor = localStorage.getItem("hotBogColor");
+        } else {
+          document.getElementsByClassName("item ")[0].style.borderColor = localStorage.getItem("hotBogColor");
+          document.getElementsByClassName("item ")[1].style.borderColor = localStorage.getItem("hotBogColor");
+          document.getElementsByClassName("item ")[2].style.borderColor = localStorage.getItem("hotBogColor");
+          document.getElementsByClassName("item ")[3].style.borderColor = localStorage.getItem("hotBogColor");
+          document.getElementsByClassName("item ")[4].style.borderColor = localStorage.getItem("hotBogColor");
+          document.getElementsByClassName("item ")[5].style.borderColor = localStorage.getItem("hotBogColor");
+          document.getElementsByClassName("item ")[6].style.borderColor = localStorage.getItem("hotBogColor");
+          document.getElementsByClassName("item ")[7].style.borderColor = localStorage.getItem("hotBogColor");
+          document.getElementsByClassName("item ")[8].style.borderColor = localStorage.getItem("hotBogColor");
+          document.getElementsByClassName("item ")[9].style.borderColor = localStorage.getItem("hotBogColor");
+          document.getElementsByClassName("item ")[10].style.borderColor = localStorage.getItem("hotBogColor");
         }
         document.body.addEventListener("keyup", gamekeyup);
         clearInterval(mch);
@@ -1246,7 +1262,6 @@ function body() {
   option14CROSSHAIR.innerHTML = "🎮";
   option14CROSSHAIR.value = "🎮";
   changeCrosshair.appendChild(option14CROSSHAIR);
-
   var option15CROSSHAIR = document.createElement("option");
   option15CROSSHAIR.innerHTML = "(⋅)";
   option15CROSSHAIR.value = "(⋅)";
@@ -1419,7 +1434,6 @@ function body() {
       chHote.style.transform = "scale(1.0)";
     });
   }
-
   ButtsG(chHot, "Change Your Hotbar to something more interesting", "Change Hotbar (Only works if you are in a game)");
   chHot.addEventListener("click", () => {
     hotbarG(0);
@@ -1515,11 +1529,9 @@ function body() {
   Bigsmall.min = "1";
   channelID.addEventListener("keyup", (kpoop) => {
     if (kpoop.key == "Enter") {
-
       subs.style.zIndex = "4";
       subs.src = "https://livecounts.io/embed/youtube-live-subscriber-counter/" + channelID.value;
       channelID.style.display = "none";
-
     } else if (kpoop.key == "b") {
       name();
       //changeCrosshair.value = "https://cdn.discordapp.com/attachments/1164211645145419836/1200316119412637767/4procrossahairv1.png?ex=65c5bc7f&is=65b3477f&hm=7d20af03f0099c27cc35b3cb8f9a3352032c3b29df13c42f652f2abc3cfa92a1&";
@@ -1527,7 +1539,6 @@ function body() {
       subs.src = "https://livecounts.io/embed/youtube-live-subscriber-counter/UCwEbSFbb4e7-XbAlcgmuTVw";
       channelID.style.display = "none";
     }
-
   });
   subs.style.height = "80px";
   subsHid.style.height = "80px";
@@ -1837,11 +1848,9 @@ function body() {
   var thumMenu = document.createElement("div");
   var wea;
   wea = setInterval(() => {
-
     if (localStorage.getItem("thumbnail") == null || localStorage.getItem("thumbnail") == undefined) {
       localStorage.setItem("thumbnail", "unrecognizednevergonnagiveyouupnevergonnaletyoudownnevergonnarunaroundanddesertyou");
     } else if (localStorage.getItem("thumbnail") == "t1") {
-
       if (document.querySelector("#root > div.WholeAppWrapper > div > div:nth-child(3) > div > div.ChooseGameWrapper > div:nth-child(1) > img") != null) {
         console.log("NOt yet saving");
         document.querySelector("#root > div.WholeAppWrapper > div > div:nth-child(3) > div > div.ChooseGameWrapper > div:nth-child(1) > img").src = "https://i.imgur.com/midF8Qc.png";
@@ -2104,7 +2113,6 @@ function body() {
     abis.appendChild(br1);
     var abisS1l1 = document.createElement("label");
     var abisS1B1 = document.createElement("input");
-
     abisS1B1.type = "range";
     abisS1B1.min = 2;
     abisS1B1.max = 12500;
@@ -2294,7 +2302,6 @@ function body() {
         }
       }
     });
-
     PBOF.style.marginRight = "10px";
     PBOF.style.marginLeft = "10px";
     PBOF.style.lineHeight = "1.75px";
@@ -2313,23 +2320,21 @@ function body() {
       console.log(hotbarBGcolor.value + "= Hotbar bg value")
       localStorage.setItem("hotBgColor", hotbarBGcolor.value);
       console.log("Changed hotbar bg color to " + localStorage.getItem("hotBgColor"));
-      if (document.getElementsByClassName("item ")[9]!=null) {
+      if (document.getElementsByClassName("item ")[9] != null) {
         var htbr = document.getElementsByClassName("item ");
-        document.getElementsByClassName("item ")[0].style.backgroundColor=hotbarBGcolor.value;
-        document.getElementsByClassName("item ")[1].style.backgroundColor=hotbarBGcolor.value;
-        document.getElementsByClassName("item ")[2].style.backgroundColor=hotbarBGcolor.value;
-        document.getElementsByClassName("item ")[3].style.backgroundColor=hotbarBGcolor.value;
-        document.getElementsByClassName("item ")[4].style.backgroundColor=hotbarBGcolor.value;
-        document.getElementsByClassName("item ")[5].style.backgroundColor=hotbarBGcolor.value;
-        document.getElementsByClassName("item ")[6].style.backgroundColor=hotbarBGcolor.value;
-        document.getElementsByClassName("item ")[7].style.backgroundColor=hotbarBGcolor.value;
-        document.getElementsByClassName("item ")[9].style.backgroundColor=hotbarBGcolor.value;
-        document.getElementsByClassName("item ")[8].style.backgroundColor=hotbarBGcolor.value;
-        document.getElementsByClassName("item ")[10].style.backgroundColor=hotbarBGcolor.value;
-    
+        document.getElementsByClassName("item ")[0].style.backgroundColor = hotbarBGcolor.value;
+        document.getElementsByClassName("item ")[1].style.backgroundColor = hotbarBGcolor.value;
+        document.getElementsByClassName("item ")[2].style.backgroundColor = hotbarBGcolor.value;
+        document.getElementsByClassName("item ")[3].style.backgroundColor = hotbarBGcolor.value;
+        document.getElementsByClassName("item ")[4].style.backgroundColor = hotbarBGcolor.value;
+        document.getElementsByClassName("item ")[5].style.backgroundColor = hotbarBGcolor.value;
+        document.getElementsByClassName("item ")[6].style.backgroundColor = hotbarBGcolor.value;
+        document.getElementsByClassName("item ")[7].style.backgroundColor = hotbarBGcolor.value;
+        document.getElementsByClassName("item ")[9].style.backgroundColor = hotbarBGcolor.value;
+        document.getElementsByClassName("item ")[8].style.backgroundColor = hotbarBGcolor.value;
+        document.getElementsByClassName("item ")[10].style.backgroundColor = hotbarBGcolor.value;
       }
     });
-
     CrosshairAndHTBSettings.appendChild(hotbarBGcolorLabel);
     if (localStorage.getItem("hotBgColor") == null || localStorage.getItem("hotBgColor") == undefined) {
       localStorage.setItem("hotBgColor", "#FFFFFF");
@@ -2347,35 +2352,37 @@ function body() {
     var hotbarBoGcolorLabel = document.createElement("label")
     hotbarBoGcolorLabel.textContent = "Hotbar Border Color";
     hotbarBoGcolorLabel.htmlFor = "hotbarBoGcolor";
-    hotbarBoGcolor.addEventListener("change", () => {
+    hotbarBordercolor.addEventListener("change", () => {
       console.log(hotbarBordercolor.value + "= Hotbar bg value")
       localStorage.setItem("hotBogColor", hotbarBordercolor.value);
-      console.log("Changed hotbar bg color to " + localStorage.getItem("hotBgColor"));
-      if (document.getElementsByClassName("item ")[9]!=null) {
+      console.log("Changed hotbar bog color to " + localStorage.getItem("hotBogColor"));
+      if (document.getElementsByClassName("item ")[9] != null) {
         var htbr = document.getElementsByClassName("item ");
-        document.getElementsByClassName("item ")[0].style.borderColor=hotbarBordercolor.value;
-        document.getElementsByClassName("item ")[1].style.borderColor=hotbarBGordercolor.value;
-        document.getElementsByClassName("item ")[2].style.borderColor=hotbarBGordercolor.value;
-        document.getElementsByClassName("item ")[3].style.borderColor=hotbarBordercolor.value;
-        document.getElementsByClassName("item ")[4].style.borderColor=hotbarBordercolor.value;
-        document.getElementsByClassName("item ")[5].style.borderColor=hotbarBordercolor.value;
-        document.getElementsByClassName("item ")[6].style.borderColor=hotbarBordercolor.value;
-        document.getElementsByClassName("item ")[7].style.borderColor=hotbarBordercolor.value;
-        document.getElementsByClassName("item ")[9].style.borderColor=hotbarBordercolor.value;
-        document.getElementsByClassName("item ")[8].style.borderColor=hotbarBordercolor.value;
-        document.getElementsByClassName("item ")[10].style.borderColor=hotbarBordercolor.value;
-    
+        document.getElementsByClassName("item ")[0].style.borderColor = hotbarBordercolor.value;
+        document.getElementsByClassName("item ")[1].style.borderColor = hotbarBordercolor.value;
+        document.getElementsByClassName("item ")[2].style.borderColor = hotbarBordercolor.value;
+        console.log(document.getElementsByClassName("item ")[2].style.borderColor+": bordrColr"+hotbarBordercolor.value+": hotbogvalu");
+        document.getElementsByClassName("item ")[3].style.borderColor = hotbarBordercolor.value;
+        document.getElementsByClassName("item ")[4].style.borderColor = hotbarBordercolor.value;
+        document.getElementsByClassName("item ")[5].style.borderColor = hotbarBordercolor.value;
+        document.getElementsByClassName("item ")[6].style.borderColor = hotbarBordercolor.value;
+        document.getElementsByClassName("item ")[7].style.borderColor = hotbarBordercolor.value;
+        document.getElementsByClassName("item ")[9].style.borderColor = hotbarBordercolor.value;
+        document.getElementsByClassName("item ")[8].style.borderColor = hotbarBordercolor.value;
+        document.getElementsByClassName("item ")[10].style.borderColor = hotbarBordercolor.value;
       }
-    });
-
+    }); var br = document.createElement("br");
+    CrosshairAndHTBSettings.appendChild(br);
     CrosshairAndHTBSettings.appendChild(hotbarBoGcolorLabel);
+    var br = document.createElement("br");
+    CrosshairAndHTBSettings.appendChild(br);
+    CrosshairAndHTBSettings.appendChild(hotbarBordercolor);
     if (localStorage.getItem("hotBogColor") == null || localStorage.getItem("hotBogColor") == undefined) {
       localStorage.setItem("hotBogColor", "#000000");
       hotbarBordercolor.value = String(localStorage.getItem("hotBogColor"));
     } else {
       hotbarBordercolor.value = String(localStorage.getItem("hotBogColor"));
     }
-
     //When thye selection changes
     selection.addEventListener("change", () => {
       localStorage.setItem("DASFB", selection.value);

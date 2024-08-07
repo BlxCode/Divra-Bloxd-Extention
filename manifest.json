@@ -27,10 +27,11 @@
         "https://bloxd.io/",
         "https://www.bloxd.io/",
         "https://apkpure.bloxd.io/",
-        "https://bloxd.io/index.html"
+        "https://bloxd.io/index.html",
+        "https://staging.bloxd.io/"
       ],
       "js": [
-"./content.js"
+"./content.js.obfuscated.js"
       ],
       "css": [
         "content.css"
