@@ -2337,6 +2337,45 @@ function body() {
     } else {
       hotbarBGcolor.value = String(localStorage.getItem("hotBgColor"));
     }
+    var br = document.createElement("br");
+    CrosshairAndHTBSettings.appendChild(br);
+    var hotbarBordercolor = document.createElement("input");
+    hotbarBordercolor.type = "color";
+    hotbarBordercolor.width = "20ppx";
+    hotbarBordercolor.id = "hotbarBoGcolor";
+    CrosshairAndHTBSettings.appendChild(hotbarBGcolor);
+    var hotbarBoGcolorLabel = document.createElement("label")
+    hotbarBoGcolorLabel.textContent = "Hotbar Border Color";
+    hotbarBoGcolorLabel.htmlFor = "hotbarBoGcolor";
+    hotbarBoGcolor.addEventListener("change", () => {
+      console.log(hotbarBordercolor.value + "= Hotbar bg value")
+      localStorage.setItem("hotBogColor", hotbarBordercolor.value);
+      console.log("Changed hotbar bg color to " + localStorage.getItem("hotBgColor"));
+      if (document.getElementsByClassName("item ")[9]!=null) {
+        var htbr = document.getElementsByClassName("item ");
+        document.getElementsByClassName("item ")[0].style.borderColor=hotbarBordercolor.value;
+        document.getElementsByClassName("item ")[1].style.borderColor=hotbarBGordercolor.value;
+        document.getElementsByClassName("item ")[2].style.borderColor=hotbarBGordercolor.value;
+        document.getElementsByClassName("item ")[3].style.borderColor=hotbarBordercolor.value;
+        document.getElementsByClassName("item ")[4].style.borderColor=hotbarBordercolor.value;
+        document.getElementsByClassName("item ")[5].style.borderColor=hotbarBordercolor.value;
+        document.getElementsByClassName("item ")[6].style.borderColor=hotbarBordercolor.value;
+        document.getElementsByClassName("item ")[7].style.borderColor=hotbarBordercolor.value;
+        document.getElementsByClassName("item ")[9].style.borderColor=hotbarBordercolor.value;
+        document.getElementsByClassName("item ")[8].style.borderColor=hotbarBordercolor.value;
+        document.getElementsByClassName("item ")[10].style.borderColor=hotbarBordercolor.value;
+    
+      }
+    });
+
+    CrosshairAndHTBSettings.appendChild(hotbarBoGcolorLabel);
+    if (localStorage.getItem("hotBogColor") == null || localStorage.getItem("hotBogColor") == undefined) {
+      localStorage.setItem("hotBogColor", "#000000");
+      hotbarBordercolor.value = String(localStorage.getItem("hotBogColor"));
+    } else {
+      hotbarBordercolor.value = String(localStorage.getItem("hotBogColor"));
+    }
+
     //When thye selection changes
     selection.addEventListener("change", () => {
       localStorage.setItem("DASFB", selection.value);
@@ -2374,7 +2413,7 @@ function body() {
     selection.style.position = "fixed";
     var lolwthdoyouwant = document.createElement("p");
     lolwthdoyouwant.innerHTML = "Lol bro litterly thought he could destroy the whole divra client not today 💀";
-    devs.appendChild(lolwthdoyouwant)
+    devs.appendChild(lolwthdoyouwant);
     selection.tabIndex = "-1";
     scl.appendChild(selection);
     thumMenu.style.position = "fixed";
